@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosotros — GreenVCI</title>
+<link rel="stylesheet" href="estilos.css">
+<style>
+  .about-hero { padding: calc(var(--nav-h) + 100px) 0 100px; background: var(--moss-950); color: #FFF; position: relative; overflow: hidden; }
+  .about-hero::before { content:''; position:absolute; top:-200px; right:-200px; width:700px; height:700px; background: radial-gradient(circle, rgba(62,137,83,0.15), transparent 65%); pointer-events:none; }
+  .about-hero__inner { position:relative; z-index:2; max-width: 960px; }
+  .about-hero h1 { font-family: var(--f-display); font-weight: 700; font-size: clamp(56px,8vw,120px); line-height: 0.92; letter-spacing: -0.015em; text-transform: uppercase; margin-top: 24px; color: #FFF; }
+  .about-hero h1 em { font-family: var(--f-editorial); font-style: italic; font-weight: 400; color: var(--moss-300); text-transform: lowercase; letter-spacing: -0.02em; }
+  .about-hero__lede { font-size: clamp(18px,1.5vw,22px); line-height: 1.65; color: rgba(255,255,255,0.75); max-width: 55ch; margin-top: 32px; font-weight: 300; }
+
+  .manifiesto { padding: 140px 0; background: var(--paper); }
+  .manifiesto__grid { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start; }
+  .manifiesto__texto p { font-family: var(--f-editorial); font-size: clamp(24px,2.5vw,36px); line-height: 1.35; color: var(--ink-800); margin-bottom: 28px; font-style: italic; letter-spacing: -0.01em; }
+  .manifiesto__texto p strong { font-family: var(--f-display); font-style: normal; color: var(--moss-600); text-transform: uppercase; font-weight: 700; letter-spacing: 0; }
+
+  .timeline { padding: 140px 0; background: var(--ink-50); position: relative; overflow: hidden; }
+  .timeline__header { text-align: center; max-width: 720px; margin: 0 auto 80px; }
+  .timeline__list { max-width: 900px; margin: 0 auto; position: relative; }
+  .timeline__list::before { content:''; position: absolute; left: 180px; top: 20px; bottom: 20px; width: 1px; background: linear-gradient(180deg, transparent, var(--moss-400) 10%, var(--moss-400) 90%, transparent); }
+  .hito { display: grid; grid-template-columns: 180px 1fr; gap: 60px; padding: 40px 0; align-items: start; position: relative; }
+  .hito__year { font-family: var(--f-display); font-weight: 700; font-size: 48px; color: var(--moss-600); letter-spacing: -0.01em; line-height: 1; padding-top: 8px; }
+  .hito::before { content:''; position: absolute; left: 174px; top: 24px; width: 13px; height: 13px; border-radius: 50%; background: var(--moss-500); border: 3px solid var(--ink-50); z-index: 2; }
+  .hito__body h3 { font-family: var(--f-display); font-weight: 700; font-size: 24px; text-transform: uppercase; letter-spacing: 0; color: var(--ink-900); margin-bottom: 8px; }
+  .hito__body p { font-size: 15px; color: var(--ink-600); line-height: 1.65; max-width: 50ch; }
+  .hito__tag { display: inline-block; font-family: var(--f-mono); font-size: 10px; color: var(--moss-700); letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 10px; background: var(--moss-100); border-radius: 100px; margin-bottom: 10px; }
+
+  .valores { padding: 140px 0; background: var(--paper); }
+  .valores__header { max-width: 720px; margin-bottom: 60px; }
+  .valores__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .valor { padding: 40px; background: var(--white); border: 1px solid var(--ink-200); border-radius: 20px; transition: transform 0.4s var(--ease-out), border-color 0.3s; }
+  .valor:hover { transform: translateY(-4px); border-color: var(--moss-300); }
+  .valor__num { font-family: var(--f-mono); font-size: 11px; color: var(--moss-600); letter-spacing: 0.15em; margin-bottom: 24px; }
+  .valor__t { font-family: var(--f-display); font-weight: 700; font-size: 26px; text-transform: uppercase; letter-spacing: -0.005em; color: var(--ink-900); margin-bottom: 14px; }
+  .valor__d { font-size: 14px; color: var(--ink-600); line-height: 1.7; }
+
+  .numeros { padding: 140px 0; background: var(--moss-950); color: #FFF; }
+  .numeros__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid rgba(255,255,255,0.12); }
+  .numero { padding: 48px 32px; border-right: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); }
+  .numero:nth-child(4n) { border-right: none; }
+  .numero__v { font-family: var(--f-display); font-weight: 700; font-size: clamp(48px,6vw,84px); line-height: 1; color: #FFF; letter-spacing: -0.015em; }
+  .numero__l { font-size: 14px; color: rgba(255,255,255,0.55); margin-top: 12px; line-height: 1.5; }
+
+  .cta-final-nos { padding: 120px 0; background: var(--moss-50); text-align: center; }
+  .cta-final-nos h2 { font-family: var(--f-display); font-weight: 700; font-size: clamp(40px,5vw,72px); text-transform: uppercase; letter-spacing: -0.01em; }
+  .cta-final-nos h2 em { font-family: var(--f-editorial); font-style: italic; font-weight: 400; color: var(--moss-600); text-transform: lowercase; }
+  .cta-final-nos p { max-width: 50ch; margin: 20px auto 40px; color: var(--ink-600); font-size: 18px; line-height: 1.6; }
+
+  @media (max-width: 960px) {
+    .manifiesto__grid { grid-template-columns: 1fr; gap: 40px; }
+    .timeline__list::before { left: 8px; }
+    .hito { grid-template-columns: 1fr; gap: 12px; padding-left: 30px; }
+    .hito::before { left: 2px; top: 48px; }
+    .hito__year { font-size: 32px; }
+    .valores__grid { grid-template-columns: 1fr; }
+    .numeros__grid { grid-template-columns: 1fr 1fr; }
+    .numero:nth-child(2n) { border-right: none; }
+    .numero:nth-child(4n) { border-right: 1px solid rgba(255,255,255,0.12); }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav nav--over-dark" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a>
+    <nav class="nav__links">
+      <a href="nosotros.html" class="nav__link">Nosotros</a>
+      <a href="index.html#productos" class="nav__link">Productos</a>
+      <a href="index.html#servicios" class="nav__link">Servicios</a>
+      <a href="index.html#industrias" class="nav__link">Industrias</a>
+      <a href="index.html#ciclo" class="nav__link">Sostenibilidad</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:20px">
+      <div class="nav__lang"><button class="active">ES</button><button>EN</button><button>KO</button></div>
+      <a href="index.html#contacto" class="nav__cta">Cotizar <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="about-hero">
+  <div class="container about-hero__inner">
+    <div class="eyebrow eyebrow--dark">Nosotros · Desde 1994</div>
+    <h1>Tres décadas protegiendo el metal <em>sin</em> envenenar la tierra.</h1>
+    <p class="about-hero__lede">Somos químicos, ingenieros y fabricantes coreanos que llevamos treinta años haciendo una sola pregunta: ¿cómo se detiene la corrosión sin dejar un rastro tóxico detrás? GreenVCI R&amp;D es la respuesta que hemos construido lote tras lote.</p>
+  </div>
+</section>
+
+<!-- MANIFIESTO -->
+<section class="manifiesto">
+  <div class="container">
+    <div class="manifiesto__grid">
+      <div class="reveal">
+        <div class="eyebrow">Nuestra filosofía</div>
+      </div>
+      <div class="manifiesto__texto reveal reveal--d1">
+        <p>Creemos que la protección anticorrosiva no debe transferir su problema a otra parte del planeta.</p>
+        <p>Por eso diseñamos cada producto con <strong>el final en mente</strong> — qué pasa cuando el cliente termina de usarlo, adónde va el empaque, qué queda en el suelo.</p>
+        <p>No vendemos un químico. Vendemos una decisión que el ingeniero de empaque toma cada día: proteger activos <strong>sin herir lo que viene después.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline">
+  <div class="container">
+    <div class="timeline__header reveal">
+      <div class="eyebrow">Nuestra historia</div>
+      <h2 class="display-lg" style="margin-top:20px">Treinta años<br>en <span class="serif-accent">seis hitos.</span></h2>
+    </div>
+    <div class="timeline__list">
+      <div class="hito reveal">
+        <div class="hito__year">1994</div>
+        <div class="hito__body">
+          <span class="hito__tag">Fundación</span>
+          <h3>Eundong Industries abre en Incheon</h3>
+          <p>Un equipo de seis químicos se propone desarrollar inhibidores de corrosión alternativos a los aceites y recubrimientos con metales pesados que dominaban la industria coreana del acero y la automotriz.</p>
+        </div>
+      </div>
+      <div class="hito reveal">
+        <div class="hito__year">2001</div>
+        <div class="hito__body">
+          <span class="hito__tag">Primer producto</span>
+          <h3>Primera generación de VCI Film</h3>
+          <p>Lanzamos nuestra primera película VCI comercial. Hyundai Motor la adopta para proteger piezas de exportación a Estados Unidos — pasamos de laboratorio a producción en serie en 18 meses.</p>
+        </div>
+      </div>
+      <div class="hito reveal">
+        <div class="hito__year">2008</div>
+        <div class="hito__body">
+          <span class="hito__tag">Expansión global</span>
+          <h3>Primeros distribuidores en Europa y Medio Oriente</h3>
+          <p>BMW, Daimler y Saudi Aramco incorporan VCI en sus cadenas logísticas. Abrimos segunda planta en Incheon dedicada a masterbatch y film técnico.</p>
+        </div>
+      </div>
+      <div class="hito reveal">
+        <div class="hito__year">2015</div>
+        <div class="hito__body">
+          <span class="hito__tag">Reinvención</span>
+          <h3>Nace GreenVCI R&amp;D</h3>
+          <p>Rebautizamos la empresa bajo el principio de economía circular. Eliminamos nitritos, cromatos y metales pesados de todas las formulaciones. Obtenemos certificación RoHS total e ISO 14001.</p>
+        </div>
+      </div>
+      <div class="hito reveal">
+        <div class="hito__year">2021</div>
+        <div class="hito__body">
+          <span class="hito__tag">Tecnología</span>
+          <h3>Tercera generación VCI — biodegradable</h3>
+          <p>Desarrollamos la primera línea VCI 100% biodegradable del mercado — se descompone en menos de 12 meses sin dejar residuos persistentes. Patente registrada en Corea, Estados Unidos y Unión Europea.</p>
+        </div>
+      </div>
+      <div class="hito reveal">
+        <div class="hito__year">2026</div>
+        <div class="hito__body">
+          <span class="hito__tag">Hoy</span>
+          <h3>50+ países, 500+ socios industriales</h3>
+          <p>Operamos con distribuidores oficiales en toda América, Europa, Asia y Oceanía. Protegemos desde semiconductores hasta plataformas offshore — con la misma obsesión por cerrar el ciclo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALORES -->
+<section class="valores">
+  <div class="container">
+    <div class="valores__header reveal">
+      <div class="eyebrow">Principios operativos</div>
+      <h2 class="display-lg" style="margin-top:20px">Cómo tomamos<br><span class="serif-accent">decisiones</span>.</h2>
+    </div>
+    <div class="valores__grid">
+      <div class="valor reveal">
+        <div class="valor__num">PRINCIPIO 01</div>
+        <h3 class="valor__t">Ciencia antes que marketing</h3>
+        <p class="valor__d">Cada afirmación sobre protección, duración o biodegradabilidad está respaldada por ensayos de laboratorio propios y validación externa independiente. Si no lo podemos medir, no lo decimos.</p>
+      </div>
+      <div class="valor reveal reveal--d1">
+        <div class="valor__num">PRINCIPIO 02</div>
+        <h3 class="valor__t">El ingeniero del cliente es nuestro cliente</h3>
+        <p class="valor__d">Nuestro equipo técnico visita plantas, analiza procesos y diseña soluciones específicas. No vendemos catálogo — diseñamos protección para tu logística, tu metal y tu volumen.</p>
+      </div>
+      <div class="valor reveal reveal--d2">
+        <div class="valor__num">PRINCIPIO 03</div>
+        <h3 class="valor__t">El final importa tanto como el principio</h3>
+        <p class="valor__d">Diseñamos pensando en qué pasa con el empaque después del último uso. Reciclabilidad, biodegradabilidad y reutilización son requisitos — no añadidos opcionales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NÚMEROS -->
+<section class="numeros">
+  <div class="container">
+    <div class="eyebrow eyebrow--dark" style="margin-bottom:40px">Escala actual</div>
+    <h2 class="display-lg" style="color:#FFF; margin-bottom:80px; max-width:900px">Lo que hacemos<br><span class="serif-accent">cada día.</span></h2>
+    <div class="numeros__grid">
+      <div class="numero"><div class="numero__v"><span data-count="30" data-suffix="+">0</span></div><div class="numero__l">Años de I+D continua en Corea del Sur</div></div>
+      <div class="numero"><div class="numero__v"><span data-count="50" data-suffix="+">0</span></div><div class="numero__l">Países con distribuidor oficial</div></div>
+      <div class="numero"><div class="numero__v"><span data-count="500" data-suffix="+">0</span></div><div class="numero__l">Socios industriales activos</div></div>
+      <div class="numero"><div class="numero__v"><span data-count="9">0</span></div><div class="numero__l">Líneas de producto completas</div></div>
+      <div class="numero"><div class="numero__v"><span data-count="120" data-suffix="+">0</span></div><div class="numero__l">Referencias en catálogo</div></div>
+      <div class="numero"><div class="numero__v"><span data-count="99.7" data-suffix="%">0</span></div><div class="numero__l">Tasa de protección validada</div></div>
+      <div class="numero"><div class="numero__v">0</div><div class="numero__l">Metales pesados · nitritos · cromatos</div></div>
+      <div class="numero"><div class="numero__v">RoHS</div><div class="numero__l">ISO 9001 · ISO 14001 · REACH</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final-nos">
+  <div class="container">
+    <div class="eyebrow" style="justify-content:center">Siguiente paso</div>
+    <h2 style="margin-top:20px">Construyamos<br><em>algo juntos.</em></h2>
+    <p>Si lideras un área de empaque, logística o calidad, nos gustaría conocer tu proceso. Primera conversación técnica sin compromiso.</p>
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap">
+      <a href="index.html#contacto" class="btn btn--primary">Hablar con un ingeniero
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="index.html#productos" class="btn btn--ghost-light">Ver productos</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo" style="color:#FFF"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a>
+        <p>Líderes globales en tecnología VCI sostenible desde 1994.</p>
+      </div>
+      <div class="footer__col"><h5>Productos</h5><a href="producto.html">VCI Film</a><a href="#">Ver todos</a></div>
+      <div class="footer__col"><h5>Empresa</h5><a href="nosotros.html">Nosotros</a><a href="#">Certificaciones</a></div>
+      <div class="footer__col"><h5>Soporte</h5><a href="index.html#contacto">Contacto</a></div>
+    </div>
+    <div class="footer__bottom"><div>© 2026 GreenVCI R&amp;D Co., Ltd.</div></div>
+  </div>
+</footer>
+
+<script src="ilustraciones.js"></script>
+<script src="animaciones.js"></script>
+</body>
+</html>
