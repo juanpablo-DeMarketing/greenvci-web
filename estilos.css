@@ -316,7 +316,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .hero__top {
   display: flex; justify-content: space-between; align-items: flex-end;
-  margin-bottom: 60px;
+  margin-bottom: 36px;
   gap: 40px;
   flex-wrap: wrap;
 }
@@ -339,12 +339,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hero__headline {
   font-family: var(--f-display);
   font-weight: 700;
-  font-size: clamp(48px, 7.5vw, 120px);
-  line-height: 0.9;
+  font-size: clamp(40px, 5.5vw, 88px);
+  line-height: 0.92;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: var(--white);
-  max-width: 1100px;
+  max-width: 900px;
 }
 .hero__headline .linea {
   display: block;
@@ -374,41 +374,30 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .hero__lede {
-  max-width: 540px;
-  font-size: clamp(17px, 1.3vw, 20px);
+  max-width: 480px;
+  font-size: clamp(14px, 1.1vw, 17px);
   line-height: 1.6;
-  color: rgba(255,255,255,0.7);
-  margin-top: 40px;
+  color: rgba(255,255,255,0.65);
+  margin-top: 24px;
   font-weight: 300;
   opacity: 0;
   animation: fadeUp 1s var(--ease-out) 0.9s forwards;
 }
 .hero__ctas {
   display: flex; gap: 14px; flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 28px;
   opacity: 0;
   animation: fadeUp 1s var(--ease-out) 1.05s forwards;
 }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-.hero__bottom {
-  position: absolute;
-  bottom: 40px; left: 0; right: 0;
-  z-index: 3;
-  padding: 0 var(--gutter);
+.hero__stats {
+  display: flex; gap: clamp(24px, 4vw, 56px);
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,0.12);
   opacity: 0;
   animation: fadeUp 1s var(--ease-out) 1.2s forwards;
-}
-.hero__bottom .container {
-  padding: 0;
-  display: flex; justify-content: space-between; align-items: flex-end;
-  gap: 40px;
-  flex-wrap: wrap;
-  border-top: 1px solid rgba(255,255,255,0.12);
-  padding-top: 28px;
-}
-.hero__stats {
-  display: flex; gap: clamp(32px, 5vw, 72px);
 }
 .hero__stat {
   display: flex; flex-direction: column;
@@ -416,7 +405,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hero__stat-num {
   font-family: var(--f-display);
   font-weight: 600;
-  font-size: clamp(28px, 3vw, 42px);
+  font-size: clamp(22px, 2.2vw, 32px);
   line-height: 1;
   color: var(--white);
 }
