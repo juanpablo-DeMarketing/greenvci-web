@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noticias — GreenVCI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    .news-hero{background:var(--moss-950);padding:160px 0 80px;color:#fff;text-align:center}
+    .news-hero h1{font-family:var(--f-display);font-size:clamp(52px,7vw,96px);font-weight:700;line-height:.95;color:#fff;margin-bottom:20px}
+    .news-hero p{font-size:18px;color:rgba(255,255,255,.65);max-width:500px;margin:0 auto}
+    .news-grid-section{padding:96px 0}
+    .news-featured{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:64px}
+    .news-featured-card{border-radius:20px;overflow:hidden;background:var(--ink-50);border:1px solid var(--ink-200)}
+    .news-featured-card--big{grid-column:span 2}
+    .news-featured-card--big .nfc__img{aspect-ratio:16/7}
+    .nfc__img{aspect-ratio:16/9;background:var(--moss-900);overflow:hidden}
+    .nfc__img img{width:100%;height:100%;object-fit:cover}
+    .nfc__body{padding:28px}
+    .nfc__tag{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--moss-600);margin-bottom:10px}
+    .nfc__title{font-family:var(--f-display);font-size:24px;font-weight:700;color:var(--ink-900);margin-bottom:10px;line-height:1.2}
+    .news-featured-card--big .nfc__title{font-size:36px}
+    .nfc__meta{font-size:13px;color:var(--ink-500);margin-bottom:12px}
+    .nfc__desc{font-size:14px;color:var(--ink-600);line-height:1.65}
+    .nfc__link{display:inline-flex;align-items:center;gap:6px;color:var(--moss-700);font-weight:600;font-size:14px;margin-top:16px;text-decoration:none}
+    .nfc__link:hover{color:var(--moss-900)}
+    .news-list-title{font-family:var(--f-display);font-size:28px;font-weight:700;margin-bottom:28px;color:var(--ink-900)}
+    .news-list{display:flex;flex-direction:column;gap:0}
+    .news-item{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:24px 0;border-bottom:1px solid var(--ink-100);align-items:start}
+    .news-item__date{font-family:var(--f-mono,monospace);font-size:12px;color:var(--ink-500);padding-top:4px}
+    .news-item__tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--moss-600);margin-bottom:6px}
+    .news-item__title{font-size:16px;font-weight:600;color:var(--ink-900);margin-bottom:4px;line-height:1.35}
+    .news-item__desc{font-size:13px;color:var(--ink-500);line-height:1.55}
+    .dark-cta{background:var(--moss-950);padding:96px 0;text-align:center;color:#fff}
+    .dark-cta h2{font-family:var(--f-display);font-size:clamp(36px,4vw,56px);font-weight:700;margin-bottom:20px}
+    .dark-cta p{font-size:17px;color:rgba(255,255,255,.7);max-width:540px;margin:0 auto 36px}
+    .btn-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    @media(max-width:768px){.news-featured{grid-template-columns:1fr}.news-featured-card--big{grid-column:1}}
+  </style>
+</head>
+<body>
+  <header class="nav nav--over-dark" id="nav">
+    <div class="nav__inner container">
+      <a class="nav__logo" href="index.html">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#2d6a4f"/><path d="M7 21 L14 7 L21 21" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 16h9" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        <span class="nav__logo-text">GreenVCI</span>
+      </a>
+      <nav class="nav__links">
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-toggle">Productos <svg class="nav__dropdown-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__dropdown-menu">
+            <a class="nav__dropdown-item" href="productos/vci-film.html">VCI Film</a>
+            <a class="nav__dropdown-item" href="productos/vci-polvo.html">VCI Polvo</a>
+            <a class="nav__dropdown-item" href="productos/vci-masterbatch.html">VCI Masterbatch</a>
+            <a class="nav__dropdown-item" href="productos/vci-emisor.html">VCI Emisor</a>
+            <a class="nav__dropdown-item" href="productos/vci-liquido.html">VCI Líquido</a>
+            <a class="nav__dropdown-item" href="productos/vci-desecante.html">VCI Desecante</a>
+            <a class="nav__dropdown-item" href="productos/vci-papel.html">VCI Papel</a>
+            <a class="nav__dropdown-item" href="productos/vci-limpiador.html">VCI Limpiador</a>
+            <a class="nav__dropdown-item" href="productos/vci-fabricacion.html">VCI Fabricación</a>
+          </div>
+        </div>
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-toggle">Recursos <svg class="nav__dropdown-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__dropdown-menu">
+            <a class="nav__dropdown-item" href="fichas-tecnicas.html">Fichas Técnicas</a>
+            <a class="nav__dropdown-item" href="certificaciones.html">Certificaciones</a>
+            <a class="nav__dropdown-item" href="recursos.html">Casos de Estudio</a>
+            <a class="nav__dropdown-item" href="noticias.html">Noticias</a>
+          </div>
+        </div>
+        <a class="nav__link" href="servicios.html">Servicios</a>
+        <a class="nav__link" href="industrias.html">Industrias</a>
+        <a class="nav__link" href="nosotros.html">Nosotros</a>
+        <a class="nav__link" href="sostenibilidad.html">Sostenibilidad</a>
+      </nav>
+      <div class="nav__actions">
+        <span class="nav__lang">ES / EN</span>
+        <a class="btn btn--sm btn--primary" href="contacto.html">Contactar</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="news-hero">
+    <div class="container">
+      <p class="section-label" style="color:var(--moss-400);margin-bottom:16px">Sala de Prensa</p>
+      <h1>Noticias<br><em style="font-family:var(--f-editorial);font-style:italic;font-weight:400">& Actualizaciones</em></h1>
+      <p>Últimas novedades de GreenVCI: lanzamientos de producto, expansión global, certificaciones y tendencias en protección anticorrosión.</p>
+    </div>
+  </section>
+
+  <section class="news-grid-section">
+    <div class="container">
+      <div class="news-featured">
+        <div class="news-featured-card news-featured-card--big">
+          <div class="nfc__img"><img src="images/servicios-lab-rnd.jpg" alt="GreenVCI laboratorio I+D" onerror="this.style.background='var(--moss-800)'"></div>
+          <div class="nfc__body">
+            <p class="nfc__tag">Innovación</p>
+            <h2 class="nfc__title">GreenVCI lanza el primer masterbatch VCI biodegradable certificado ISO 7827 para la industria automotriz</h2>
+            <p class="nfc__meta">Marzo 2024 · Incheon, Corea del Sur</p>
+            <p class="nfc__desc">El nuevo GVR700 basado en polihidroxialcanoato (PHA) biodegrada el 95% de su masa en 90 días bajo condiciones de compostaje industrial, sin sacrificar el rendimiento anticorrosión frente a los grados estándar de la serie GVR.</p>
+            <a class="nfc__link" href="contacto.html">Leer más →</a>
+          </div>
+        </div>
+        <div class="news-featured-card">
+          <div class="nfc__img"><img src="images/certificaciones-testing-chamber.jpg" alt="Certificación Boeing D6" onerror="this.style.background='var(--moss-900)'"></div>
+          <div class="nfc__body">
+            <p class="nfc__tag">Certificaciones</p>
+            <h2 class="nfc__title">EDC300 obtiene certificación Boeing D6-17487 para mercados aeroespaciales de América</h2>
+            <p class="nfc__meta">Enero 2024</p>
+            <p class="nfc__desc">El limpiador VCI EDC300 supera los ensayos de la especificación D6-17487 de Boeing en instalaciones acreditadas de EE.UU., abriendo el acceso a contratos de mantenimiento aeroespacial en Latinoamérica.</p>
+            <a class="nfc__link" href="certificaciones.html">Ver certificación →</a>
+          </div>
+        </div>
+        <div class="news-featured-card">
+          <div class="nfc__img"><img src="images/carreras-team-office.jpg" alt="Equipo GreenVCI" onerror="this.style.background='var(--moss-900)'"></div>
+          <div class="nfc__body">
+            <p class="nfc__tag">Expansión</p>
+            <h2 class="nfc__title">GreenVCI abre oficina regional en México para atender el mercado latinoamericano</h2>
+            <p class="nfc__meta">Noviembre 2023</p>
+            <p class="nfc__desc">La nueva sede en Ciudad de México consolida la presencia de GreenVCI en la región, con soporte técnico local en español y acceso directo a inventario regional para entregas en 48 horas.</p>
+            <a class="nfc__link" href="distribuidores.html">Ver distribuidores →</a>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="news-list-title">Más noticias</h2>
+      <div class="news-list">
+        <div class="news-item">
+          <div class="news-item__date">Oct 2023</div>
+          <div>
+            <p class="news-item__tag">Industria</p>
+            <p class="news-item__title">GreenVCI presenta soluciones para baterías de vehículos eléctricos en Battery Show North America 2023</p>
+            <p class="news-item__desc">El VCI Film GVF600 antiestático fue seleccionado como material preferente por tres fabricantes de celdas de litio para embalaje de módulos de batería durante el transporte intercontinental.</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-item__date">Sep 2023</div>
+          <div>
+            <p class="news-item__tag">Sostenibilidad</p>
+            <p class="news-item__title">GreenVCI publica su primer informe de sostenibilidad ESG alineado con GRI Standards</p>
+            <p class="news-item__desc">El informe documenta la reducción del 28% en emisiones de CO₂ de proceso, la eliminación total del nitrito de sodio en la línea de producción y el incremento al 94% de reciclabilidad de residuos de fábrica.</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-item__date">Jul 2023</div>
+          <div>
+            <p class="news-item__tag">Contratos</p>
+            <p class="news-item__title">Saudi Aramco selecciona VCI Desecante GVD310 como estándar para protección de equipos en instalaciones offshore del Golfo Pérsico</p>
+            <p class="news-item__desc">Contrato de suministro plurianual para protección de válvulas, bridas y equipos de proceso en condiciones de corrosividad marina extrema clasificación C5-M según ISO 9223.</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-item__date">May 2023</div>
+          <div>
+            <p class="news-item__tag">I+D</p>
+            <p class="news-item__title">GreenVCI amplía su laboratorio de Incheon con nueva cámara de niebla salina de 2 000 litros para ensayos ISO 9227</p>
+            <p class="news-item__desc">La nueva instalación permite realizar ciclos de ensayo acelerado 3× más rápido, reduciendo el tiempo de desarrollo de nuevas formulaciones de 18 a 6 meses.</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-item__date">Feb 2023</div>
+          <div>
+            <p class="news-item__tag">Certificaciones</p>
+            <p class="news-item__title">Renovación exitosa de las certificaciones VW 50164 y TRGS 615 para toda la línea de películas y papeles VCI</p>
+            <p class="news-item__desc">Las auditorías independientes de laboratorio confirman el cumplimiento sin excepciones de ambas especificaciones técnicas para el periodo 2023–2026.</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-item__date">Ene 2023</div>
+          <div>
+            <p class="news-item__tag">Distribución</p>
+            <p class="news-item__title">GreenVCI firma acuerdo de distribución exclusiva para el mercado alemán con CORTEC GmbH como socio certificado</p>
+            <p class="news-item__desc">La alianza estratégica garantiza disponibilidad de stock completo en Alemania con tiempos de entrega inferiores a 48 horas para clientes del sector automotriz y aeroespacial.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark-cta">
+    <div class="container">
+      <h2>Manténgase actualizado</h2>
+      <p>Suscríbase a las actualizaciones de GreenVCI y reciba lanzamientos de producto, publicaciones técnicas y noticias de la industria anticorrosión directamente en su correo.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="contacto.html">Suscribirse</a>
+        <a class="btn btn--outline-light" href="recursos.html">Ver recursos técnicos</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="nav__logo" href="index.html" style="margin-bottom:16px;display:inline-flex">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#2d6a4f"/><path d="M7 21 L14 7 L21 21" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 16h9" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+            <span class="nav__logo-text" style="color:#fff">GreenVCI</span>
+          </a>
+          <p style="color:rgba(255,255,255,.55);font-size:14px;line-height:1.6;max-width:240px">Tecnología VCI de origen coreano. Certificada, sostenible y de alto rendimiento.</p>
+        </div>
+        <div>
+          <p class="footer__col-title">Productos</p>
+          <a class="footer__link" href="productos/vci-film.html">VCI Film</a>
+          <a class="footer__link" href="productos/vci-polvo.html">VCI Polvo</a>
+          <a class="footer__link" href="productos/vci-masterbatch.html">VCI Masterbatch</a>
+          <a class="footer__link" href="productos/vci-emisor.html">VCI Emisor</a>
+          <a class="footer__link" href="productos/vci-liquido.html">VCI Líquido</a>
+          <a class="footer__link" href="productos/vci-desecante.html">VCI Desecante</a>
+          <a class="footer__link" href="productos/vci-papel.html">VCI Papel</a>
+          <a class="footer__link" href="productos/vci-limpiador.html">VCI Limpiador</a>
+          <a class="footer__link" href="productos/vci-fabricacion.html">VCI Fabricación</a>
+        </div>
+        <div>
+          <p class="footer__col-title">Empresa</p>
+          <a class="footer__link" href="nosotros.html">Nosotros</a>
+          <a class="footer__link" href="sostenibilidad.html">Sostenibilidad</a>
+          <a class="footer__link" href="certificaciones.html">Certificaciones</a>
+          <a class="footer__link" href="carreras.html">Carreras</a>
+          <a class="footer__link" href="noticias.html">Noticias</a>
+        </div>
+        <div>
+          <p class="footer__col-title">Soporte</p>
+          <a class="footer__link" href="contacto.html">Contacto</a>
+          <a class="footer__link" href="distribuidores.html">Distribuidores</a>
+          <a class="footer__link" href="fichas-tecnicas.html">Fichas Técnicas</a>
+          <a class="footer__link" href="faq.html">FAQ</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2024 GreenVCI Co., Ltd. Todos los derechos reservados.</p>
+        <p>Fabricado en Corea del Sur · Distribuido globalmente</p>
+      </div>
+    </div>
+  </footer>
+  <script src="animaciones.js"></script>
+</body>
+</html>

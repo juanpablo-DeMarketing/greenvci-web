@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VCI Film — GreenVCI</title>
+<meta name="description" content="VCI Film de GreenVCI: películas LDPE con inhibidores volátiles de corrosión para metales ferrosos y no ferrosos. Aprobado por VW, BMW y Mercedes-Benz.">
+<link rel="stylesheet" href="../estilos.css">
+<style>
+  .prod-hero { padding: calc(var(--nav-h) + 80px) 0 80px; background: var(--moss-950); color: #FFF; position: relative; overflow: hidden; }
+  .prod-hero__bg { position:absolute; inset:0; }
+  .prod-hero__bg img { width:100%; height:100%; object-fit:cover; opacity:0.3; filter:brightness(0.4) saturate(0.7); }
+  .prod-hero__grad { position:absolute; inset:0; background: linear-gradient(to right, rgba(10,26,18,0.95) 55%, rgba(30,74,48,0.4) 100%); }
+  .prod-hero__inner { position:relative; z-index:2; }
+  .prod-hero__grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+  .prod-hero__title { font-family:var(--f-display); font-weight:700; font-size:clamp(52px,7vw,100px); line-height:0.92; text-transform:uppercase; letter-spacing:-0.015em; margin-top:24px; }
+  .prod-hero__title em { font-family:var(--f-editorial); font-style:italic; font-weight:400; color:var(--moss-300); text-transform:lowercase; }
+  .prod-hero__lede { font-size:clamp(16px,1.3vw,19px); line-height:1.65; color:rgba(255,255,255,0.72); max-width:48ch; margin-top:24px; font-weight:300; }
+  .prod-hero__specs { display:grid; grid-template-columns:1fr 1fr; gap:2px; background:rgba(255,255,255,0.08); border-radius:16px; overflow:hidden; margin-top:40px; }
+  .prod-spec { background:rgba(255,255,255,0.03); padding:20px 24px; }
+  .prod-spec__l { font-family:var(--f-mono); font-size:10px; color:rgba(255,255,255,0.45); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px; }
+  .prod-spec__v { font-family:var(--f-display); font-weight:600; font-size:20px; color:#FFF; }
+  .prod-hero__img { border-radius:20px; overflow:hidden; aspect-ratio:4/3; }
+  .prod-hero__img img { width:100%; height:100%; object-fit:cover; display:block; }
+
+  .prod-section { padding:100px 0; }
+  .prod-section-alt { background:var(--ink-50); }
+  .prod-section h2 { font-family:var(--f-display); font-weight:700; font-size:clamp(32px,4vw,52px); text-transform:uppercase; letter-spacing:-0.005em; margin-top:16px; margin-bottom:40px; }
+
+  .beneficios-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .beneficio { padding:32px; background:var(--white); border:1px solid var(--ink-200); border-radius:16px; transition:transform 0.3s, border-color 0.3s; }
+  .beneficio:hover { transform:translateY(-4px); border-color:var(--moss-300); }
+  .beneficio__icon { width:48px; height:48px; border-radius:12px; background:var(--moss-50); display:grid; place-items:center; color:var(--moss-600); margin-bottom:20px; }
+  .beneficio__icon svg { width:24px; height:24px; }
+  .beneficio h3 { font-family:var(--f-display); font-weight:700; font-size:18px; text-transform:uppercase; color:var(--ink-900); margin-bottom:8px; }
+  .beneficio p { font-size:13px; color:var(--ink-600); line-height:1.65; }
+
+  .tabla-modelos { width:100%; border-collapse:collapse; border-radius:16px; overflow:hidden; border:1px solid var(--ink-200); margin-top:32px; }
+  .tabla-modelos th { background:var(--moss-600); color:#FFF; padding:14px 20px; text-align:left; font-family:var(--f-display); font-size:13px; text-transform:uppercase; letter-spacing:0.06em; font-weight:600; }
+  .tabla-modelos td { padding:14px 20px; font-size:13px; color:var(--ink-700); border-bottom:1px solid var(--ink-100); vertical-align:middle; }
+  .tabla-modelos tr:last-child td { border-bottom:none; }
+  .tabla-modelos tr:hover td { background:var(--moss-50); }
+  .tabla-modelos td:first-child { font-family:var(--f-mono); font-weight:600; color:var(--moss-700); font-size:12px; }
+
+  .aplicaciones-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:32px; }
+  .aplicacion { padding:16px 20px; background:var(--ink-100); border-radius:10px; font-size:13px; color:var(--ink-700); font-weight:500; }
+
+  .certs-row { display:flex; gap:12px; flex-wrap:wrap; margin-top:32px; }
+  .cert-badge { padding:8px 16px; background:var(--moss-50); border:1px solid var(--moss-200); border-radius:100px; font-family:var(--f-mono); font-size:11px; color:var(--moss-700); letter-spacing:0.1em; }
+
+  .prod-cta { padding:100px 0; background:var(--moss-950); color:#FFF; text-align:center; }
+  .prod-cta h2 { font-family:var(--f-display); font-weight:700; font-size:clamp(36px,4.5vw,64px); text-transform:uppercase; letter-spacing:-0.01em; }
+  .prod-cta h2 em { font-family:var(--f-editorial); font-style:italic; font-weight:400; color:var(--moss-300); text-transform:lowercase; }
+  .prod-cta p { max-width:48ch; margin:20px auto 40px; color:rgba(255,255,255,0.65); font-size:18px; line-height:1.6; }
+
+  .productos-relacionados { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:40px; }
+  .prod-rel { background:var(--white); border:1px solid var(--ink-200); border-radius:16px; padding:24px; text-decoration:none; transition:transform 0.3s, border-color 0.3s; }
+  .prod-rel:hover { transform:translateY(-3px); border-color:var(--moss-300); }
+  .prod-rel__name { font-family:var(--f-display); font-weight:700; font-size:16px; text-transform:uppercase; color:var(--ink-900); margin-bottom:6px; }
+  .prod-rel__desc { font-size:12px; color:var(--ink-500); line-height:1.5; }
+
+  @media (max-width:900px) {
+    .prod-hero__grid { grid-template-columns:1fr; gap:40px; }
+    .beneficios-grid { grid-template-columns:1fr 1fr; }
+    .aplicaciones-grid { grid-template-columns:1fr 1fr; }
+    .productos-relacionados { grid-template-columns:1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="../index.html" class="nav__logo"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a>
+    <nav class="nav__links">
+      <a href="../nosotros.html" class="nav__link">Nosotros</a>
+      <div class="nav__dropdown">
+        <button class="nav__dropdown-toggle">Productos <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="nav__dropdown-menu">
+          <a href="vci-film.html" class="nav__dropdown-item">VCI Film</a>
+          <a href="vci-polvo.html" class="nav__dropdown-item">VCI Polvo</a>
+          <a href="vci-masterbatch.html" class="nav__dropdown-item">VCI Masterbatch</a>
+          <a href="vci-emisor.html" class="nav__dropdown-item">VCI Emisor</a>
+          <a href="vci-liquido.html" class="nav__dropdown-item">VCI Líquido</a>
+          <a href="vci-desecante.html" class="nav__dropdown-item">VCI Desecante</a>
+          <a href="vci-papel.html" class="nav__dropdown-item">VCI Papel</a>
+          <a href="vci-limpiador.html" class="nav__dropdown-item">VCI Limpiador</a>
+          <a href="vci-fabricacion.html" class="nav__dropdown-item">VCI Fabricación</a>
+        </div>
+      </div>
+      <a href="../servicios.html" class="nav__link">Servicios</a>
+      <div class="nav__dropdown">
+        <button class="nav__dropdown-toggle">Recursos <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="nav__dropdown-menu">
+          <a href="../recursos.html#consejos" class="nav__dropdown-item">Consejos Rápidos</a>
+          <a href="../recursos.html#archivo" class="nav__dropdown-item">Archivo</a>
+          <a href="../recursos.html#casos" class="nav__dropdown-item">Casos de Estudio</a>
+          <a href="../fichas-tecnicas.html" class="nav__dropdown-item">Fichas Técnicas</a>
+        </div>
+      </div>
+    </nav>
+    <div style="display:flex; align-items:center; gap:20px">
+      <div class="nav__lang"><button class="active">ES</button><button>EN</button><button>KO</button></div>
+      <a href="../contacto.html" class="nav__cta">Cotizar <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="prod-hero">
+  <div class="prod-hero__bg">
+    <img src="../images/vci-film-extrusion-machine.jpg" alt="VCI Film">
+    <div class="prod-hero__grad"></div>
+  </div>
+  <div class="container prod-hero__inner">
+    <div class="prod-hero__grid">
+      <div>
+        <div class="eyebrow eyebrow--dark">Producto · GreenVCI</div>
+        <h1 class="prod-hero__title">VCI <em>Film</em></h1>
+        <p class="prod-hero__lede">Película LDPE con inhibición de corrosión en fase vapor y contacto para metales ferrosos y no ferrosos. Protección hasta 24 meses en sellado hermético.</p>
+        <div class="prod-hero__specs">
+          <div class="prod-spec"><div class="prod-spec__l">Duración</div><div class="prod-spec__v">Hasta 24 meses</div></div>
+          <div class="prod-spec"><div class="prod-spec__l">Cobertura</div><div class="prod-spec__v">6 m²/m³</div></div>
+          <div class="prod-spec"><div class="prod-spec__l">Nitritos</div><div class="prod-spec__v">0%</div></div>
+          <div class="prod-spec"><div class="prod-spec__l">Aprobación</div><div class="prod-spec__v">VW · BMW · MB</div></div>
+        </div>
+        <div style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap">
+          <a href="../contacto.html" class="btn btn--ghost-dark">Solicitar muestra <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+          <a href="../fichas-tecnicas.html" class="btn" style="background:rgba(255,255,255,0.08); color:#FFF; border:1px solid rgba(255,255,255,0.2);">Ficha técnica</a>
+        </div>
+      </div>
+      <div class="prod-hero__img"><img src="../images/vci-film-roll.jpg" alt="Rollo de VCI Film"></div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section class="prod-section">
+  <div class="container">
+    <div class="eyebrow reveal">¿Por qué VCI Film?</div>
+    <h2 class="reveal">Características <span class="serif-accent">clave.</span></h2>
+    <div class="beneficios-grid">
+      <div class="beneficio reveal">
+        <div class="beneficio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg></div>
+        <h3>Aprobación OEM</h3>
+        <p>Aprobado por Volkswagen (VW 50164), Daimler Mercedes-Benz (DBL 6994), BMW (GS 94003) y el Departamento de Defensa de EE.UU. (MIL-PRF-22019E).</p>
+      </div>
+      <div class="beneficio reveal reveal--d1">
+        <div class="beneficio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg></div>
+        <h3>Doble protección</h3>
+        <p>Acción en fase vapor (VCI) y contacto simultáneamente. El inhibidor sublima y forma una barrera molecular de una sola molécula de espesor sobre la superficie metálica.</p>
+      </div>
+      <div class="beneficio reveal reveal--d2">
+        <div class="beneficio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg></div>
+        <h3>Multi-metal</h3>
+        <p>Protege simultáneamente acero, hierro fundido, aluminio, cobre, latón y sus aleaciones en el mismo empaque, sin interferencia galvánica.</p>
+      </div>
+      <div class="beneficio reveal">
+        <div class="beneficio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg></div>
+        <h3>Formulación verde</h3>
+        <p>0% nitritos, 0% aminas secundarias, 0% metales pesados. Cumple REACH (SVHC), RoHS y TRGS 615. Disponible en versión biodegradable (GVF700).</p>
+      </div>
+      <div class="beneficio reveal reveal--d1">
+        <div class="beneficio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z"/></svg></div>
+        <h3>6 variantes especializadas</h3>
+        <p>Desde LDPE multi-metal estándar hasta stretch film de alta resistencia y versiones con protección UV para almacenamiento exterior.</p>
+      </div>
+      <div class="beneficio reveal reveal--d2">
+        <div class="beneficio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg></div>
+        <h3>Certificación independiente</h3>
+        <p>Cada lote es verificado en nuestro laboratorio interno (NACE TM0208, MIL-I-22110C) y validado por organismos externos antes de salir a producción.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODELOS -->
+<section class="prod-section prod-section-alt">
+  <div class="container">
+    <div class="eyebrow reveal">Línea de producto</div>
+    <h2 class="reveal">Modelos <span class="serif-accent">disponibles.</span></h2>
+    <div style="overflow-x:auto">
+      <table class="tabla-modelos reveal">
+        <thead>
+          <tr>
+            <th>Modelo</th>
+            <th>Tipo</th>
+            <th>Aplicación principal</th>
+            <th>Cobertura</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>GVF100</td><td>Multi-metal LDPE</td><td>Empaque automotriz general</td><td>6 m²/m³</td></tr>
+          <tr><td>GVF110</td><td>Multi-metal</td><td>Electrónica y semiconductores</td><td>6 m²/m³</td></tr>
+          <tr><td>GVF120</td><td>Multi-metal + UV</td><td>Industria pesada con exposición solar</td><td>6 m²/m³</td></tr>
+          <tr><td>GVF200</td><td>Solo ferrosos</td><td>Acerías y construcción</td><td>6 m²/m³</td></tr>
+          <tr><td>GVF300</td><td>Solo no ferrosos</td><td>Electrónica avanzada</td><td>6 m²/m³</td></tr>
+          <tr><td>GVF600</td><td>Multi-metal stretch</td><td>Industria pesada, maquinaria</td><td>12–18 m²/m³</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- APLICACIONES -->
+<section class="prod-section">
+  <div class="container">
+    <div class="eyebrow reveal">Aplicaciones</div>
+    <h2 class="reveal">¿Dónde se <span class="serif-accent">usa?</span></h2>
+    <div class="aplicaciones-grid">
+      <div class="aplicacion reveal">🚗 Empaque de piezas CKD/SKD automotriz</div>
+      <div class="aplicacion reveal reveal--d1">⚙️ Conservación de maquinaria industrial</div>
+      <div class="aplicacion reveal reveal--d2">🏗️ Almacenamiento de estructuras de acero</div>
+      <div class="aplicacion reveal">🛡️ Empaque para exportación militar</div>
+      <div class="aplicacion reveal reveal--d1">🔩 Protección de componentes de remanufactura</div>
+      <div class="aplicacion reveal reveal--d2">⚡ Empaques para baterías EV</div>
+    </div>
+    <div class="certs-row reveal">
+      <span class="cert-badge">VW 50164</span>
+      <span class="cert-badge">DBL 6994</span>
+      <span class="cert-badge">BMW GS 94003</span>
+      <span class="cert-badge">MIL-PRF-22019E</span>
+      <span class="cert-badge">REACH SVHC</span>
+      <span class="cert-badge">RoHS</span>
+      <span class="cert-badge">TRGS 615</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTOS RELACIONADOS -->
+<section class="prod-section prod-section-alt">
+  <div class="container">
+    <div class="eyebrow reveal">También te puede interesar</div>
+    <h2 class="reveal">Productos <span class="serif-accent">complementarios.</span></h2>
+    <div class="productos-relacionados">
+      <a href="vci-masterbatch.html" class="prod-rel reveal"><div class="prod-rel__name">VCI Masterbatch</div><div class="prod-rel__desc">Resina para fabricar tu propio film VCI con fórmula personalizada</div></a>
+      <a href="vci-papel.html" class="prod-rel reveal reveal--d1"><div class="prod-rel__name">VCI Papel</div><div class="prod-rel__desc">Para piezas individuales y geometrías irregulares</div></a>
+      <a href="vci-emisor.html" class="prod-rel reveal reveal--d2"><div class="prod-rel__name">VCI Emisor</div><div class="prod-rel__desc">Complemento ideal para espacios confinados como cajas de control</div></a>
+      <a href="vci-fabricacion.html" class="prod-rel reveal reveal--d3"><div class="prod-rel__name">VCI Fabricación</div><div class="prod-rel__desc">Film personalizado con heat-shrink, UV o estructura compuesta</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="prod-cta">
+  <div class="container">
+    <div class="eyebrow eyebrow--dark" style="justify-content:center">Siguiente paso</div>
+    <h2 style="margin-top:20px">¿Listo para <em>cotizar?</em></h2>
+    <p>Cuéntanos el metal, el volumen y la duración requerida. Nuestro equipo técnico te recomienda el modelo correcto.</p>
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap">
+      <a href="../contacto.html" class="btn btn--primary">Solicitar cotización <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="../fichas-tecnicas.html" class="btn btn--ghost-dark">Descargar ficha técnica</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="../index.html" class="nav__logo" style="color:#FFF"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a>
+        <p>Líderes globales en tecnología VCI sostenible desde 1994.</p>
+      </div>
+      <div class="footer__col"><h5>Productos</h5><a href="vci-film.html">VCI Film</a><a href="vci-polvo.html">VCI Polvo</a><a href="vci-masterbatch.html">VCI Masterbatch</a><a href="vci-emisor.html">VCI Emisor</a><a href="vci-liquido.html">VCI Líquido</a><a href="vci-papel.html">VCI Papel</a></div>
+      <div class="footer__col"><h5>Empresa</h5><a href="../nosotros.html">Nosotros</a><a href="../certificaciones.html">Certificaciones</a><a href="../noticias.html">Noticias</a><a href="../carreras.html">Carreras</a></div>
+      <div class="footer__col"><h5>Soporte</h5><a href="../contacto.html">Contacto</a><a href="../fichas-tecnicas.html">Fichas Técnicas</a><a href="../faq.html">FAQ</a><a href="../recursos.html">Recursos</a></div>
+    </div>
+    <div class="footer__bottom"><div>© 2026 GreenVCI R&amp;D Co., Ltd.</div></div>
+  </div>
+</footer>
+
+<script src="../ilustraciones.js"></script>
+<script src="../animaciones.js"></script>
+</body>
+</html>

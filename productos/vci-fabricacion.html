@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VCI Fabricación — GreenVCI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../estilos.css">
+  <style>
+    .prod-hero{background:var(--moss-950);padding:140px 0 80px;color:#fff}
+    .prod-hero__grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .prod-hero__label{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--moss-400);margin-bottom:16px}
+    .prod-hero__title{font-family:var(--f-display);font-size:clamp(42px,5vw,72px);font-weight:700;line-height:1;color:#fff;margin-bottom:20px}
+    .prod-hero__desc{font-size:17px;line-height:1.65;color:rgba(255,255,255,.72);margin-bottom:32px}
+    .prod-hero__specs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:36px}
+    .spec-chip{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:14px 16px}
+    .spec-chip__label{font-size:11px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+    .spec-chip__val{font-size:15px;font-weight:600;color:#fff}
+    .prod-hero__image{border-radius:20px;overflow:hidden;aspect-ratio:4/3;background:var(--moss-900)}
+    .prod-hero__image img{width:100%;height:100%;object-fit:cover;opacity:.9}
+    .benefits{padding:96px 0}
+    .benefits__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
+    .benefit-card{background:var(--ink-50);border-radius:16px;padding:28px}
+    .benefit-card__icon{width:44px;height:44px;background:var(--moss-100);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+    .benefit-card__title{font-size:16px;font-weight:600;color:var(--ink-900);margin-bottom:8px}
+    .benefit-card__desc{font-size:14px;color:var(--ink-600);line-height:1.6}
+    .variants{padding:80px 0;background:var(--ink-50)}
+    table{width:100%;border-collapse:collapse;margin-top:32px}
+    th{background:var(--moss-950);color:#fff;padding:12px 16px;text-align:left;font-size:13px;font-weight:600}
+    th:first-child{border-radius:8px 0 0 8px}th:last-child{border-radius:0 8px 8px 0}
+    td{padding:12px 16px;font-size:14px;color:var(--ink-700);border-bottom:1px solid var(--ink-100)}
+    tr:last-child td{border-bottom:none}tr:hover td{background:var(--moss-50)}
+    .apps{padding:80px 0}
+    .apps__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+    .app-card{background:var(--moss-50);border-radius:12px;padding:20px;text-align:center;font-size:13px;font-weight:600;color:var(--moss-800)}
+    .certs-row{padding:48px 0;border-top:1px solid var(--ink-100)}
+    .certs-row__grid{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:24px}
+    .cert-badge{background:#fff;border:1px solid var(--ink-200);border-radius:8px;padding:8px 18px;font-size:13px;font-weight:600;color:var(--ink-700)}
+    .dark-cta{background:var(--moss-950);padding:96px 0;text-align:center;color:#fff}
+    .dark-cta h2{font-family:var(--f-display);font-size:clamp(36px,4vw,56px);font-weight:700;margin-bottom:20px}
+    .dark-cta p{font-size:17px;color:rgba(255,255,255,.7);max-width:540px;margin:0 auto 36px}
+    .btn-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    @media(max-width:768px){.prod-hero__grid,.benefits__grid{grid-template-columns:1fr}.apps__grid{grid-template-columns:repeat(2,1fr)}}
+  </style>
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a class="nav__logo" href="../index.html">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#2d6a4f"/><path d="M7 21 L14 7 L21 21" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 16h9" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        <span class="nav__logo-text">GreenVCI</span>
+      </a>
+      <nav class="nav__links">
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-toggle">Productos <svg class="nav__dropdown-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__dropdown-menu">
+            <a class="nav__dropdown-item" href="vci-film.html">VCI Film</a>
+            <a class="nav__dropdown-item" href="vci-polvo.html">VCI Polvo</a>
+            <a class="nav__dropdown-item" href="vci-masterbatch.html">VCI Masterbatch</a>
+            <a class="nav__dropdown-item" href="vci-emisor.html">VCI Emisor</a>
+            <a class="nav__dropdown-item" href="vci-liquido.html">VCI Líquido</a>
+            <a class="nav__dropdown-item" href="vci-desecante.html">VCI Desecante</a>
+            <a class="nav__dropdown-item" href="vci-papel.html">VCI Papel</a>
+            <a class="nav__dropdown-item" href="vci-limpiador.html">VCI Limpiador</a>
+            <a class="nav__dropdown-item" href="vci-fabricacion.html">VCI Fabricación</a>
+          </div>
+        </div>
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-toggle">Recursos <svg class="nav__dropdown-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__dropdown-menu">
+            <a class="nav__dropdown-item" href="../fichas-tecnicas.html">Fichas Técnicas</a>
+            <a class="nav__dropdown-item" href="../certificaciones.html">Certificaciones</a>
+            <a class="nav__dropdown-item" href="../recursos.html">Casos de Estudio</a>
+            <a class="nav__dropdown-item" href="../noticias.html">Noticias</a>
+          </div>
+        </div>
+        <a class="nav__link" href="../servicios.html">Servicios</a>
+        <a class="nav__link" href="../industrias.html">Industrias</a>
+        <a class="nav__link" href="../nosotros.html">Nosotros</a>
+        <a class="nav__link" href="../sostenibilidad.html">Sostenibilidad</a>
+      </nav>
+      <div class="nav__actions">
+        <span class="nav__lang">ES / EN</span>
+        <a class="btn btn--sm btn--primary" href="../contacto.html">Contactar</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="prod-hero">
+    <div class="container">
+      <div class="prod-hero__grid">
+        <div>
+          <p class="prod-hero__label">GVH / GWF / GPF / GAB Series</p>
+          <h1 class="prod-hero__title">VCI Fabricación</h1>
+          <p class="prod-hero__desc">Soluciones de embalaje VCI de alta resistencia: termoencogibles, laminados compuestos, bolsas planas y tubería flexible. Diseñados para cargas voluminosas y geometrías no estándar.</p>
+          <div class="prod-hero__specs">
+            <div class="spec-chip"><div class="spec-chip__label">Resistencia</div><div class="spec-chip__val">Alta tracción</div></div>
+            <div class="spec-chip"><div class="spec-chip__label">Protección</div><div class="spec-chip__val">Hasta 36 meses</div></div>
+            <div class="spec-chip"><div class="spec-chip__label">Ancho máx.</div><div class="spec-chip__val">6 000 mm</div></div>
+          </div>
+          <div class="btn-row" style="justify-content:flex-start">
+            <a class="btn btn--primary" href="../contacto.html">Solicitar Cotización</a>
+            <a class="btn btn--outline-light" href="../fichas-tecnicas.html">Ficha Técnica</a>
+          </div>
+        </div>
+        <div class="prod-hero__image">
+          <img src="../images/vci-film-roll.jpg" alt="VCI Fabricación GreenVCI" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="container">
+      <div style="text-align:center;max-width:600px;margin:0 auto">
+        <p class="section-label">Ventajas Clave</p>
+        <h2 class="section-title">Embalaje VCI para cargas industriales complejas</h2>
+      </div>
+      <div class="benefits__grid">
+        <div class="benefit-card">
+          <div class="benefit-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--moss-700)" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+          <h3 class="benefit-card__title">Termoencogible VCI (GVH)</h3>
+          <p class="benefit-card__desc">Lámina termoencogible de polietileno de alta densidad con VCI integrado. Se adapta perfectamente a cualquier geometría al aplicar calor.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--moss-700)" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-4 0v2"/></svg></div>
+          <h3 class="benefit-card__title">Laminado compuesto (GWF)</h3>
+          <p class="benefit-card__desc">Film de woven fabric reforzado con VCI para embalaje de maquinaria pesada. Resistencia al desgarro 10× superior al film estándar.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--moss-700)" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></div>
+          <h3 class="benefit-card__title">Bolsas planas (GPF)</h3>
+          <p class="benefit-card__desc">Bolsas a medida en PE multicapa con VCI para piezas de gran formato. Sellado por impulso o soldadura térmica. Hasta 6 m de ancho.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--moss-700)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3 class="benefit-card__title">Bolsas anticorrosión (GAB)</h3>
+          <p class="benefit-card__desc">Bolsas de alta barrera con aluminio foil + VCI para ambientes de corrosividad extrema. Protección certificada hasta 36 meses.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--moss-700)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <h3 class="benefit-card__title">Fabricación bajo pedido</h3>
+          <p class="benefit-card__desc">Todos los formatos se producen a medida según las dimensiones exactas del cliente. MOQ flexible según el producto y volumen requerido.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--moss-700)" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+          <h3 class="benefit-card__title">Transporte marítimo y aéreo</h3>
+          <p class="benefit-card__desc">Certificados para tránsito marítimo de larga duración y carga aérea en contenedores estándar ISO y no estándar (project cargo).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="variants">
+    <div class="container">
+      <p class="section-label">Modelos Disponibles</p>
+      <h2 class="section-title">Series GVH / GWF / GPF / GAB</h2>
+      <table>
+        <thead>
+          <tr><th>Modelo</th><th>Tipo</th><th>Grosor</th><th>Protección</th><th>Ancho máx.</th><th>Aplicación</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>GVH100</td><td>Termoencogible</td><td>100 µm</td><td>12 meses</td><td>2 000 mm</td><td>Piezas medianas / motores</td></tr>
+          <tr><td>GVH200</td><td>Termoencogible HD</td><td>200 µm</td><td>24 meses</td><td>3 000 mm</td><td>Maquinaria industrial</td></tr>
+          <tr><td>GWF100</td><td>Woven fabric compuesto</td><td>150 µm</td><td>24 meses</td><td>4 000 mm</td><td>Equipos pesados, grúas</td></tr>
+          <tr><td>GPF100</td><td>Bolsa plana</td><td>120 µm</td><td>24 meses</td><td>6 000 mm</td><td>Estructuras, perfiles largos</td></tr>
+          <tr><td>GAB100</td><td>Bolsa alta barrera</td><td>200 µm</td><td>36 meses</td><td>2 000 mm</td><td>Ambientes corrosivos extremos</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="apps">
+    <div class="container">
+      <p class="section-label">Sectores de Aplicación</p>
+      <h2 class="section-title">Project cargo y maquinaria de gran escala</h2>
+      <div class="apps__grid">
+        <div class="app-card">Turbinas de energía</div>
+        <div class="app-card">Generadores industriales</div>
+        <div class="app-card">Estructuras de acero</div>
+        <div class="app-card">Excavadoras y grúas</div>
+        <div class="app-card">Intercambiadores de calor</div>
+        <div class="app-card">Buques y offshore</div>
+        <div class="app-card">Transformadores eléctricos</div>
+        <div class="app-card">Reactores y recipientes a presión</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="certs-row">
+    <div class="container" style="text-align:center">
+      <p class="section-label">Certificaciones</p>
+      <div class="certs-row__grid">
+        <span class="cert-badge">MIL-SPEC</span>
+        <span class="cert-badge">ISO 7827</span>
+        <span class="cert-badge">RoHS</span>
+        <span class="cert-badge">REACH</span>
+        <span class="cert-badge">IMO</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="dark-cta">
+    <div class="container">
+      <h2>¿Tiene una carga fuera de estándar?</h2>
+      <p>Díganos las dimensiones y el destino. Diseñamos el embalaje VCI exacto para su maquinaria o estructura, fabricado en Korea y entregado globalmente.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="../contacto.html">Solicitar diseño personalizado</a>
+        <a class="btn btn--outline-light" href="../fichas-tecnicas.html">Ver fichas técnicas</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="nav__logo" href="../index.html" style="margin-bottom:16px;display:inline-flex">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#2d6a4f"/><path d="M7 21 L14 7 L21 21" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 16h9" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+            <span class="nav__logo-text" style="color:#fff">GreenVCI</span>
+          </a>
+          <p style="color:rgba(255,255,255,.55);font-size:14px;line-height:1.6;max-width:240px">Tecnología VCI de origen coreano. Certificada, sostenible y de alto rendimiento.</p>
+        </div>
+        <div>
+          <p class="footer__col-title">Productos</p>
+          <a class="footer__link" href="vci-film.html">VCI Film</a>
+          <a class="footer__link" href="vci-polvo.html">VCI Polvo</a>
+          <a class="footer__link" href="vci-masterbatch.html">VCI Masterbatch</a>
+          <a class="footer__link" href="vci-emisor.html">VCI Emisor</a>
+          <a class="footer__link" href="vci-liquido.html">VCI Líquido</a>
+          <a class="footer__link" href="vci-desecante.html">VCI Desecante</a>
+          <a class="footer__link" href="vci-papel.html">VCI Papel</a>
+          <a class="footer__link" href="vci-limpiador.html">VCI Limpiador</a>
+          <a class="footer__link" href="vci-fabricacion.html">VCI Fabricación</a>
+        </div>
+        <div>
+          <p class="footer__col-title">Empresa</p>
+          <a class="footer__link" href="../nosotros.html">Nosotros</a>
+          <a class="footer__link" href="../sostenibilidad.html">Sostenibilidad</a>
+          <a class="footer__link" href="../certificaciones.html">Certificaciones</a>
+          <a class="footer__link" href="../carreras.html">Carreras</a>
+          <a class="footer__link" href="../noticias.html">Noticias</a>
+        </div>
+        <div>
+          <p class="footer__col-title">Soporte</p>
+          <a class="footer__link" href="../contacto.html">Contacto</a>
+          <a class="footer__link" href="../distribuidores.html">Distribuidores</a>
+          <a class="footer__link" href="../fichas-tecnicas.html">Fichas Técnicas</a>
+          <a class="footer__link" href="../faq.html">FAQ</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2024 GreenVCI Co., Ltd. Todos los derechos reservados.</p>
+        <p>Fabricado en Corea del Sur · Distribuido globalmente</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../animaciones.js"></script>
+</body>
+</html>

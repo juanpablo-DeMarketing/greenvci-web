@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — GreenVCI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    .faq-hero{background:var(--moss-950);padding:160px 0 80px;color:#fff;text-align:center}
+    .faq-hero h1{font-family:var(--f-display);font-size:clamp(52px,7vw,96px);font-weight:700;line-height:.95;color:#fff;margin-bottom:20px}
+    .faq-hero p{font-size:18px;color:rgba(255,255,255,.7);max-width:500px;margin:0 auto}
+    .faq-section{padding:96px 0}
+    .faq-section__layout{display:grid;grid-template-columns:260px 1fr;gap:64px;align-items:start}
+    .faq-nav{position:sticky;top:100px}
+    .faq-nav__title{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-500);margin-bottom:16px}
+    .faq-nav__link{display:block;padding:8px 0;font-size:14px;color:var(--ink-600);font-weight:500;text-decoration:none;border-left:2px solid var(--ink-200);padding-left:14px;margin-bottom:4px;transition:color .15s,border-color .15s}
+    .faq-nav__link:hover,.faq-nav__link.active{color:var(--moss-700);border-color:var(--moss-700)}
+    .faq-categories{display:flex;flex-direction:column;gap:48px}
+    .faq-category h2{font-family:var(--f-display);font-size:28px;font-weight:700;color:var(--ink-900);margin-bottom:24px;padding-bottom:16px;border-bottom:2px solid var(--moss-200)}
+    .faq-item{border-bottom:1px solid var(--ink-100)}
+    .faq-item summary{list-style:none;cursor:pointer;padding:20px 0;display:flex;justify-content:space-between;align-items:center;font-size:16px;font-weight:600;color:var(--ink-900)}
+    .faq-item summary::-webkit-details-marker{display:none}
+    .faq-item summary::after{content:'+';font-size:24px;font-weight:300;color:var(--moss-600);transition:transform .25s;flex-shrink:0}
+    .faq-item[open] summary::after{transform:rotate(45deg)}
+    .faq-item[open] summary{color:var(--moss-700)}
+    .faq-answer{padding:0 0 20px;font-size:15px;color:var(--ink-600);line-height:1.7}
+    .faq-answer p{margin-bottom:12px}
+    .faq-answer p:last-child{margin-bottom:0}
+    .faq-answer ul{padding-left:20px;margin:8px 0;display:flex;flex-direction:column;gap:6px}
+    .faq-answer a{color:var(--moss-700);font-weight:500}
+    .dark-cta{background:var(--moss-950);padding:96px 0;text-align:center;color:#fff}
+    .dark-cta h2{font-family:var(--f-display);font-size:clamp(36px,4vw,56px);font-weight:700;margin-bottom:20px}
+    .dark-cta p{font-size:17px;color:rgba(255,255,255,.7);max-width:540px;margin:0 auto 36px}
+    .btn-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    @media(max-width:900px){.faq-section__layout{grid-template-columns:1fr}.faq-nav{display:none}}
+  </style>
+</head>
+<body>
+  <header class="nav nav--over-dark" id="nav">
+    <div class="nav__inner container">
+      <a class="nav__logo" href="index.html">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#2d6a4f"/><path d="M7 21 L14 7 L21 21" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 16h9" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        <span class="nav__logo-text">GreenVCI</span>
+      </a>
+      <nav class="nav__links">
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-toggle">Productos <svg class="nav__dropdown-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__dropdown-menu">
+            <a class="nav__dropdown-item" href="productos/vci-film.html">VCI Film</a>
+            <a class="nav__dropdown-item" href="productos/vci-polvo.html">VCI Polvo</a>
+            <a class="nav__dropdown-item" href="productos/vci-masterbatch.html">VCI Masterbatch</a>
+            <a class="nav__dropdown-item" href="productos/vci-emisor.html">VCI Emisor</a>
+            <a class="nav__dropdown-item" href="productos/vci-liquido.html">VCI Líquido</a>
+            <a class="nav__dropdown-item" href="productos/vci-desecante.html">VCI Desecante</a>
+            <a class="nav__dropdown-item" href="productos/vci-papel.html">VCI Papel</a>
+            <a class="nav__dropdown-item" href="productos/vci-limpiador.html">VCI Limpiador</a>
+            <a class="nav__dropdown-item" href="productos/vci-fabricacion.html">VCI Fabricación</a>
+          </div>
+        </div>
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-toggle">Recursos <svg class="nav__dropdown-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__dropdown-menu">
+            <a class="nav__dropdown-item" href="fichas-tecnicas.html">Fichas Técnicas</a>
+            <a class="nav__dropdown-item" href="certificaciones.html">Certificaciones</a>
+            <a class="nav__dropdown-item" href="recursos.html">Casos de Estudio</a>
+            <a class="nav__dropdown-item" href="noticias.html">Noticias</a>
+          </div>
+        </div>
+        <a class="nav__link" href="servicios.html">Servicios</a>
+        <a class="nav__link" href="industrias.html">Industrias</a>
+        <a class="nav__link" href="nosotros.html">Nosotros</a>
+        <a class="nav__link" href="sostenibilidad.html">Sostenibilidad</a>
+      </nav>
+      <div class="nav__actions">
+        <span class="nav__lang">ES / EN</span>
+        <a class="btn btn--sm btn--primary" href="contacto.html">Contactar</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="faq-hero">
+    <div class="container">
+      <p class="section-label" style="color:var(--moss-400);margin-bottom:16px">Centro de ayuda</p>
+      <h1>Preguntas<br><em style="font-family:var(--f-editorial);font-style:italic;font-weight:400">Frecuentes</em></h1>
+      <p>Respuestas a las preguntas más comunes sobre tecnología VCI, selección de productos, certificaciones y pedidos.</p>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-section__layout">
+        <div class="faq-nav">
+          <p class="faq-nav__title">Categorías</p>
+          <a class="faq-nav__link" href="#tecnologia">Tecnología VCI</a>
+          <a class="faq-nav__link" href="#seleccion">Selección de producto</a>
+          <a class="faq-nav__link" href="#aplicacion">Aplicación y uso</a>
+          <a class="faq-nav__link" href="#certificaciones">Certificaciones</a>
+          <a class="faq-nav__link" href="#pedidos">Pedidos y logística</a>
+        </div>
+        <div class="faq-categories">
+
+          <div id="tecnologia">
+            <h2>Tecnología VCI</h2>
+            <details class="faq-item">
+              <summary>¿Qué es la tecnología VCI y cómo funciona?</summary>
+              <div class="faq-answer">
+                <p>VCI significa Volatile Corrosion Inhibitor (Inhibidor de Corrosión Volátil). Son compuestos químicos que se vaporizan a temperatura ambiente y se depositan como película molecular sobre las superficies metálicas cercanas, formando una barrera que desplaza el oxígeno y la humedad.</p>
+                <p>Este proceso ocurre sin contacto físico entre el inhibidor y el metal. Al abrir el empaque, la película se evapora sin dejar residuos, por lo que el metal queda listo para uso inmediato sin limpiar.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>¿Los productos VCI son seguros para metales no ferrosos como aluminio o cobre?</summary>
+              <div class="faq-answer">
+                <p>Depende de la formulación. Los productos GreenVCI están disponibles en versiones:</p>
+                <ul>
+                  <li><strong>Solo ferrosos:</strong> GVP100, GVF100 — optimizados para acero y hierro fundido</li>
+                  <li><strong>Multi-metal:</strong> GVF200, GVP400, GVL200 — compatibles con acero, aluminio, cobre, latón y zinc simultáneamente</li>
+                  <li><strong>Cobre + PCBs:</strong> GVPR410 — especialmente formulado para electrónica</li>
+                </ul>
+                <p>Consulte siempre la ficha técnica del producto específico para confirmar compatibilidad con su aplicación.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>¿Es necesario limpiar el metal antes de aplicar protección VCI?</summary>
+              <div class="faq-answer">
+                <p>Sí, en la gran mayoría de los casos. El VCI protege contra nueva corrosión pero no elimina el óxido ya existente. Para superficies con:</p>
+                <ul>
+                  <li><strong>Óxido superficial leve:</strong> use VCI Limpiador EDC antes de empacar</li>
+                  <li><strong>Superficies limpias de fabricación:</strong> el VCI se aplica directamente</li>
+                  <li><strong>Superficies mecanizadas con aceite de corte:</strong> el VCI Líquido puede aplicarse como paso final del proceso de lavado</li>
+                </ul>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>¿Cuánto tiempo dura la protección VCI?</summary>
+              <div class="faq-answer">
+                <p>La duración varía según el producto y las condiciones de almacenamiento:</p>
+                <ul>
+                  <li>VCI Film GVF100: 6–12 meses en interior bajo techo</li>
+                  <li>VCI Film GVF600 + VCI Desecante: hasta 36 meses en condiciones marítimas</li>
+                  <li>VCI Emisor GVDF200: 24 meses en espacios cerrados</li>
+                </ul>
+                <p>Los plazos asumen almacenamiento en interior, temperatura 5–35°C y humedad relativa &lt;75%. Condiciones extremas reducen la vida útil. Contáctenos para un análisis de su caso específico.</p>
+              </div>
+            </details>
+          </div>
+
+          <div id="seleccion">
+            <h2>Selección de producto</h2>
+            <details class="faq-item">
+              <summary>¿Cómo elijo entre VCI Film, VCI Papel y VCI Emisor?</summary>
+              <div class="faq-answer">
+                <p>La elección depende de la geometría y el tiempo de protección requerido:</p>
+                <ul>
+                  <li><strong>VCI Film:</strong> piezas que pueden envolverse o embolsarse. Mayor barrera a la humedad. Ideal para exportación marítima.</li>
+                  <li><strong>VCI Papel:</strong> piezas individuales que se envuelven manualmente. Reciclable. Buena opción para tránsito terrestre o almacenamiento en interior.</li>
+                  <li><strong>VCI Emisor:</strong> equipos ya ensamblados que no pueden envolverse, como armarios eléctricos, motores en contenedor o maquinaria en carcasa.</li>
+                </ul>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>¿Qué producto recomiendan para tránsito marítimo de 8 semanas?</summary>
+              <div class="faq-answer">
+                <p>Para 8 semanas de tránsito marítimo (condiciones de corrosividad C4–C5 según ISO 9223) recomendamos la combinación:</p>
+                <ul>
+                  <li>VCI Film GVF300 o GVF500 (embolsado de piezas individuales)</li>
+                  <li>VCI Desecante GVD310 (1 kg / contenedor 40 pies)</li>
+                  <li>VCI Emisor GVDF110 para espacios vacíos del contenedor</li>
+                </ul>
+                <p>Esta combinación proporciona una protección redundante de 18–24 meses, muy por encima del tiempo de tránsito requerido.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>¿Puedo usar VCI Masterbatch para fabricar mis propias bolsas anticorrosión?</summary>
+              <div class="faq-answer">
+                <p>Sí. El VCI Masterbatch GreenVCI (serie GVR) está diseñado exactamente para este propósito. Se añade al granulado de PE o PP en proporción 2–5% según el grado y espesor de película deseado, y se procesa en extrusoras convencionales de soplado o colada.</p>
+                <p>GreenVCI proporciona soporte técnico completo para el proceso de extrusión, incluyendo dosificación, temperaturas de proceso y validación de la eficacia anticorrosión del film resultante.</p>
+              </div>
+            </details>
+          </div>
+
+          <div id="aplicacion">
+            <h2>Aplicación y uso</h2>
+            <details class="faq-item">
+              <summary>¿Cómo se calcula la cantidad de VCI Emisor necesaria?</summary>
+              <div class="faq-answer">
+                <p>La regla general es 1 g de VCI Emisor activo por cada litro de volumen del espacio cerrado, para protección de 12 meses. Para 24 meses, multiplique por 1.5.</p>
+                <p>Ejemplo: contenedor estándar de 20 pies (33 m³ = 33 000 litros) → 33 g de VCI activo → 2× GVDF110 (17 g de VCI activo c/u).</p>
+                <p>Para cálculos complejos o espacios con alta carga metálica, contáctenos para un análisis personalizado sin costo.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>¿El VCI contamina alimentos o productos farmacéuticos?</summary>
+              <div class="faq-answer">
+                <p>Los productos GreenVCI <strong>no están aprobados para contacto directo con alimentos o medicamentos</strong>. Si su aplicación requiere protección de equipos o maquinaria de la industria alimentaria o farmacéutica, contáctenos para evaluar formulaciones específicas y asegurarse de que no hay contacto entre el VCI y el producto final.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>¿Qué sucede si el VCI entra en contacto con plásticos, pinturas o juntas de goma?</summary>
+              <div class="faq-answer">
+                <p>La mayoría de formulaciones GreenVCI son compatibles con plásticos de ingeniería (PE, PP, PA, POM) y pinturas industriales curadas. Sin embargo, algunos compuestos VCI pueden atacar elastómeros naturales o pinturas alquídicas sin curar.</p>
+                <p>Consulte la ficha técnica del producto específico donde se indica la compatibilidad con materiales no metálicos. Si tiene dudas, podemos realizar un ensayo de compatibilidad bajo pedido.</p>
+              </div>
+            </details>
+          </div>
+
+          <div id="certificaciones">
+            <h2>Certificaciones</h2>
+            <details class="faq-item">
+              <summary>¿Pueden proporcionar certificados de conformidad para auditorías de proveedor?</summary>
+              <div class="faq-answer">
+                <p>Sí. Para cada pedido podemos emitir:</p>
+                <ul>
+                  <li>Certificado de análisis (CoA) con número de lote</li>
+                  <li>Declaración de conformidad RoHS / REACH</li>
+                  <li>Fichas de datos de seguridad (SDS) según GHS / CLP</li>
+                  <li>Copia de las certificaciones vigentes (Boeing D6, MIL-SPEC, VW 50164, etc.)</li>
+                </ul>
+                <p>Solicite la documentación a través del formulario de <a href="contacto.html">contacto</a> o directamente a su distribuidor regional.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>¿Los productos GreenVCI cumplen con TRGS 615 (libre de nitrito)?</summary>
+              <div class="faq-answer">
+                <p>Sí. Toda la gama GreenVCI está formulada sin nitrito de sodio ni compuestos precursores de nitrosaminas, cumpliendo plenamente con la TRGS 615 alemana y siendo aptos para su uso en instalaciones con restricciones específicas sobre nitrito (industria alimentaria, aeroespacial, farmacéutica).</p>
+              </div>
+            </details>
+          </div>
+
+          <div id="pedidos">
+            <h2>Pedidos y logística</h2>
+            <details class="faq-item">
+              <summary>¿Cuál es el pedido mínimo y cuáles son los tiempos de entrega?</summary>
+              <div class="faq-answer">
+                <p>Los pedidos mínimos varían por producto:</p>
+                <ul>
+                  <li>VCI Film: 100 kg (aprox. 2 rollos)</li>
+                  <li>VCI Polvo: 25 kg</li>
+                  <li>VCI Emisor / Desecante: 1 caja (50–100 unidades)</li>
+                  <li>VCI Masterbatch: 250 kg</li>
+                </ul>
+                <p>Tiempos de entrega: stock disponible en distribuidores locales = 24–72 horas. Pedidos especiales desde fábrica en Corea = 3–6 semanas.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>¿Ofrecen muestras gratuitas para evaluación?</summary>
+              <div class="faq-answer">
+                <p>Sí, enviamos muestras de evaluación (hasta 5 kg de VCI Film o 10 unidades de emisor/desecante) sin costo para clientes industriales que puedan demostrar aplicación y volumen potencial. Solicite su muestra a través del formulario de <a href="contacto.html">contacto</a> indicando su aplicación específica.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>¿GreenVCI exporta directamente o solo a través de distribuidores?</summary>
+              <div class="faq-answer">
+                <p>En mercados con distribuidor exclusivo (México, China, Alemania, Arabia Saudita, EE.UU.), todos los pedidos se canalizan a través del distribuidor local. Para mercados sin distribuidor asignado, GreenVCI Co., Ltd. puede exportar directamente con Incoterms FOB Busan o CIF destino. Contáctenos para confirmar la disponibilidad en su país.</p>
+              </div>
+            </details>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark-cta">
+    <div class="container">
+      <h2>¿No encontró su respuesta?</h2>
+      <p>Nuestro equipo técnico responde preguntas específicas sobre aplicación, selección de producto y cumplimiento regulatorio. Sin compromiso, en español.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="contacto.html">Hacer una pregunta</a>
+        <a class="btn btn--outline-light" href="recursos.html">Ver recursos técnicos</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="nav__logo" href="index.html" style="margin-bottom:16px;display:inline-flex">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#2d6a4f"/><path d="M7 21 L14 7 L21 21" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 16h9" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+            <span class="nav__logo-text" style="color:#fff">GreenVCI</span>
+          </a>
+          <p style="color:rgba(255,255,255,.55);font-size:14px;line-height:1.6;max-width:240px">Tecnología VCI de origen coreano. Certificada, sostenible y de alto rendimiento.</p>
+        </div>
+        <div>
+          <p class="footer__col-title">Productos</p>
+          <a class="footer__link" href="productos/vci-film.html">VCI Film</a>
+          <a class="footer__link" href="productos/vci-polvo.html">VCI Polvo</a>
+          <a class="footer__link" href="productos/vci-masterbatch.html">VCI Masterbatch</a>
+          <a class="footer__link" href="productos/vci-emisor.html">VCI Emisor</a>
+          <a class="footer__link" href="productos/vci-liquido.html">VCI Líquido</a>
+          <a class="footer__link" href="productos/vci-desecante.html">VCI Desecante</a>
+          <a class="footer__link" href="productos/vci-papel.html">VCI Papel</a>
+          <a class="footer__link" href="productos/vci-limpiador.html">VCI Limpiador</a>
+          <a class="footer__link" href="productos/vci-fabricacion.html">VCI Fabricación</a>
+        </div>
+        <div>
+          <p class="footer__col-title">Empresa</p>
+          <a class="footer__link" href="nosotros.html">Nosotros</a>
+          <a class="footer__link" href="sostenibilidad.html">Sostenibilidad</a>
+          <a class="footer__link" href="certificaciones.html">Certificaciones</a>
+          <a class="footer__link" href="carreras.html">Carreras</a>
+          <a class="footer__link" href="noticias.html">Noticias</a>
+        </div>
+        <div>
+          <p class="footer__col-title">Soporte</p>
+          <a class="footer__link" href="contacto.html">Contacto</a>
+          <a class="footer__link" href="distribuidores.html">Distribuidores</a>
+          <a class="footer__link" href="fichas-tecnicas.html">Fichas Técnicas</a>
+          <a class="footer__link" href="faq.html">FAQ</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2024 GreenVCI Co., Ltd. Todos los derechos reservados.</p>
+        <p>Fabricado en Corea del Sur · Distribuido globalmente</p>
+      </div>
+    </div>
+  </footer>
+  <script src="animaciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distribuidores — GreenVCI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    .dist-hero{background:var(--moss-950);padding:160px 0 100px;color:#fff;text-align:center}
+    .dist-hero h1{font-family:var(--f-display);font-size:clamp(52px,7vw,96px);font-weight:700;line-height:.95;color:#fff;margin-bottom:24px}
+    .dist-hero p{font-size:18px;color:rgba(255,255,255,.7);max-width:560px;margin:0 auto}
+    .dist-regions{padding:96px 0}
+    .dist-regions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
+    .dist-card{background:#fff;border:1px solid var(--ink-200);border-radius:20px;padding:32px;transition:box-shadow .2s,transform .2s}
+    .dist-card:hover{box-shadow:0 16px 40px rgba(12,20,16,.1);transform:translateY(-4px)}
+    .dist-card__flag{font-size:36px;margin-bottom:16px}
+    .dist-card__country{font-family:var(--f-display);font-size:22px;font-weight:700;color:var(--ink-900);margin-bottom:4px}
+    .dist-card__region{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--moss-600);margin-bottom:20px}
+    .dist-card__company{font-size:16px;font-weight:700;color:var(--ink-800);margin-bottom:8px}
+    .dist-card__info{font-size:13px;color:var(--ink-500);line-height:1.6;margin-bottom:16px}
+    .dist-card__contact{display:flex;flex-direction:column;gap:6px}
+    .dist-card__contact a{font-size:13px;color:var(--moss-700);font-weight:500;text-decoration:none}
+    .dist-card__contact a:hover{color:var(--moss-900)}
+    .dist-badge{display:inline-flex;align-items:center;gap:5px;background:var(--moss-100);color:var(--moss-800);border-radius:6px;padding:3px 10px;font-size:11px;font-weight:600;margin-top:16px}
+    .become-dist{padding:96px 0;background:var(--ink-50)}
+    .become-dist__grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    .become-dist h2{font-family:var(--f-display);font-size:clamp(36px,4vw,56px);font-weight:700;margin-bottom:20px}
+    .become-dist p{font-size:16px;color:var(--ink-600);line-height:1.7;margin-bottom:16px}
+    .req-list{list-style:none;padding:0;margin:24px 0;display:flex;flex-direction:column;gap:12px}
+    .req-list li{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--ink-700)}
+    .req-list li::before{content:'✓';color:var(--moss-700);font-weight:700;flex-shrink:0;margin-top:1px}
+    .dark-cta{background:var(--moss-950);padding:96px 0;text-align:center;color:#fff}
+    .dark-cta h2{font-family:var(--f-display);font-size:clamp(36px,4vw,56px);font-weight:700;margin-bottom:20px}
+    .dark-cta p{font-size:17px;color:rgba(255,255,255,.7);max-width:540px;margin:0 auto 36px}
+    .btn-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    @media(max-width:768px){.dist-regions-grid,.become-dist__grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="nav nav--over-dark" id="nav">
+    <div class="nav__inner container">
+      <a class="nav__logo" href="index.html">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#2d6a4f"/><path d="M7 21 L14 7 L21 21" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 16h9" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        <span class="nav__logo-text">GreenVCI</span>
+      </a>
+      <nav class="nav__links">
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-toggle">Productos <svg class="nav__dropdown-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__dropdown-menu">
+            <a class="nav__dropdown-item" href="productos/vci-film.html">VCI Film</a>
+            <a class="nav__dropdown-item" href="productos/vci-polvo.html">VCI Polvo</a>
+            <a class="nav__dropdown-item" href="productos/vci-masterbatch.html">VCI Masterbatch</a>
+            <a class="nav__dropdown-item" href="productos/vci-emisor.html">VCI Emisor</a>
+            <a class="nav__dropdown-item" href="productos/vci-liquido.html">VCI Líquido</a>
+            <a class="nav__dropdown-item" href="productos/vci-desecante.html">VCI Desecante</a>
+            <a class="nav__dropdown-item" href="productos/vci-papel.html">VCI Papel</a>
+            <a class="nav__dropdown-item" href="productos/vci-limpiador.html">VCI Limpiador</a>
+            <a class="nav__dropdown-item" href="productos/vci-fabricacion.html">VCI Fabricación</a>
+          </div>
+        </div>
+        <div class="nav__dropdown">
+          <button class="nav__dropdown-toggle">Recursos <svg class="nav__dropdown-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="nav__dropdown-menu">
+            <a class="nav__dropdown-item" href="fichas-tecnicas.html">Fichas Técnicas</a>
+            <a class="nav__dropdown-item" href="certificaciones.html">Certificaciones</a>
+            <a class="nav__dropdown-item" href="recursos.html">Casos de Estudio</a>
+            <a class="nav__dropdown-item" href="noticias.html">Noticias</a>
+          </div>
+        </div>
+        <a class="nav__link" href="servicios.html">Servicios</a>
+        <a class="nav__link" href="industrias.html">Industrias</a>
+        <a class="nav__link" href="nosotros.html">Nosotros</a>
+        <a class="nav__link" href="sostenibilidad.html">Sostenibilidad</a>
+      </nav>
+      <div class="nav__actions">
+        <span class="nav__lang">ES / EN</span>
+        <a class="btn btn--sm btn--primary" href="contacto.html">Contactar</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="dist-hero">
+    <div class="container">
+      <p class="section-label" style="color:var(--moss-400);margin-bottom:16px">Red Global</p>
+      <h1>Distribuidores<br><em style="font-family:var(--f-editorial);font-style:italic;font-weight:400">Certificados</em></h1>
+      <p>GreenVCI opera con una red de distribuidores exclusivos certificados en los principales mercados industriales del mundo. Cada distribuidor está capacitado por nuestro equipo técnico en Incheon.</p>
+    </div>
+  </section>
+
+  <section class="dist-regions">
+    <div class="container">
+      <p class="section-label">Red de Distribución</p>
+      <h2 class="section-title">Presencia en 6 regiones estratégicas</h2>
+      <div class="dist-regions-grid">
+        <div class="dist-card">
+          <div class="dist-card__flag">🇰🇷</div>
+          <h3 class="dist-card__country">Corea del Sur</h3>
+          <p class="dist-card__region">Asia Pacífico · Sede Central</p>
+          <p class="dist-card__company">GreenVCI Co., Ltd.</p>
+          <p class="dist-card__info">Unidad 8F, GreenTech Tower, 245 Seonyu-ro, Yeongdeungpo-gu, Seúl 07317, República de Corea</p>
+          <div class="dist-card__contact">
+            <a href="mailto:global@greenvci.com">global@greenvci.com</a>
+            <a href="tel:+82223456789">+82 2 2345 6789</a>
+          </div>
+          <span class="dist-badge">HQ · Fabricación</span>
+        </div>
+        <div class="dist-card">
+          <div class="dist-card__flag">🇨🇳</div>
+          <h3 class="dist-card__country">China</h3>
+          <p class="dist-card__region">Asia Pacífico</p>
+          <p class="dist-card__company">Shenzhen VCI Solutions Ltd.</p>
+          <p class="dist-card__info">Room 2208, Minsheng Tower, Futian District, Shenzhen 518048, Guangdong, China</p>
+          <div class="dist-card__contact">
+            <a href="mailto:china@greenvci.com">china@greenvci.com</a>
+            <a href="tel:+8675512345678">+86 755 1234 5678</a>
+          </div>
+          <span class="dist-badge">Distribuidor exclusivo</span>
+        </div>
+        <div class="dist-card">
+          <div class="dist-card__flag">🇲🇽</div>
+          <h3 class="dist-card__country">México</h3>
+          <p class="dist-card__region">América Latina</p>
+          <p class="dist-card__company">GreenVCI México, S.A. de C.V.</p>
+          <p class="dist-card__info">Av. Insurgentes Sur 1898, Piso 12, Col. Florida, Álvaro Obregón, Ciudad de México, C.P. 01030</p>
+          <div class="dist-card__contact">
+            <a href="mailto:mexico@greenvci.com">mexico@greenvci.com</a>
+            <a href="tel:+525512345678">+52 55 1234 5678</a>
+          </div>
+          <span class="dist-badge">Distribuidor exclusivo</span>
+        </div>
+        <div class="dist-card">
+          <div class="dist-card__flag">🇩🇪</div>
+          <h3 class="dist-card__country">Alemania</h3>
+          <p class="dist-card__region">Europa</p>
+          <p class="dist-card__company">CORTEC GmbH — GreenVCI Partner</p>
+          <p class="dist-card__info">Industriestraße 47, 70565 Stuttgart, Baden-Württemberg, Deutschland</p>
+          <div class="dist-card__contact">
+            <a href="mailto:europe@greenvci.com">europe@greenvci.com</a>
+            <a href="tel:+4971112345678">+49 711 1234 5678</a>
+          </div>
+          <span class="dist-badge">Distribuidor certificado</span>
+        </div>
+        <div class="dist-card">
+          <div class="dist-card__flag">🇸🇦</div>
+          <h3 class="dist-card__country">Arabia Saudita</h3>
+          <p class="dist-card__region">Oriente Medio</p>
+          <p class="dist-card__company">Al-Madar Technical Supplies Co.</p>
+          <p class="dist-card__info">King Fahd District, Olaya Main Street, Riyadh 12361, Kingdom of Saudi Arabia</p>
+          <div class="dist-card__contact">
+            <a href="mailto:mena@greenvci.com">mena@greenvci.com</a>
+            <a href="tel:+96612345678">+966 1 234 5678</a>
+          </div>
+          <span class="dist-badge">Distribuidor exclusivo</span>
+        </div>
+        <div class="dist-card">
+          <div class="dist-card__flag">🇺🇸</div>
+          <h3 class="dist-card__country">Estados Unidos</h3>
+          <p class="dist-card__region">América del Norte</p>
+          <p class="dist-card__company">Pacific Corrosion Solutions LLC</p>
+          <p class="dist-card__info">2100 Industrial Blvd, Suite 300, Houston, TX 77023, United States</p>
+          <div class="dist-card__contact">
+            <a href="mailto:usa@greenvci.com">usa@greenvci.com</a>
+            <a href="tel:+17131234567">+1 713 123 4567</a>
+          </div>
+          <span class="dist-badge">Distribuidor certificado</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="become-dist">
+    <div class="container">
+      <div class="become-dist__grid">
+        <div>
+          <p class="section-label">Conviértase en Distribuidor</p>
+          <h2>¿Su mercado no está en la lista?</h2>
+          <p>GreenVCI está en expansión activa y evalúa solicitudes de distribución en nuevos territorios. Buscamos socios con base de clientes industriales establecida, capacidad técnica de soporte y compromiso con los estándares de calidad GreenVCI.</p>
+          <p>El proceso de certificación toma entre 3 y 6 meses e incluye formación técnica presencial en Incheon, acceso a nuestro laboratorio de aplicaciones y soporte comercial continuo.</p>
+          <ul class="req-list">
+            <li>Experiencia mínima de 3 años en distribución de insumos industriales o químicos</li>
+            <li>Cartera activa de clientes en sectores: automotriz, petroquímica, defensa, marina o manufactura general</li>
+            <li>Capacidad de almacenamiento en condiciones controladas (temperatura y humedad)</li>
+            <li>Equipo técnico con disponibilidad para formación certificada</li>
+            <li>Capacidad financiera para pedido mínimo inicial de USD 50 000</li>
+          </ul>
+        </div>
+        <div>
+          <form style="background:#fff;border:1px solid var(--ink-200);border-radius:20px;padding:36px" onsubmit="event.preventDefault();this.innerHTML='<p style=\'text-align:center;color:var(--moss-700);font-weight:600;padding:32px\'>✓ Solicitud enviada. Nos pondremos en contacto en 48 horas.</p>'">
+            <h3 style="font-size:22px;font-weight:700;margin-bottom:24px">Solicitud de distribución</h3>
+            <div style="display:flex;flex-direction:column;gap:14px">
+              <input type="text" placeholder="Nombre y apellido" required style="padding:12px 16px;border:1.5px solid var(--ink-200);border-radius:10px;font-size:14px;font-family:var(--f-body);outline:none">
+              <input type="text" placeholder="Empresa" required style="padding:12px 16px;border:1.5px solid var(--ink-200);border-radius:10px;font-size:14px;font-family:var(--f-body);outline:none">
+              <input type="text" placeholder="País / Territorio objetivo" required style="padding:12px 16px;border:1.5px solid var(--ink-200);border-radius:10px;font-size:14px;font-family:var(--f-body);outline:none">
+              <input type="email" placeholder="Correo corporativo" required style="padding:12px 16px;border:1.5px solid var(--ink-200);border-radius:10px;font-size:14px;font-family:var(--f-body);outline:none">
+              <input type="tel" placeholder="Teléfono con código de país" style="padding:12px 16px;border:1.5px solid var(--ink-200);border-radius:10px;font-size:14px;font-family:var(--f-body);outline:none">
+              <select style="padding:12px 16px;border:1.5px solid var(--ink-200);border-radius:10px;font-size:14px;font-family:var(--f-body);outline:none;color:var(--ink-600)">
+                <option value="">Sector industrial principal</option>
+                <option>Automotriz</option>
+                <option>Petroquímica / Oil &amp; Gas</option>
+                <option>Defensa / Militar</option>
+                <option>Manufactura general</option>
+                <option>Marina / Offshore</option>
+                <option>Aeroespacial</option>
+                <option>Otro</option>
+              </select>
+              <textarea placeholder="Descripción de su empresa y mercado objetivo (min. 100 palabras)" rows="4" style="padding:12px 16px;border:1.5px solid var(--ink-200);border-radius:10px;font-size:14px;font-family:var(--f-body);outline:none;resize:vertical"></textarea>
+              <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center">Enviar solicitud</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark-cta">
+    <div class="container">
+      <h2>¿Necesita soporte técnico local?</h2>
+      <p>Contacte al distribuidor de su región para asistencia técnica, muestras y cotizaciones en su idioma y zona horaria.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="contacto.html">Hablar con soporte global</a>
+        <a class="btn btn--outline-light" href="fichas-tecnicas.html">Descargar fichas técnicas</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="nav__logo" href="index.html" style="margin-bottom:16px;display:inline-flex">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#2d6a4f"/><path d="M7 21 L14 7 L21 21" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 16h9" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+            <span class="nav__logo-text" style="color:#fff">GreenVCI</span>
+          </a>
+          <p style="color:rgba(255,255,255,.55);font-size:14px;line-height:1.6;max-width:240px">Tecnología VCI de origen coreano. Certificada, sostenible y de alto rendimiento.</p>
+        </div>
+        <div>
+          <p class="footer__col-title">Productos</p>
+          <a class="footer__link" href="productos/vci-film.html">VCI Film</a>
+          <a class="footer__link" href="productos/vci-polvo.html">VCI Polvo</a>
+          <a class="footer__link" href="productos/vci-masterbatch.html">VCI Masterbatch</a>
+          <a class="footer__link" href="productos/vci-emisor.html">VCI Emisor</a>
+          <a class="footer__link" href="productos/vci-liquido.html">VCI Líquido</a>
+          <a class="footer__link" href="productos/vci-desecante.html">VCI Desecante</a>
+          <a class="footer__link" href="productos/vci-papel.html">VCI Papel</a>
+          <a class="footer__link" href="productos/vci-limpiador.html">VCI Limpiador</a>
+          <a class="footer__link" href="productos/vci-fabricacion.html">VCI Fabricación</a>
+        </div>
+        <div>
+          <p class="footer__col-title">Empresa</p>
+          <a class="footer__link" href="nosotros.html">Nosotros</a>
+          <a class="footer__link" href="sostenibilidad.html">Sostenibilidad</a>
+          <a class="footer__link" href="certificaciones.html">Certificaciones</a>
+          <a class="footer__link" href="carreras.html">Carreras</a>
+          <a class="footer__link" href="noticias.html">Noticias</a>
+        </div>
+        <div>
+          <p class="footer__col-title">Soporte</p>
+          <a class="footer__link" href="contacto.html">Contacto</a>
+          <a class="footer__link" href="distribuidores.html">Distribuidores</a>
+          <a class="footer__link" href="fichas-tecnicas.html">Fichas Técnicas</a>
+          <a class="footer__link" href="faq.html">FAQ</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2024 GreenVCI Co., Ltd. Todos los derechos reservados.</p>
+        <p>Fabricado en Corea del Sur · Distribuido globalmente</p>
+      </div>
+    </div>
+  </footer>
+  <script src="animaciones.js"></script>
+</body>
+</html>

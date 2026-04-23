@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios — GreenVCI</title>
+<meta name="description" content="GreenVCI ofrece inspecciones en sitio, I+D personalizado, pruebas en laboratorio y consultoría técnica anticorrosiva para industrias globales.">
+<link rel="stylesheet" href="estilos.css">
+<style>
+  .svc-hero { padding: calc(var(--nav-h) + 100px) 0 100px; background: var(--moss-950); color: #FFF; position: relative; overflow: hidden; }
+  .svc-hero__bg { position:absolute; inset:0; }
+  .svc-hero__bg img { width:100%; height:100%; object-fit:cover; opacity:0.2; filter:brightness(0.5) saturate(0.7); }
+  .svc-hero__grad { position:absolute; inset:0; background: linear-gradient(135deg, rgba(10,26,18,0.92) 40%, rgba(30,74,48,0.4) 100%); }
+  .svc-hero__inner { position:relative; z-index:2; max-width:900px; }
+  .svc-hero h1 { font-family:var(--f-display); font-weight:700; font-size:clamp(52px,7vw,110px); line-height:0.92; letter-spacing:-0.015em; text-transform:uppercase; margin-top:24px; }
+  .svc-hero h1 em { font-family:var(--f-editorial); font-style:italic; font-weight:400; color:var(--moss-300); text-transform:lowercase; }
+  .svc-hero__lede { font-size:clamp(17px,1.4vw,21px); line-height:1.65; color:rgba(255,255,255,0.72); max-width:55ch; margin-top:28px; font-weight:300; }
+  .svc-hero__chips { display:flex; gap:12px; flex-wrap:wrap; margin-top:36px; }
+  .chip { padding:8px 18px; border:1px solid rgba(255,255,255,0.18); border-radius:100px; font-family:var(--f-mono); font-size:11px; color:rgba(255,255,255,0.7); letter-spacing:0.1em; text-transform:uppercase; }
+
+  .servicios-grid { padding:140px 0; background:var(--paper); }
+  .svc-card { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; margin-bottom:120px; }
+  .svc-card:last-child { margin-bottom:0; }
+  .svc-card--reverse .svc-card__photo { order:2; }
+  .svc-card--reverse .svc-card__content { order:1; }
+  .svc-card__photo { border-radius:24px; overflow:hidden; aspect-ratio:4/3; position:relative; }
+  .svc-card__photo img { width:100%; height:100%; object-fit:cover; transition:transform 0.7s var(--ease-out); display:block; }
+  .svc-card:hover .svc-card__photo img { transform:scale(1.05); }
+  .svc-card__num { font-family:var(--f-mono); font-size:11px; color:var(--moss-600); letter-spacing:0.18em; text-transform:uppercase; margin-bottom:16px; }
+  .svc-card__title { font-family:var(--f-display); font-weight:700; font-size:clamp(36px,4vw,60px); text-transform:uppercase; line-height:0.95; letter-spacing:-0.01em; color:var(--ink-900); margin-bottom:20px; }
+  .svc-card__title em { font-family:var(--f-editorial); font-style:italic; font-weight:400; color:var(--moss-600); text-transform:lowercase; }
+  .svc-card__desc { font-size:16px; line-height:1.7; color:var(--ink-600); max-width:48ch; }
+  .svc-bullets { margin-top:32px; display:flex; flex-direction:column; gap:14px; }
+  .svc-bullet { display:flex; gap:14px; align-items:flex-start; }
+  .svc-bullet__dot { width:6px; height:6px; border-radius:50%; background:var(--moss-500); margin-top:8px; flex-shrink:0; }
+  .svc-bullet p { font-size:14px; color:var(--ink-700); line-height:1.6; }
+
+  .diferenciadores { padding:140px 0; background:var(--moss-950); color:#FFF; }
+  .dif-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:rgba(255,255,255,0.06); border-radius:24px; overflow:hidden; margin-top:72px; }
+  .dif { background:rgba(255,255,255,0.02); padding:48px 40px; transition:background 0.3s; }
+  .dif:hover { background:rgba(255,255,255,0.05); }
+  .dif__num { font-family:var(--f-mono); font-size:11px; color:var(--moss-400); letter-spacing:0.18em; margin-bottom:20px; }
+  .dif__title { font-family:var(--f-display); font-weight:700; font-size:24px; text-transform:uppercase; color:#FFF; margin-bottom:14px; }
+  .dif__desc { font-size:14px; color:rgba(255,255,255,0.6); line-height:1.7; }
+
+  .industrias-svc { padding:140px 0; background:var(--ink-50); }
+  .ind-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:72px; }
+  .ind-card { background:var(--white); border:1px solid var(--ink-200); border-radius:20px; overflow:hidden; transition:transform 0.4s var(--ease-out), box-shadow 0.4s, border-color 0.3s; }
+  .ind-card:hover { transform:translateY(-5px); box-shadow:0 20px 50px rgba(12,20,16,0.08); border-color:var(--moss-300); }
+  .ind-card__img { aspect-ratio:16/9; overflow:hidden; }
+  .ind-card__img img { width:100%; height:100%; object-fit:cover; transition:transform 0.6s var(--ease-out); }
+  .ind-card:hover .ind-card__img img { transform:scale(1.06); }
+  .ind-card__body { padding:28px; }
+  .ind-card__title { font-family:var(--f-display); font-weight:700; font-size:22px; text-transform:uppercase; color:var(--ink-900); margin-bottom:10px; }
+  .ind-card__desc { font-size:13px; color:var(--ink-600); line-height:1.6; }
+
+  .svc-cta { padding:120px 0; background:var(--moss-50); text-align:center; }
+  .svc-cta h2 { font-family:var(--f-display); font-weight:700; font-size:clamp(40px,5vw,72px); text-transform:uppercase; letter-spacing:-0.01em; }
+  .svc-cta h2 em { font-family:var(--f-editorial); font-style:italic; font-weight:400; color:var(--moss-600); text-transform:lowercase; }
+  .svc-cta p { max-width:50ch; margin:20px auto 40px; color:var(--ink-600); font-size:18px; line-height:1.6; }
+
+  @media (max-width:900px) {
+    .svc-card { grid-template-columns:1fr; gap:40px; }
+    .svc-card--reverse .svc-card__photo, .svc-card--reverse .svc-card__content { order:unset; }
+    .dif-grid { grid-template-columns:1fr; }
+    .ind-grid { grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:600px) { .ind-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav nav--over-dark" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a>
+    <nav class="nav__links">
+      <a href="nosotros.html" class="nav__link">Nosotros</a>
+      <div class="nav__dropdown">
+        <button class="nav__dropdown-toggle">Productos <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="nav__dropdown-menu">
+          <a href="productos/vci-film.html" class="nav__dropdown-item">VCI Film</a>
+          <a href="productos/vci-polvo.html" class="nav__dropdown-item">VCI Polvo</a>
+          <a href="productos/vci-masterbatch.html" class="nav__dropdown-item">VCI Masterbatch</a>
+          <a href="productos/vci-emisor.html" class="nav__dropdown-item">VCI Emisor</a>
+          <a href="productos/vci-liquido.html" class="nav__dropdown-item">VCI Líquido</a>
+          <a href="productos/vci-desecante.html" class="nav__dropdown-item">VCI Desecante</a>
+          <a href="productos/vci-papel.html" class="nav__dropdown-item">VCI Papel</a>
+          <a href="productos/vci-limpiador.html" class="nav__dropdown-item">VCI Limpiador</a>
+          <a href="productos/vci-fabricacion.html" class="nav__dropdown-item">VCI Fabricación</a>
+        </div>
+      </div>
+      <a href="servicios.html" class="nav__link">Servicios</a>
+      <div class="nav__dropdown">
+        <button class="nav__dropdown-toggle">Recursos <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="nav__dropdown-menu">
+          <a href="recursos.html#consejos" class="nav__dropdown-item">Consejos Rápidos</a>
+          <a href="recursos.html#archivo" class="nav__dropdown-item">Archivo</a>
+          <a href="recursos.html#casos" class="nav__dropdown-item">Casos de Estudio</a>
+          <a href="fichas-tecnicas.html" class="nav__dropdown-item">Fichas Técnicas</a>
+        </div>
+      </div>
+    </nav>
+    <div style="display:flex; align-items:center; gap:20px">
+      <div class="nav__lang"><button class="active">ES</button><button>EN</button><button>KO</button></div>
+      <a href="contacto.html" class="nav__cta">Cotizar <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="svc-hero">
+  <div class="svc-hero__bg">
+    <img src="images/inhouse-testing-laboratory.jpg" alt="">
+    <div class="svc-hero__grad"></div>
+  </div>
+  <div class="container svc-hero__inner">
+    <div class="eyebrow eyebrow--dark">Servicios Globales · GreenVCI R&amp;D</div>
+    <h1>Soluciones que <em>van</em> más allá del producto.</h1>
+    <p class="svc-hero__lede">GreenVCI entrega soluciones avanzadas de corrosión y orientación práctica para ayudar a las principales industrias a mejorar la protección, reducir costos y operar de forma más sostenible.</p>
+    <div class="svc-hero__chips">
+      <div class="chip">Inspección en sitio</div>
+      <div class="chip">I+D personalizado</div>
+      <div class="chip">Pruebas en laboratorio</div>
+      <div class="chip">Soporte post-venta</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS DETALLE -->
+<section class="servicios-grid">
+  <div class="container">
+
+    <!-- Servicio 1 -->
+    <div class="svc-card reveal">
+      <div class="svc-card__photo">
+        <img src="images/site-inspection-consulting.jpg" alt="Inspección en sitio y consultoría">
+      </div>
+      <div class="svc-card__content">
+        <div class="svc-card__num">Servicio 01</div>
+        <h2 class="svc-card__title">Inspección en sitio &amp; <em>consultoría</em></h2>
+        <p class="svc-card__desc">Evaluaciones in situ y recomendaciones expertas para identificar riesgos de corrosión. Nuestros equipos diagnostican problemas, evalúan metodologías actuales y entregan informes comparativos entre las soluciones GreenVCI y los sistemas existentes.</p>
+        <div class="svc-bullets">
+          <div class="svc-bullet"><div class="svc-bullet__dot"></div><p>Auditoría de proceso de empaque y almacenamiento</p></div>
+          <div class="svc-bullet"><div class="svc-bullet__dot"></div><p>Análisis de fallas y causa raíz de corrosión activa</p></div>
+          <div class="svc-bullet"><div class="svc-bullet__dot"></div><p>Recomendación de producto específico por sustrato</p></div>
+          <div class="svc-bullet"><div class="svc-bullet__dot"></div><p>Informe técnico con benchmarking contra competidores</p></div>
+        </div>
+        <div style="margin-top:36px">
+          <a href="contacto.html" class="btn btn--primary">Agendar inspección <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Servicio 2 -->
+    <div class="svc-card svc-card--reverse reveal">
+      <div class="svc-card__photo">
+        <img src="images/rnd-product-development-lab.jpg" alt="I+D y desarrollo de producto">
+      </div>
+      <div class="svc-card__content">
+        <div class="svc-card__num">Servicio 02</div>
+        <h2 class="svc-card__title">I+D &amp; desarrollo <em>a la medida</em></h2>
+        <p class="svc-card__desc">Prototipado rápido y formulaciones personalizadas con funciones integradas como propiedades antiestáticas o gestión de humedad. Laboratorios y capacidades de fabricación verticalmente integrados para una producción eficiente y de alta calidad.</p>
+        <div class="svc-bullets">
+          <div class="svc-bullet"><div class="svc-bullet__dot"></div><p>Formulación VCI para metales específicos o combinaciones</p></div>
+          <div class="svc-bullet"><div class="svc-bullet__dot"></div><p>Integración de funcionalidades: antiestático, UV, barrera</p></div>
+          <div class="svc-bullet"><div class="svc-bullet__dot"></div><p>Ciclo de prototipo a producción en 4–8 semanas</p></div>
+          <div class="svc-bullet"><div class="svc-bullet__dot"></div><p>Validación según estándares OEM (VW, BMW, MIL-SPEC)</p></div>
+        </div>
+        <div style="margin-top:36px">
+          <a href="contacto.html" class="btn btn--primary">Solicitar desarrollo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Servicio 3 -->
+    <div class="svc-card reveal">
+      <div class="svc-card__photo">
+        <img src="images/servicios-lab-rnd.jpg" alt="Pruebas en laboratorio propio">
+      </div>
+      <div class="svc-card__content">
+        <div class="svc-card__num">Servicio 03</div>
+        <h2 class="svc-card__title">Pruebas en laboratorio &amp; <em>soporte técnico</em></h2>
+        <p class="svc-card__desc">Instalaciones de laboratorio garantizan que los productos cumplan rigurosos criterios de rendimiento y seguridad. El soporte post-entrega incluye orientación de aplicación, resolución de problemas técnicos y servicios de aseguramiento de calidad.</p>
+        <div class="svc-bullets">
+          <div class="svc-bullet"><div class="svc-bullet__dot"></div><p>Cámara de corrosividad climática (MIL-STD-3010C)</p></div>
+          <div class="svc-bullet"><div class="svc-bullet__dot"></div><p>Pruebas NACE, ASTM B117, cámara de niebla salina</p></div>
+          <div class="svc-bullet"><div class="svc-bullet__dot"></div><p>Análisis de emisión VCI y biodegradabilidad</p></div>
+          <div class="svc-bullet"><div class="svc-bullet__dot"></div><p>Soporte técnico continuo durante y post-implementación</p></div>
+        </div>
+        <div style="margin-top:36px">
+          <a href="fichas-tecnicas.html" class="btn btn--primary">Ver fichas técnicas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DIFERENCIADORES -->
+<section class="diferenciadores">
+  <div class="container">
+    <div class="eyebrow eyebrow--dark reveal">Por qué GreenVCI</div>
+    <h2 class="display-lg reveal" style="color:#FFF; margin-top:20px; max-width:800px">Siete razones para <span class="serif-accent">confiar</span> en nosotros.</h2>
+    <div class="dif-grid">
+      <div class="dif reveal">
+        <div class="dif__num">01</div>
+        <h3 class="dif__title">Casi 30 años de experiencia</h3>
+        <p class="dif__desc">Desde 1994 desarrollando y perfeccionando inhibidores volátiles de corrosión para las industrias más exigentes del mundo.</p>
+      </div>
+      <div class="dif reveal reveal--d1">
+        <div class="dif__num">02</div>
+        <h3 class="dif__title">Soporte integral</h3>
+        <p class="dif__desc">Acompañamos desde la inspección inicial hasta la implementación completa y el seguimiento post-venta.</p>
+      </div>
+      <div class="dif reveal reveal--d2">
+        <div class="dif__num">03</div>
+        <h3 class="dif__title">I+D y personalización rápida</h3>
+        <p class="dif__desc">Capacidades de prototipado acelerado para responder a requerimientos industriales específicos en semanas, no meses.</p>
+      </div>
+      <div class="dif reveal">
+        <div class="dif__num">04</div>
+        <h3 class="dif__title">Control de calidad riguroso</h3>
+        <p class="dif__desc">Cumplimiento de normas internacionales: ISO 9001, ISO 14001, REACH, RoHS, MIL-SPEC y estándares OEM alemanes.</p>
+      </div>
+      <div class="dif reveal reveal--d1">
+        <div class="dif__num">05</div>
+        <h3 class="dif__title">Presencia global, asistencia local</h3>
+        <p class="dif__desc">Red de distribuidores técnicos en 50+ países que hablan tu idioma y conocen tu industria regional.</p>
+      </div>
+      <div class="dif reveal reveal--d2">
+        <div class="dif__num">06</div>
+        <h3 class="dif__title">Enfoque sostenible</h3>
+        <p class="dif__desc">Soluciones reutilizables, reciclables y biodegradables. Sin nitritos, sin aminas, sin metales pesados.</p>
+      </div>
+      <div class="dif reveal" style="grid-column:span 3">
+        <div class="dif__num">07</div>
+        <h3 class="dif__title">Modelo de asociación a largo plazo</h3>
+        <p class="dif__desc">No vendemos un químico. Construimos una relación técnica duradera centrada en los resultados de tu proceso — no en el volumen de ventas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIAS ATENDIDAS -->
+<section class="industrias-svc">
+  <div class="container">
+    <div class="eyebrow reveal">Industrias atendidas</div>
+    <h2 class="display-lg reveal" style="margin-top:20px">Protegemos activos en los <span class="serif-accent">sectores más críticos</span>.</h2>
+    <div class="ind-grid">
+      <div class="ind-card reveal">
+        <div class="ind-card__img"><img src="images/automotive-assembly-line.jpg" alt="Automotriz"></div>
+        <div class="ind-card__body">
+          <h3 class="ind-card__title">Automotriz</h3>
+          <p class="ind-card__desc">Protección de componentes CKD/SKD/DKD durante ensamblaje transfronterizo y envío de larga distancia con films, papeles, polvos y dispositivos.</p>
+        </div>
+      </div>
+      <div class="ind-card reveal reveal--d1">
+        <div class="ind-card__img"><img src="images/deep-tech-semiconductor-fab.jpg" alt="Deep Tech"></div>
+        <div class="ind-card__body">
+          <h3 class="ind-card__title">Deep Tech</h3>
+          <p class="ind-card__desc">Protección de componentes de alto valor para sistemas de IA, centros de datos, robótica, semiconductores y electrónica durante fabricación y distribución.</p>
+        </div>
+      </div>
+      <div class="ind-card reveal reveal--d2">
+        <div class="ind-card__img"><img src="images/heavy-industry-steel-mill.jpg" alt="Industria pesada"></div>
+        <div class="ind-card__body">
+          <h3 class="ind-card__title">Industria Pesada</h3>
+          <p class="ind-card__desc">Remanufactura y reacondicionamiento con limpiadores ecológicos y empaques VCI para motores, sistemas hidráulicos y componentes estructurales.</p>
+        </div>
+      </div>
+      <div class="ind-card reveal">
+        <div class="ind-card__img"><img src="images/oil-gas-offshore-platform.jpg" alt="Petróleo y gas"></div>
+        <div class="ind-card__body">
+          <h3 class="ind-card__title">Petróleo &amp; Gas</h3>
+          <p class="ind-card__desc">Protección de tuberías, válvulas, compresores, tanques y equipos de refinería en ambientes de alta humedad y alta salinidad.</p>
+        </div>
+      </div>
+      <div class="ind-card reveal reveal--d1">
+        <div class="ind-card__img"><img src="images/military-defense-equipment.jpg" alt="Defensa"></div>
+        <div class="ind-card__body">
+          <h3 class="ind-card__title">Militar &amp; Defensa</h3>
+          <p class="ind-card__desc">Materiales conformes a MIL-SPEC para sistemas aeroespaciales, vehículos terrestres y navales. Proveedor aprobado de adquisición de defensa.</p>
+        </div>
+      </div>
+      <div class="ind-card reveal reveal--d2">
+        <div class="ind-card__img"><img src="images/shipping-marine-cargo-vessel.jpg" alt="Marina y transporte"></div>
+        <div class="ind-card__body">
+          <h3 class="ind-card__title">Marina &amp; Transporte</h3>
+          <p class="ind-card__desc">Inhibidores en fase vapor para proteger componentes de barcos, carga, motores y repuestos contra sal, humedad y fluctuaciones de temperatura.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="svc-cta">
+  <div class="container">
+    <div class="eyebrow" style="justify-content:center">Próximo paso</div>
+    <h2 style="margin-top:20px">Diseñemos <em>tu solución</em>.</h2>
+    <p>Primera conversación técnica sin costo. Cuéntanos tu proceso y te proponemos el enfoque más eficiente.</p>
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap">
+      <a href="contacto.html" class="btn btn--primary">Hablar con un ingeniero <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="productos/vci-film.html" class="btn btn--ghost-light">Ver productos</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo" style="color:#FFF"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a>
+        <p>Líderes globales en tecnología VCI sostenible desde 1994.</p>
+      </div>
+      <div class="footer__col"><h5>Productos</h5><a href="productos/vci-film.html">VCI Film</a><a href="productos/vci-polvo.html">VCI Polvo</a><a href="productos/vci-masterbatch.html">VCI Masterbatch</a><a href="productos/vci-emisor.html">VCI Emisor</a><a href="productos/vci-liquido.html">VCI Líquido</a><a href="productos/vci-papel.html">VCI Papel</a></div>
+      <div class="footer__col"><h5>Empresa</h5><a href="nosotros.html">Nosotros</a><a href="certificaciones.html">Certificaciones</a><a href="noticias.html">Noticias</a><a href="carreras.html">Carreras</a><a href="distribuidores.html">Distribuidores</a></div>
+      <div class="footer__col"><h5>Soporte</h5><a href="contacto.html">Contacto</a><a href="fichas-tecnicas.html">Fichas Técnicas</a><a href="faq.html">FAQ</a><a href="recursos.html">Recursos</a></div>
+    </div>
+    <div class="footer__bottom"><div>© 2026 GreenVCI R&amp;D Co., Ltd. · Hwaseong-si, Gyeonggi-do, República de Corea</div></div>
+  </div>
+</footer>
+
+<script src="ilustraciones.js"></script>
+<script src="animaciones.js"></script>
+</body>
+</html>

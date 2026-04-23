@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industrias — GreenVCI</title>
+<meta name="description" content="GreenVCI protege activos críticos en automotriz, semiconductores, industria pesada, petróleo y gas, defensa y marina. Soluciones VCI para cada sector.">
+<link rel="stylesheet" href="estilos.css">
+<style>
+  .ind-hero { padding: calc(var(--nav-h) + 100px) 0 100px; background: var(--ink-900); color: #FFF; position: relative; overflow: hidden; }
+  .ind-hero__bg { position:absolute; inset:0; }
+  .ind-hero__bg img { width:100%; height:100%; object-fit:cover; opacity:0.25; filter:brightness(0.5) saturate(0.8); }
+  .ind-hero__grad { position:absolute; inset:0; background: linear-gradient(to right, rgba(12,20,16,0.95) 50%, rgba(12,20,16,0.5) 100%); }
+  .ind-hero__inner { position:relative; z-index:2; max-width:860px; }
+  .ind-hero h1 { font-family:var(--f-display); font-weight:700; font-size:clamp(52px,7vw,110px); line-height:0.92; letter-spacing:-0.015em; text-transform:uppercase; margin-top:24px; }
+  .ind-hero h1 em { font-family:var(--f-editorial); font-style:italic; font-weight:400; color:var(--moss-300); text-transform:lowercase; }
+  .ind-hero__lede { font-size:clamp(17px,1.4vw,21px); line-height:1.65; color:rgba(255,255,255,0.72); max-width:55ch; margin-top:28px; font-weight:300; }
+
+  .ind-showcase { padding:0; }
+  .ind-section { display:grid; grid-template-columns:1fr 1fr; min-height:600px; }
+  .ind-section:nth-child(even) .ind-section__img { order:2; }
+  .ind-section:nth-child(even) .ind-section__content { order:1; }
+  .ind-section__img { position:relative; overflow:hidden; }
+  .ind-section__img img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.8s var(--ease-out); }
+  .ind-section:hover .ind-section__img img { transform:scale(1.04); }
+  .ind-section__content { padding:80px; display:flex; flex-direction:column; justify-content:center; background:var(--paper); }
+  .ind-section:nth-child(even) .ind-section__content { background:var(--ink-50); }
+  .ind-section__num { font-family:var(--f-mono); font-size:11px; color:var(--moss-600); letter-spacing:0.18em; text-transform:uppercase; margin-bottom:16px; }
+  .ind-section__title { font-family:var(--f-display); font-weight:700; font-size:clamp(36px,4vw,60px); text-transform:uppercase; line-height:0.95; letter-spacing:-0.01em; color:var(--ink-900); margin-bottom:20px; }
+  .ind-section__title em { font-family:var(--f-editorial); font-style:italic; font-weight:400; color:var(--moss-600); text-transform:lowercase; }
+  .ind-section__desc { font-size:16px; line-height:1.7; color:var(--ink-600); max-width:48ch; margin-bottom:28px; }
+  .ind-tags { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:32px; }
+  .ind-tag { font-family:var(--f-mono); font-size:10px; color:var(--moss-700); letter-spacing:0.1em; text-transform:uppercase; padding:5px 12px; border:1px solid var(--moss-200); border-radius:100px; background:var(--moss-50); }
+  .ind-products { margin-top:24px; }
+  .ind-products h4 { font-family:var(--f-display); font-weight:600; font-size:14px; text-transform:uppercase; letter-spacing:0.08em; color:var(--ink-500); margin-bottom:12px; }
+  .ind-products-list { display:flex; gap:8px; flex-wrap:wrap; }
+  .ind-product-link { font-size:13px; color:var(--moss-600); font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:6px 0; transition:gap 0.2s; }
+  .ind-product-link:hover { gap:10px; }
+  .ind-product-link::after { content:'→'; }
+
+  .ind-stats { padding:100px 0; background:var(--moss-950); color:#FFF; }
+  .ind-stats__grid { display:grid; grid-template-columns:repeat(4,1fr); gap:0; border-top:1px solid rgba(255,255,255,0.1); margin-top:60px; }
+  .ind-stat { padding:48px 32px; border-right:1px solid rgba(255,255,255,0.1); }
+  .ind-stat:last-child { border-right:none; }
+  .ind-stat__v { font-family:var(--f-display); font-weight:700; font-size:clamp(40px,5vw,72px); line-height:1; color:#FFF; letter-spacing:-0.015em; }
+  .ind-stat__l { font-size:14px; color:rgba(255,255,255,0.5); margin-top:12px; line-height:1.5; }
+
+  .ind-cta { padding:120px 0; background:var(--moss-50); text-align:center; }
+  .ind-cta h2 { font-family:var(--f-display); font-weight:700; font-size:clamp(40px,5vw,72px); text-transform:uppercase; letter-spacing:-0.01em; }
+  .ind-cta h2 em { font-family:var(--f-editorial); font-style:italic; font-weight:400; color:var(--moss-600); text-transform:lowercase; }
+  .ind-cta p { max-width:50ch; margin:20px auto 40px; color:var(--ink-600); font-size:18px; line-height:1.6; }
+
+  @media (max-width:900px) {
+    .ind-section { grid-template-columns:1fr; }
+    .ind-section:nth-child(even) .ind-section__img, .ind-section:nth-child(even) .ind-section__content { order:unset; }
+    .ind-section__img { min-height:300px; }
+    .ind-section__content { padding:60px 40px; }
+    .ind-stats__grid { grid-template-columns:1fr 1fr; }
+    .ind-stat:nth-child(2n) { border-right:none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav nav--over-dark" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a>
+    <nav class="nav__links">
+      <a href="nosotros.html" class="nav__link">Nosotros</a>
+      <div class="nav__dropdown">
+        <button class="nav__dropdown-toggle">Productos <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="nav__dropdown-menu">
+          <a href="productos/vci-film.html" class="nav__dropdown-item">VCI Film</a>
+          <a href="productos/vci-polvo.html" class="nav__dropdown-item">VCI Polvo</a>
+          <a href="productos/vci-masterbatch.html" class="nav__dropdown-item">VCI Masterbatch</a>
+          <a href="productos/vci-emisor.html" class="nav__dropdown-item">VCI Emisor</a>
+          <a href="productos/vci-liquido.html" class="nav__dropdown-item">VCI Líquido</a>
+          <a href="productos/vci-desecante.html" class="nav__dropdown-item">VCI Desecante</a>
+          <a href="productos/vci-papel.html" class="nav__dropdown-item">VCI Papel</a>
+          <a href="productos/vci-limpiador.html" class="nav__dropdown-item">VCI Limpiador</a>
+          <a href="productos/vci-fabricacion.html" class="nav__dropdown-item">VCI Fabricación</a>
+        </div>
+      </div>
+      <a href="servicios.html" class="nav__link">Servicios</a>
+      <div class="nav__dropdown">
+        <button class="nav__dropdown-toggle">Recursos <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="nav__dropdown-menu">
+          <a href="recursos.html#consejos" class="nav__dropdown-item">Consejos Rápidos</a>
+          <a href="recursos.html#archivo" class="nav__dropdown-item">Archivo</a>
+          <a href="recursos.html#casos" class="nav__dropdown-item">Casos de Estudio</a>
+          <a href="fichas-tecnicas.html" class="nav__dropdown-item">Fichas Técnicas</a>
+        </div>
+      </div>
+    </nav>
+    <div style="display:flex; align-items:center; gap:20px">
+      <div class="nav__lang"><button class="active">ES</button><button>EN</button><button>KO</button></div>
+      <a href="contacto.html" class="nav__cta">Cotizar <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="ind-hero">
+  <div class="ind-hero__bg">
+    <img src="images/industrias-global-logistics.jpg" alt="">
+    <div class="ind-hero__grad"></div>
+  </div>
+  <div class="container ind-hero__inner">
+    <div class="eyebrow eyebrow--dark">Industrias · GreenVCI</div>
+    <h1>Protección donde el <em>metal</em> más importa.</h1>
+    <p class="ind-hero__lede">Desde líneas de ensamblaje automotriz hasta plataformas offshore. Desde fabs de semiconductores hasta buques de carga. GreenVCI protege los activos más críticos del mundo industrial.</p>
+  </div>
+</section>
+
+<!-- INDUSTRIAS DETALLE -->
+<div class="ind-showcase">
+
+  <div class="ind-section">
+    <div class="ind-section__img"><img src="images/automotive-assembly-line.jpg" alt="Industria automotriz"></div>
+    <div class="ind-section__content">
+      <div class="ind-section__num">Industria 01</div>
+      <h2 class="ind-section__title">Auto&shy;motriz &amp; <em>vehículos eléctricos</em></h2>
+      <p class="ind-section__desc">Protección de componentes CKD, SKD y DKD durante ensamblaje transfronterizo y envíos de larga distancia. Soluciones aprobadas por los Big Three alemanes (Volkswagen, BMW, Mercedes-Benz) y fabricantes de EV globales.</p>
+      <div class="ind-tags">
+        <span class="ind-tag">CKD/SKD/DKD</span>
+        <span class="ind-tag">Exportación</span>
+        <span class="ind-tag">EV Battery</span>
+        <span class="ind-tag">OEM Aprobado</span>
+      </div>
+      <div class="ind-products">
+        <h4>Productos recomendados</h4>
+        <div class="ind-products-list">
+          <a href="productos/vci-film.html" class="ind-product-link">VCI Film GVF100</a>
+          <a href="productos/vci-papel.html" class="ind-product-link">VCI Papel GVPR100</a>
+          <a href="productos/vci-polvo.html" class="ind-product-link">VCI Polvo GVP100</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ind-section">
+    <div class="ind-section__img"><img src="images/deep-tech-semiconductor-fab.jpg" alt="Semiconductores y electrónica"></div>
+    <div class="ind-section__content">
+      <div class="ind-section__num">Industria 02</div>
+      <h2 class="ind-section__title">Deep Tech &amp; <em>semiconductores</em></h2>
+      <p class="ind-section__desc">Protección de componentes de alto valor para sistemas de IA, centros de datos, robótica y electrónica avanzada. Fórmulas antiestáticas especiales para sustratos sensibles como cobre, plata y componentes PCB.</p>
+      <div class="ind-tags">
+        <span class="ind-tag">Semiconductores</span>
+        <span class="ind-tag">IA Hardware</span>
+        <span class="ind-tag">PCB</span>
+        <span class="ind-tag">Antiestático</span>
+      </div>
+      <div class="ind-products">
+        <h4>Productos recomendados</h4>
+        <div class="ind-products-list">
+          <a href="productos/vci-film.html" class="ind-product-link">VCI Film GVF110</a>
+          <a href="productos/vci-emisor.html" class="ind-product-link">VCI Emisor GVDF200</a>
+          <a href="productos/vci-papel.html" class="ind-product-link">VCI Papel GVPR400</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ind-section">
+    <div class="ind-section__img"><img src="images/heavy-industry-steel-mill.jpg" alt="Industria pesada"></div>
+    <div class="ind-section__content">
+      <div class="ind-section__num">Industria 03</div>
+      <h2 class="ind-section__title">Industria <em>pesada</em> &amp; acero</h2>
+      <p class="ind-section__desc">Remanufactura y reacondicionamiento de motores, sistemas hidráulicos y componentes estructurales. Soluciones para acerías, maquinaria de construcción y almacenamiento prolongado de componentes ferrosos de gran tamaño.</p>
+      <div class="ind-tags">
+        <span class="ind-tag">Acerías</span>
+        <span class="ind-tag">Construcción</span>
+        <span class="ind-tag">Remanufactura</span>
+        <span class="ind-tag">Long-term Storage</span>
+      </div>
+      <div class="ind-products">
+        <h4>Productos recomendados</h4>
+        <div class="ind-products-list">
+          <a href="productos/vci-fabricacion.html" class="ind-product-link">VCI Fabricación GWF100</a>
+          <a href="productos/vci-polvo.html" class="ind-product-link">VCI Polvo GVP110</a>
+          <a href="productos/vci-limpiador.html" class="ind-product-link">EDC300 Desengrasante</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ind-section">
+    <div class="ind-section__img"><img src="images/oil-gas-offshore-platform.jpg" alt="Petróleo y gas"></div>
+    <div class="ind-section__content">
+      <div class="ind-section__num">Industria 04</div>
+      <h2 class="ind-section__title">Petróleo <em>&amp;</em> gas</h2>
+      <p class="ind-section__desc">Protección de tuberías, válvulas, compresores, tanques y equipos de refinería en ambientes de alta humedad y salinidad. Soluciones para operaciones upstream y downstream, incluyendo pruebas hidrostáticas.</p>
+      <div class="ind-tags">
+        <span class="ind-tag">Offshore</span>
+        <span class="ind-tag">Pipelines</span>
+        <span class="ind-tag">Refinería</span>
+        <span class="ind-tag">Hydro Testing</span>
+      </div>
+      <div class="ind-products">
+        <h4>Productos recomendados</h4>
+        <div class="ind-products-list">
+          <a href="productos/vci-liquido.html" class="ind-product-link">VCI Líquido GVL200</a>
+          <a href="productos/vci-polvo.html" class="ind-product-link">VCI Polvo GVP300</a>
+          <a href="productos/vci-fabricacion.html" class="ind-product-link">VCI Fabricación GVH200</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ind-section">
+    <div class="ind-section__img"><img src="images/military-defense-equipment.jpg" alt="Defensa y militar"></div>
+    <div class="ind-section__content">
+      <div class="ind-section__num">Industria 05</div>
+      <h2 class="ind-section__title">Militar &amp; <em>defensa</em></h2>
+      <p class="ind-section__desc">Materiales conformes a MIL-SPEC para sistemas aeroespaciales, vehículos terrestres y navales. Proveedor aprobado para adquisición de defensa con certificación MIL-PRF-22019E y MIL-STD-3010C.</p>
+      <div class="ind-tags">
+        <span class="ind-tag">MIL-SPEC</span>
+        <span class="ind-tag">Aeroespacial</span>
+        <span class="ind-tag">Naval</span>
+        <span class="ind-tag">DoD Aprobado</span>
+      </div>
+      <div class="ind-products">
+        <h4>Productos recomendados</h4>
+        <div class="ind-products-list">
+          <a href="productos/vci-fabricacion.html" class="ind-product-link">VCI Fabricación GVH100</a>
+          <a href="productos/vci-film.html" class="ind-product-link">VCI Film GVF100</a>
+          <a href="productos/vci-emisor.html" class="ind-product-link">VCI Emisor GVE200</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ind-section">
+    <div class="ind-section__img"><img src="images/shipping-marine-cargo-vessel.jpg" alt="Marina y transporte"></div>
+    <div class="ind-section__content">
+      <div class="ind-section__num">Industria 06</div>
+      <h2 class="ind-section__title">Marina &amp; <em>transporte</em></h2>
+      <p class="ind-section__desc">Inhibidores en fase vapor para proteger componentes de barcos, carga, motores y piezas de repuesto contra sal, humedad y fluctuaciones de temperatura durante travesías oceánicas y operaciones logísticas.</p>
+      <div class="ind-tags">
+        <span class="ind-tag">Cargo Ships</span>
+        <span class="ind-tag">Repuestos</span>
+        <span class="ind-tag">Sal / Humedad</span>
+        <span class="ind-tag">Long Voyage</span>
+      </div>
+      <div class="ind-products">
+        <h4>Productos recomendados</h4>
+        <div class="ind-products-list">
+          <a href="productos/vci-desecante.html" class="ind-product-link">VCI Desecante GVD300</a>
+          <a href="productos/vci-film.html" class="ind-product-link">VCI Film GVF120</a>
+          <a href="productos/vci-polvo.html" class="ind-product-link">VCI Polvo GVP200</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ESTADÍSTICAS -->
+<section class="ind-stats">
+  <div class="container">
+    <div class="eyebrow eyebrow--dark reveal">Impacto global</div>
+    <h2 class="display-lg reveal" style="color:#FFF; margin-top:20px">Números que <span class="serif-accent">hablan.</span></h2>
+    <div class="ind-stats__grid">
+      <div class="ind-stat reveal"><div class="ind-stat__v"><span data-count="50" data-suffix="+">0</span></div><div class="ind-stat__l">Países con presencia activa</div></div>
+      <div class="ind-stat reveal reveal--d1"><div class="ind-stat__v"><span data-count="500" data-suffix="+">0</span></div><div class="ind-stat__l">Plantas industriales protegidas</div></div>
+      <div class="ind-stat reveal reveal--d2"><div class="ind-stat__v"><span data-count="6">0</span></div><div class="ind-stat__l">Sectores críticos cubiertos</div></div>
+      <div class="ind-stat reveal reveal--d3"><div class="ind-stat__v">30+</div><div class="ind-stat__l">Años de experiencia sectorial</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="ind-cta">
+  <div class="container">
+    <div class="eyebrow" style="justify-content:center">¿Tu sector no está aquí?</div>
+    <h2 style="margin-top:20px">Cuéntanos tu <em>desafío</em>.</h2>
+    <p>Trabajamos con cualquier industria que proteja metal. Si no encontraste tu sector, nuestros ingenieros pueden diseñar una solución específica para ti.</p>
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap">
+      <a href="contacto.html" class="btn btn--primary">Hablar con un ingeniero <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="servicios.html" class="btn btn--ghost-light">Ver servicios</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo" style="color:#FFF"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a>
+        <p>Líderes globales en tecnología VCI sostenible desde 1994.</p>
+      </div>
+      <div class="footer__col"><h5>Productos</h5><a href="productos/vci-film.html">VCI Film</a><a href="productos/vci-polvo.html">VCI Polvo</a><a href="productos/vci-masterbatch.html">VCI Masterbatch</a><a href="productos/vci-emisor.html">VCI Emisor</a><a href="productos/vci-liquido.html">VCI Líquido</a><a href="productos/vci-papel.html">VCI Papel</a></div>
+      <div class="footer__col"><h5>Empresa</h5><a href="nosotros.html">Nosotros</a><a href="certificaciones.html">Certificaciones</a><a href="noticias.html">Noticias</a><a href="carreras.html">Carreras</a><a href="distribuidores.html">Distribuidores</a></div>
+      <div class="footer__col"><h5>Soporte</h5><a href="contacto.html">Contacto</a><a href="fichas-tecnicas.html">Fichas Técnicas</a><a href="faq.html">FAQ</a><a href="recursos.html">Recursos</a></div>
+    </div>
+    <div class="footer__bottom"><div>© 2026 GreenVCI R&amp;D Co., Ltd. · Hwaseong-si, Gyeonggi-do, República de Corea</div></div>
+  </div>
+</footer>
+
+<script src="ilustraciones.js"></script>
+<script src="animaciones.js"></script>
+</body>
+</html>
