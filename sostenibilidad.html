@@ -74,7 +74,7 @@
     <nav class="nav__links">
       <a href="nosotros.html" class="nav__link" data-i18n="nav.about">Nosotros</a>
       <div class="nav__dropdown">
-        <button class="nav__dropdown-toggle" data-i18n="nav.products">Productos <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <button class="nav__dropdown-toggle"><span data-i18n="nav.products">Productos</span> <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="nav__dropdown-menu">
           <a href="productos/vci-film.html" class="nav__dropdown-item" data-i18n="nav.dd.film">VCI Film</a>
           <a href="productos/vci-polvo.html" class="nav__dropdown-item" data-i18n="nav.dd.polvo">VCI Polvo</a>
@@ -89,10 +89,10 @@
       </div>
       <a href="servicios.html" class="nav__link" data-i18n="nav.services">Servicios</a>
       <div class="nav__dropdown">
-        <button class="nav__dropdown-toggle" data-i18n="nav.resources">Recursos <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <button class="nav__dropdown-toggle"><span data-i18n="nav.resources">Recursos</span> <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="nav__dropdown-menu">
-          <a href="recursos.html#consejos" class="nav__dropdown-item">Consejos Rápidos</a>
-          <a href="recursos.html#archivo" class="nav__dropdown-item">Archivo</a>
+          <a href="recursos.html#consejos" class="nav__dropdown-item" data-i18n="nav.dd.tips">Consejos Rápidos</a>
+          <a href="recursos.html#archivo" class="nav__dropdown-item" data-i18n="nav.dd.archive">Archivo</a>
           <a href="recursos.html#casos" class="nav__dropdown-item" data-i18n="nav.dd.cases">Casos de Estudio</a>
           <a href="fichas-tecnicas.html" class="nav__dropdown-item" data-i18n="nav.dd.fichas">Fichas Técnicas</a>
         </div>
@@ -100,7 +100,7 @@
     </nav>
     <div style="display:flex; align-items:center; gap:20px">
       <div class="nav__lang"><button class="active">ES</button><button>EN</button><button>KO</button></div>
-      <a href="contacto.html" class="nav__cta" data-i18n="nav.cta">Cotizar <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="contacto.html" class="nav__cta"><span data-i18n="nav.cta">Cotizar</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </header>
@@ -113,8 +113,8 @@
   </div>
   <div class="container eco-hero__inner">
     <div class="eyebrow eyebrow--dark" data-i18n="eco.hero.eyebrow">Sostenibilidad · GreenVCI</div>
-    <h1>Proteger el metal sin <em>herir</em> el planeta.</h1>
-    <p class="eco-hero__lede">Creemos que la protección anticorrosiva no debe transferir su problema al medio ambiente. Cada producto GreenVCI está diseñado con el final en mente: qué pasa cuando el cliente termina de usarlo.</p>
+    <h1 data-i18n-html="eco.hero.title">Proteger el metal sin <em>herir</em> el planeta.</h1>
+    <p class="eco-hero__lede" data-i18n="eco.hero.lede">Creemos que la protección anticorrosiva no debe transferir su problema al medio ambiente. Cada producto GreenVCI está diseñado con el final en mente: qué pasa cuando el cliente termina de usarlo.</p>
     <div class="eco-hero__metrics">
       <div class="eco-metric"><div class="eco-metric__v">99%</div><div class="eco-metric__l" data-i18n="eco.hero.m1.label">Biodegradabilidad certificada KS ISO 7827</div></div>
       <div class="eco-metric"><div class="eco-metric__v">0%</div><div class="eco-metric__l" data-i18n="eco.hero.m2.label">Nitritos · Aminas · Metales pesados</div></div>
@@ -136,10 +136,10 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
         </div>
         <div class="eyebrow" data-i18n="eco.p1.eyebrow">Pilar 01</div>
-        <h2 class="pilar__title">Re&shy;<em>utilizable</em></h2>
-        <p class="pilar__desc">Dispositivos VCI de usos múltiples diseñados para ciclos de protección repetidos. Los productos son recolectados, inspeccionados y reutilizados, reduciendo residuos y costos de ciclo de vida, mientras apoyan prácticas de fabricación circular.</p>
+        <h2 class="pilar__title" data-i18n-html="eco.p1.title.html">Re&shy;<em>utilizable</em></h2>
+        <p class="pilar__desc" data-i18n="eco.p1.desc">Dispositivos VCI de usos múltiples diseñados para ciclos de protección repetidos. Los productos son recolectados, inspeccionados y reutilizados, reduciendo residuos y costos de ciclo de vida, mientras apoyan prácticas de fabricación circular.</p>
         <div class="pilar__detail">
-          <p><strong>Cómo funciona:</strong> Los emisores VCI y desecantes pueden ser recargados o redistribuidos al finalizar su primer ciclo de protección. La tecnología de emisión controlada asegura que el producto mantenga su eficacia en cada ciclo.</p>
+          <p data-i18n-html="eco.p1.how.full"><strong>Cómo funciona:</strong> Los emisores VCI y desecantes pueden ser recargados o redistribuidos al finalizar su primer ciclo de protección. La tecnología de emisión controlada asegura que el producto mantenga su eficacia en cada ciclo.</p>
         </div>
       </div>
     </div>
@@ -153,10 +153,10 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"/></svg>
         </div>
         <div class="eyebrow" data-i18n="eco.p2.eyebrow">Pilar 02</div>
-        <h2 class="pilar__title">Re&shy;<em>ciclable</em></h2>
-        <p class="pilar__desc">Films y materiales de empaque integrados en sistemas de ciclo cerrado donde los materiales usados pasan por reciclaje mecánico para conversión de materia prima, reduciendo residuos plásticos y ayudando a los clientes a cumplir sus metas de cumplimiento.</p>
+        <h2 class="pilar__title" data-i18n-html="eco.p2.title.html">Re&shy;<em>ciclable</em></h2>
+        <p class="pilar__desc" data-i18n="eco.p2.desc">Films y materiales de empaque integrados en sistemas de ciclo cerrado donde los materiales usados pasan por reciclaje mecánico para conversión de materia prima, reduciendo residuos plásticos y ayudando a los clientes a cumplir sus metas de cumplimiento.</p>
         <div class="pilar__detail">
-          <p><strong>Estándar de reciclaje:</strong> Nuestros films LDPE/LLDPE son compatibles con corrientes de reciclaje post-industrial existentes. Los materiales PE se reintroducen en la cadena de suministro sin pérdida significativa de propiedades.</p>
+          <p data-i18n-html="eco.p2.how.full"><strong>Estándar de reciclaje:</strong> Nuestros films LDPE/LLDPE son compatibles con corrientes de reciclaje post-industrial existentes. Los materiales PE se reintroducen en la cadena de suministro sin pérdida significativa de propiedades.</p>
         </div>
       </div>
     </div>
@@ -170,10 +170,10 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </div>
         <div class="eyebrow" data-i18n="eco.p3.eyebrow">Pilar 03</div>
-        <h2 class="pilar__title">Bio&shy;<em>degradable</em></h2>
-        <p class="pilar__desc">Formulaciones de base vegetal y aptas para alimentos que se descomponen naturalmente. Los productos demuestran altas tasas de biodegradación según estándares internacionales de prueba mientras mantienen una defensa efectiva contra la corrosión en fase vapor.</p>
+        <h2 class="pilar__title" data-i18n-html="eco.p3.title.html">Bio&shy;<em>degradable</em></h2>
+        <p class="pilar__desc" data-i18n="eco.p3.desc">Formulaciones de base vegetal y aptas para alimentos que se descomponen naturalmente. Los productos demuestran altas tasas de biodegradación según estándares internacionales de prueba mientras mantienen una defensa efectiva contra la corrosión en fase vapor.</p>
         <div class="pilar__detail">
-          <p><strong>Certificación:</strong> Línea GVPR700 y series biodegradables certificadas bajo KS I ISO 7827 con >99% de biodegradación en 28 días. Formulaciones sin nitritos, sin aminas secundarias, sin cromatos.</p>
+          <p data-i18n-html="eco.p3.how.full"><strong>Certificación:</strong> Línea GVPR700 y series biodegradables certificadas bajo KS I ISO 7827 con >99% de biodegradación en 28 días. Formulaciones sin nitritos, sin aminas secundarias, sin cromatos.</p>
         </div>
       </div>
     </div>
@@ -185,7 +185,7 @@
 <section class="esg-data">
   <div class="container">
     <div class="eyebrow eyebrow--dark reveal" data-i18n="eco.esg.eyebrow">Impacto ambiental medido</div>
-    <h2 class="display-lg reveal" style="color:#FFF; margin-top:20px">Cada dato está <span class="serif-accent">certificado.</span></h2>
+    <h2 class="display-lg reveal" style="color:#FFF; margin-top:20px" data-i18n-html="eco.esg.title">Cada dato está <span class="serif-accent">certificado.</span></h2>
     <div class="esg-grid">
       <div class="esg-item reveal"><div class="esg-item__v">99%</div><div class="esg-item__l" data-i18n="eco.esg.m1.label">Biodegradabilidad en 28 días (KS I ISO 7827)</div></div>
       <div class="esg-item reveal reveal--d1"><div class="esg-item__v">0</div><div class="esg-item__l" data-i18n="eco.esg.m2.label">Metales pesados, nitritos o aminas en formulaciones</div></div>
@@ -198,8 +198,8 @@
 <!-- CERTIFICACIONES -->
 <section class="certificaciones-eco">
   <div class="container">
-    <div class="eyebrow reveal">Estándares y certificaciones</div>
-    <h2 class="display-lg reveal" style="margin-top:20px">Validado por los <span class="serif-accent">más exigentes</span>.</h2>
+    <div class="eyebrow reveal" data-i18n="eco.certs.eyebrow">Estándares y certificaciones</div>
+    <h2 class="display-lg reveal" style="margin-top:20px" data-i18n-html="eco.certs.title">Validado por los <span class="serif-accent">más exigentes</span>.</h2>
     <div class="cert-grid">
       <div class="cert-card reveal">
         <div class="cert-card__badge">RoHS</div>
@@ -235,7 +235,7 @@
       </div>
     </div>
     <div style="text-align:center; margin-top:48px">
-      <a href="certificaciones.html" class="btn btn--primary" data-i18n="eco.cert.cta">Ver todas las certificaciones <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="certificaciones.html" class="btn btn--primary"><span data-i18n="eco.cert.cta">Ver todas las certificaciones</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
@@ -244,10 +244,10 @@
 <section class="eco-cta">
   <div class="container">
     <div class="eyebrow" style="justify-content:center" data-i18n="eco.cta.eyebrow">Únete al movimiento</div>
-    <h2 style="margin-top:20px">Protege <em>más, impactas menos.</em></h2>
-    <p>Descubre cómo nuestra línea de productos puede reducir la huella ambiental de tu proceso sin sacrificar ni un milímetro de protección.</p>
+    <h2 style="margin-top:20px" data-i18n-html="eco.cta.title">Protege <em>más, impactas menos.</em></h2>
+    <p data-i18n="eco.cta.desc">Descubre cómo nuestra línea de productos puede reducir la huella ambiental de tu proceso sin sacrificar ni un milímetro de protección.</p>
     <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap">
-      <a href="contacto.html" class="btn btn--primary" data-i18n="eco.cta.btn1">Solicitar asesoría <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="contacto.html" class="btn btn--primary"><span data-i18n="eco.cta.btn1">Solicitar asesoría</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
       <a href="productos/vci-papel.html" class="btn btn--ghost-light" data-i18n="eco.cta.btn2">Ver línea biodegradable</a>
     </div>
   </div>
@@ -261,11 +261,11 @@
         <a href="index.html" class="nav__logo" style="color:#FFF"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a>
         <p data-i18n="footer.brand.lede">Líderes globales en tecnología VCI sostenible desde 1994.</p>
       </div>
-      <div class="footer__col"><h5 data-i18n="footer.col.products">Productos</h5><a href="productos/vci-film.html">VCI Film</a><a href="productos/vci-polvo.html">VCI Polvo</a><a href="productos/vci-masterbatch.html">VCI Masterbatch</a><a href="productos/vci-emisor.html">VCI Emisor</a><a href="productos/vci-liquido.html">VCI Líquido</a><a href="productos/vci-papel.html">VCI Papel</a></div>
+      <div class="footer__col"><h5 data-i18n="footer.col.products">Productos</h5><a href="productos/vci-film.html" data-i18n="nav.dd.film">VCI Film</a><a href="productos/vci-polvo.html" data-i18n="nav.dd.polvo">VCI Polvo</a><a href="productos/vci-masterbatch.html" data-i18n="nav.dd.masterbatch">VCI Masterbatch</a><a href="productos/vci-emisor.html" data-i18n="nav.dd.emisor">VCI Emisor</a><a href="productos/vci-liquido.html" data-i18n="nav.dd.liquido">VCI Líquido</a><a href="productos/vci-papel.html" data-i18n="nav.dd.papel">VCI Papel</a></div>
       <div class="footer__col"><h5 data-i18n="footer.col.company">Empresa</h5><a href="nosotros.html" data-i18n="footer.about">Nosotros</a><a href="certificaciones.html" data-i18n="footer.certs">Certificaciones</a><a href="noticias.html" data-i18n="footer.news">Noticias</a><a href="carreras.html" data-i18n="footer.careers">Carreras</a><a href="distribuidores.html" data-i18n="footer.distributors">Distribuidores</a></div>
       <div class="footer__col"><h5 data-i18n="footer.col.support">Soporte</h5><a href="contacto.html" data-i18n="footer.contact">Contacto</a><a href="fichas-tecnicas.html" data-i18n="footer.datasheets">Fichas Técnicas</a><a href="faq.html" data-i18n="footer.faq">FAQ</a><a href="recursos.html" data-i18n="footer.resources">Recursos</a></div>
     </div>
-    <div class="footer__bottom"><div>© 2026 GreenVCI R&amp;D Co., Ltd. · Hwaseong-si, Gyeonggi-do, República de Corea</div></div>
+    <div class="footer__bottom"><div data-i18n="footer.copy.address">© 2026 GreenVCI R&amp;D Co., Ltd. · Hwaseong-si, Gyeonggi-do, República de Corea</div></div>
   </div>
 </footer>
 

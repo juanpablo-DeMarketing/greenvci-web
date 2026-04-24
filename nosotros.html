@@ -72,7 +72,7 @@
     <nav class="nav__links">
       <a href="nosotros.html" class="nav__link" data-i18n="nav.about">Nosotros</a>
       <div class="nav__dropdown">
-        <button class="nav__dropdown-toggle" data-i18n="nav.products">Productos <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <button class="nav__dropdown-toggle"><span data-i18n="nav.products">Productos</span> <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="nav__dropdown-menu">
           <a href="productos/vci-film.html" class="nav__dropdown-item" data-i18n="nav.dd.film">VCI Film</a>
           <a href="productos/vci-polvo.html" class="nav__dropdown-item" data-i18n="nav.dd.polvo">VCI Polvo</a>
@@ -87,10 +87,10 @@
       </div>
       <a href="servicios.html" class="nav__link" data-i18n="nav.services">Servicios</a>
       <div class="nav__dropdown">
-        <button class="nav__dropdown-toggle" data-i18n="nav.resources">Recursos <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <button class="nav__dropdown-toggle"><span data-i18n="nav.resources">Recursos</span> <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="nav__dropdown-menu">
-          <a href="recursos.html#consejos" class="nav__dropdown-item">Consejos Rápidos</a>
-          <a href="recursos.html#archivo" class="nav__dropdown-item">Archivo</a>
+          <a href="recursos.html#consejos" class="nav__dropdown-item" data-i18n="nav.dd.tips">Consejos Rápidos</a>
+          <a href="recursos.html#archivo" class="nav__dropdown-item" data-i18n="nav.dd.archive">Archivo</a>
           <a href="recursos.html#casos" class="nav__dropdown-item" data-i18n="nav.dd.cases">Casos de Estudio</a>
           <a href="fichas-tecnicas.html" class="nav__dropdown-item" data-i18n="nav.dd.fichas">Fichas Técnicas</a>
         </div>
@@ -98,7 +98,7 @@
     </nav>
     <div style="display:flex; align-items:center; gap:20px">
       <div class="nav__lang"><button class="active">ES</button><button>EN</button><button>KO</button></div>
-      <a href="contacto.html" class="nav__cta" data-i18n="nav.cta">Cotizar <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="contacto.html" class="nav__cta"><span data-i18n="nav.cta">Cotizar</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </header>
@@ -107,8 +107,8 @@
 <section class="about-hero">
   <div class="container about-hero__inner">
     <div class="eyebrow eyebrow--dark" data-i18n="about.hero.eyebrow">Nosotros · Desde 1994</div>
-    <h1>Tres décadas protegiendo el metal <em>sin</em> envenenar la tierra.</h1>
-    <p class="about-hero__lede">Somos químicos, ingenieros y fabricantes coreanos que llevamos treinta años haciendo una sola pregunta: ¿cómo se detiene la corrosión sin dejar un rastro tóxico detrás? GreenVCI R&amp;D es la respuesta que hemos construido lote tras lote.</p>
+    <h1 data-i18n-html="about.hero.title">Tres décadas protegiendo el metal <em>sin</em> envenenar la tierra.</h1>
+    <p class="about-hero__lede" data-i18n="about.hero.lede">Somos químicos, ingenieros y fabricantes coreanos que llevamos treinta años haciendo una sola pregunta: ¿cómo se detiene la corrosión sin dejar un rastro tóxico detrás? GreenVCI R&amp;D es la respuesta que hemos construido lote tras lote.</p>
   </div>
 </section>
 
@@ -120,9 +120,9 @@
         <div class="eyebrow" data-i18n="about.manifesto.eyebrow">Nuestra filosofía</div>
       </div>
       <div class="manifiesto__texto reveal reveal--d1">
-        <p>Creemos que la protección anticorrosiva no debe transferir su problema a otra parte del planeta.</p>
-        <p>Por eso diseñamos cada producto con <strong>el final en mente</strong> — qué pasa cuando el cliente termina de usarlo, adónde va el empaque, qué queda en el suelo.</p>
-        <p>No vendemos un químico. Vendemos una decisión que el ingeniero de empaque toma cada día: proteger activos <strong>sin herir lo que viene después.</strong></p>
+        <p data-i18n="about.manifesto.p1">Creemos que la protección anticorrosiva no debe transferir su problema a otra parte del planeta.</p>
+        <p data-i18n-html="about.manifesto.p2">Por eso diseñamos cada producto con <strong>el final en mente</strong> — qué pasa cuando el cliente termina de usarlo, adónde va el empaque, qué queda en el suelo.</p>
+        <p data-i18n-html="about.manifesto.p3">No vendemos un químico. Vendemos una decisión que el ingeniero de empaque toma cada día: proteger activos <strong>sin herir lo que viene después.</strong></p>
       </div>
     </div>
   </div>
@@ -133,7 +133,7 @@
   <div class="container">
     <div class="timeline__header reveal">
       <div class="eyebrow" data-i18n="about.timeline.eyebrow">Nuestra historia</div>
-      <h2 class="display-lg" style="margin-top:20px">Treinta años<br>en <span class="serif-accent">seis hitos.</span></h2>
+      <h2 class="display-lg" style="margin-top:20px" data-i18n-html="about.timeline.title">Treinta años<br>en <span class="serif-accent">seis hitos.</span></h2>
     </div>
     <div class="timeline__list">
       <div class="hito reveal">
@@ -141,7 +141,7 @@
         <div class="hito__body">
           <span class="hito__tag" data-i18n="about.hito1.tag">Fundación</span>
           <h3 data-i18n="about.hito1.title">Eundong Industries abre en Incheon</h3>
-          <p>Un equipo de seis químicos se propone desarrollar inhibidores de corrosión alternativos a los aceites y recubrimientos con metales pesados que dominaban la industria coreana del acero y la automotriz.</p>
+          <p data-i18n="about.hito1.desc">Un equipo de seis químicos se propone desarrollar inhibidores de corrosión alternativos a los aceites y recubrimientos con metales pesados que dominaban la industria coreana del acero y la automotriz.</p>
         </div>
       </div>
       <div class="hito reveal">
@@ -149,7 +149,7 @@
         <div class="hito__body">
           <span class="hito__tag" data-i18n="about.hito2.tag">Primer producto</span>
           <h3 data-i18n="about.hito2.title">Primera generación de VCI Film</h3>
-          <p>Lanzamos nuestra primera película VCI comercial. Hyundai Motor la adopta para proteger piezas de exportación a Estados Unidos — pasamos de laboratorio a producción en serie en 18 meses.</p>
+          <p data-i18n="about.hito2.desc">Lanzamos nuestra primera película VCI comercial. Hyundai Motor la adopta para proteger piezas de exportación a Estados Unidos — pasamos de laboratorio a producción en serie en 18 meses.</p>
         </div>
       </div>
       <div class="hito reveal">
@@ -157,7 +157,7 @@
         <div class="hito__body">
           <span class="hito__tag" data-i18n="about.hito3.tag">Expansión global</span>
           <h3 data-i18n="about.hito3.title">Primeros distribuidores en Europa y Medio Oriente</h3>
-          <p>BMW, Daimler y Saudi Aramco incorporan VCI en sus cadenas logísticas. Abrimos segunda planta en Incheon dedicada a masterbatch y film técnico.</p>
+          <p data-i18n="about.hito3.desc">BMW, Daimler y Saudi Aramco incorporan VCI en sus cadenas logísticas. Abrimos segunda planta en Incheon dedicada a masterbatch y film técnico.</p>
         </div>
       </div>
       <div class="hito reveal">
@@ -165,7 +165,7 @@
         <div class="hito__body">
           <span class="hito__tag" data-i18n="about.hito4.tag">Reinvención</span>
           <h3 data-i18n="about.hito4.title">Nace GreenVCI R&amp;D</h3>
-          <p>Rebautizamos la empresa bajo el principio de economía circular. Eliminamos nitritos, cromatos y metales pesados de todas las formulaciones. Obtenemos certificación RoHS total e ISO 14001.</p>
+          <p data-i18n="about.hito4.desc">Rebautizamos la empresa bajo el principio de economía circular. Eliminamos nitritos, cromatos y metales pesados de todas las formulaciones. Obtenemos certificación RoHS total e ISO 14001.</p>
         </div>
       </div>
       <div class="hito reveal">
@@ -173,7 +173,7 @@
         <div class="hito__body">
           <span class="hito__tag" data-i18n="about.hito5.tag">Tecnología</span>
           <h3 data-i18n="about.hito5.title">Tercera generación VCI — biodegradable</h3>
-          <p>Desarrollamos la primera línea VCI 100% biodegradable del mercado — se descompone en menos de 12 meses sin dejar residuos persistentes. Patente registrada en Corea, Estados Unidos y Unión Europea.</p>
+          <p data-i18n="about.hito5.desc">Desarrollamos la primera línea VCI 100% biodegradable del mercado — se descompone en menos de 12 meses sin dejar residuos persistentes. Patente registrada en Corea, Estados Unidos y Unión Europea.</p>
         </div>
       </div>
       <div class="hito reveal">
@@ -181,7 +181,7 @@
         <div class="hito__body">
           <span class="hito__tag" data-i18n="about.hito6.tag">Hoy</span>
           <h3 data-i18n="about.hito6.title">50+ países, 500+ socios industriales</h3>
-          <p>Operamos con distribuidores oficiales en toda América, Europa, Asia y Oceanía. Protegemos desde semiconductores hasta plataformas offshore — con la misma obsesión por cerrar el ciclo.</p>
+          <p data-i18n="about.hito6.desc">Operamos con distribuidores oficiales en toda América, Europa, Asia y Oceanía. Protegemos desde semiconductores hasta plataformas offshore — con la misma obsesión por cerrar el ciclo.</p>
         </div>
       </div>
     </div>
@@ -193,7 +193,7 @@
   <div class="container">
     <div class="valores__header reveal">
       <div class="eyebrow" data-i18n="about.values.eyebrow">Principios operativos</div>
-      <h2 class="display-lg" style="margin-top:20px">Cómo tomamos<br><span class="serif-accent">decisiones</span>.</h2>
+      <h2 class="display-lg" style="margin-top:20px" data-i18n-html="about.values.title">Cómo tomamos<br><span class="serif-accent">decisiones</span>.</h2>
     </div>
     <div class="valores__grid">
       <div class="valor reveal">
@@ -219,7 +219,7 @@
 <section class="numeros">
   <div class="container">
     <div class="eyebrow eyebrow--dark" style="margin-bottom:40px" data-i18n="about.numbers.eyebrow">Escala actual</div>
-    <h2 class="display-lg" style="color:#FFF; margin-bottom:80px; max-width:900px">Lo que hacemos<br><span class="serif-accent">cada día.</span></h2>
+    <h2 class="display-lg" style="color:#FFF; margin-bottom:80px; max-width:900px" data-i18n-html="about.numbers.title">Lo que hacemos<br><span class="serif-accent">cada día.</span></h2>
     <div class="numeros__grid">
       <div class="numero"><div class="numero__v"><span data-count="30" data-suffix="+">0</span></div><div class="numero__l" data-i18n="about.n1.label">Años de I+D continua en Corea del Sur</div></div>
       <div class="numero"><div class="numero__v"><span data-count="50" data-suffix="+">0</span></div><div class="numero__l" data-i18n="about.n2.label">Países con distribuidor oficial</div></div>
@@ -228,7 +228,7 @@
       <div class="numero"><div class="numero__v"><span data-count="120" data-suffix="+">0</span></div><div class="numero__l" data-i18n="about.n5.label">Referencias en catálogo</div></div>
       <div class="numero"><div class="numero__v"><span data-count="99.7" data-suffix="%">0</span></div><div class="numero__l" data-i18n="about.n6.label">Tasa de protección validada</div></div>
       <div class="numero"><div class="numero__v">0</div><div class="numero__l" data-i18n="about.n7.label">Metales pesados · nitritos · cromatos</div></div>
-      <div class="numero"><div class="numero__v">RoHS</div><div class="numero__l">ISO 9001 · ISO 14001 · REACH</div></div>
+      <div class="numero"><div class="numero__v">RoHS</div><div class="numero__l" data-i18n="about.n8.label">ISO 9001 · ISO 14001 · REACH</div></div>
     </div>
   </div>
 </section>
@@ -237,10 +237,10 @@
 <section class="cta-final-nos">
   <div class="container">
     <div class="eyebrow" style="justify-content:center" data-i18n="about.cta.eyebrow">Siguiente paso</div>
-    <h2 style="margin-top:20px">Construyamos<br><em>algo juntos.</em></h2>
-    <p>Si lideras un área de empaque, logística o calidad, nos gustaría conocer tu proceso. Primera conversación técnica sin compromiso.</p>
+    <h2 style="margin-top:20px" data-i18n-html="about.cta.title">Construyamos<br><em>algo juntos.</em></h2>
+    <p data-i18n="about.cta.desc">Si lideras un área de empaque, logística o calidad, nos gustaría conocer tu proceso. Primera conversación técnica sin compromiso.</p>
     <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap">
-      <a href="index.html#contacto" class="btn btn--primary" data-i18n="about.cta.btn1">Hablar con un ingeniero
+      <a href="index.html#contacto" class="btn btn--primary"><span data-i18n="about.cta.btn1">Hablar con un ingeniero</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
       <a href="index.html#productos" class="btn btn--ghost-light" data-i18n="about.cta.btn2">Ver productos</a>
@@ -256,7 +256,7 @@
         <a href="index.html" class="nav__logo" style="color:#FFF"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a>
         <p data-i18n="footer.brand.lede">Líderes globales en tecnología VCI sostenible desde 1994.</p>
       </div>
-      <div class="footer__col"><h5 data-i18n="footer.col.products">Productos</h5><a href="productos/vci-film.html">VCI Film</a><a href="productos/vci-polvo.html">VCI Polvo</a><a href="productos/vci-masterbatch.html">VCI Masterbatch</a><a href="productos/vci-emisor.html">VCI Emisor</a><a href="productos/vci-liquido.html">VCI Líquido</a><a href="productos/vci-papel.html">VCI Papel</a></div>
+      <div class="footer__col"><h5 data-i18n="footer.col.products">Productos</h5><a href="productos/vci-film.html" data-i18n="nav.dd.film">VCI Film</a><a href="productos/vci-polvo.html" data-i18n="nav.dd.polvo">VCI Polvo</a><a href="productos/vci-masterbatch.html" data-i18n="nav.dd.masterbatch">VCI Masterbatch</a><a href="productos/vci-emisor.html" data-i18n="nav.dd.emisor">VCI Emisor</a><a href="productos/vci-liquido.html" data-i18n="nav.dd.liquido">VCI Líquido</a><a href="productos/vci-papel.html" data-i18n="nav.dd.papel">VCI Papel</a></div>
       <div class="footer__col"><h5 data-i18n="footer.col.company">Empresa</h5><a href="nosotros.html" data-i18n="footer.about">Nosotros</a><a href="certificaciones.html" data-i18n="footer.certs">Certificaciones</a><a href="noticias.html" data-i18n="footer.news">Noticias</a><a href="carreras.html" data-i18n="footer.careers">Carreras</a><a href="distribuidores.html" data-i18n="footer.distributors">Distribuidores</a></div>
       <div class="footer__col"><h5 data-i18n="footer.col.support">Soporte</h5><a href="contacto.html" data-i18n="footer.contact">Contacto</a><a href="fichas-tecnicas.html" data-i18n="footer.datasheets">Fichas Técnicas</a><a href="faq.html" data-i18n="footer.faq">FAQ</a><a href="recursos.html" data-i18n="footer.resources">Recursos</a></div>
     </div>

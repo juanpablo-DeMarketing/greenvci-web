@@ -50,7 +50,7 @@
 </style>
 </head>
 <body>
-<header class="nav" id="nav">
+<header class="nav nav--over-dark" id="nav">
   <div class="container nav__inner">
     <a href="../index.html" class="nav__logo"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a>
     <nav class="nav__links">
@@ -73,8 +73,8 @@
       <div class="nav__dropdown">
         <button class="nav__dropdown-toggle" data-i18n="nav.resources">Recursos <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="nav__dropdown-menu">
-          <a href="../recursos.html#consejos" class="nav__dropdown-item">Consejos Rápidos</a>
-          <a href="../recursos.html#archivo" class="nav__dropdown-item">Archivo</a>
+          <a href="../recursos.html#consejos" class="nav__dropdown-item" data-i18n="nav.dd.tips">Consejos Rápidos</a>
+          <a href="../recursos.html#archivo" class="nav__dropdown-item" data-i18n="nav.dd.archive">Archivo</a>
           <a href="../recursos.html#casos" class="nav__dropdown-item" data-i18n="nav.dd.cases">Casos de Estudio</a>
           <a href="../fichas-tecnicas.html" class="nav__dropdown-item" data-i18n="nav.dd.fichas">Fichas Técnicas</a>
         </div>
@@ -82,54 +82,54 @@
     </nav>
     <div style="display:flex;align-items:center;gap:20px">
       <div class="nav__lang"><button class="active">ES</button><button>EN</button><button>KO</button></div>
-      <a href="../contacto.html" class="nav__cta">Cotizar <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="../contacto.html" class="nav__cta"><span data-i18n="nav.cta">Cotizar</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </header>
 
 <section class="prod-hero">
-  <div class="prod-hero__bg"><img src="../images/vci-powder-anticorrosion.jpg" alt="VCI Polvo"><div class="prod-hero__grad"></div></div>
+  <div class="prod-hero__bg"><img src="../images/producto-vci-polvo.jpg" alt="VCI Polvo"><div class="prod-hero__grad"></div></div>
   <div class="container prod-hero__inner">
     <div class="prod-hero__grid">
       <div>
-        <div class="eyebrow eyebrow--dark">Producto · GreenVCI</div>
-        <h1 class="prod-hero__title">VCI <em>Polvo</em></h1>
-        <p class="prod-hero__lede">Inhibidor de corrosión en polvo de acción prolongada para metales ferrosos y no ferrosos. Crea una barrera molecular que previene la oxidación hasta 24 meses en espacios sellados.</p>
+        <div class="eyebrow eyebrow--dark" data-i18n="prod.common.eyebrow">Producto · GreenVCI</div>
+        <h1 class="prod-hero__title" data-i18n-html="prod.polvo.hero.title">VCI <em>Polvo</em></h1>
+        <p class="prod-hero__lede" data-i18n="prod.polvo.hero.lede">Inhibidor de corrosión en polvo de acción prolongada para metales ferrosos y no ferrosos. Crea una barrera molecular que previene la oxidación hasta 24 meses en espacios sellados.</p>
         <div class="prod-hero__specs">
-          <div class="prod-spec"><div class="prod-spec__l">Duración</div><div class="prod-spec__v">Hasta 24 meses</div></div>
-          <div class="prod-spec"><div class="prod-spec__l">Dosis estándar</div><div class="prod-spec__v">100–200 g/m³</div></div>
-          <div class="prod-spec"><div class="prod-spec__l">Nitritos</div><div class="prod-spec__v">0%</div></div>
-          <div class="prod-spec"><div class="prod-spec__l">Biodegradable</div><div class="prod-spec__v">Disponible</div></div>
+          <div class="prod-spec"><div class="prod-spec__l" data-i18n="prod.common.spec.duration">Duración</div><div class="prod-spec__v" data-i18n="prod.film.spec1.val">Hasta 24 meses</div></div>
+          <div class="prod-spec"><div class="prod-spec__l" data-i18n="prod.polvo.spec.dose">Dosis estándar</div><div class="prod-spec__v">100–200 g/m³</div></div>
+          <div class="prod-spec"><div class="prod-spec__l" data-i18n="prod.common.spec.nitrites">Nitritos</div><div class="prod-spec__v">0%</div></div>
+          <div class="prod-spec"><div class="prod-spec__l" data-i18n="prod.common.spec.biodeg">Biodegradable</div><div class="prod-spec__v" data-i18n="prod.common.spec.available">Disponible</div></div>
         </div>
         <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap">
-          <a href="../contacto.html" class="btn btn--ghost-dark">Solicitar muestra <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-          <a href="../fichas-tecnicas.html" class="btn" style="background:rgba(255,255,255,0.08);color:#FFF;border:1px solid rgba(255,255,255,0.2);">Ficha técnica</a>
+          <a href="../contacto.html" class="btn btn--ghost-dark"><span data-i18n="section.sample">Solicitar muestra</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+          <a href="../fichas-tecnicas.html" class="btn" style="background:rgba(255,255,255,0.08);color:#FFF;border:1px solid rgba(255,255,255,0.2);" data-i18n="section.datasheet">Ficha técnica</a>
         </div>
       </div>
-      <div class="prod-hero__img"><img src="../images/vci-powder-anticorrosion.jpg" alt="VCI Polvo anticorrosivo"></div>
+      <div class="prod-hero__img"><img src="../images/producto-vci-polvo.jpg" alt="VCI Polvo anticorrosivo"></div>
     </div>
   </div>
 </section>
 
 <section class="prod-section">
   <div class="container">
-    <div class="eyebrow reveal">¿Por qué VCI Polvo?</div>
-    <h2 class="reveal">Características <span class="serif-accent">clave.</span></h2>
+    <div class="eyebrow reveal" data-i18n="prod.polvo.benefits.eyebrow">¿Por qué VCI Polvo?</div>
+    <h2 class="reveal" data-i18n-html="prod.common.benefits.title">Características <span class="serif-accent">clave.</span></h2>
     <div class="beneficios-grid">
       <div class="beneficio reveal">
         <div class="beneficio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg></div>
-        <h3>Formato versátil</h3>
-        <p>Disponible en sachets, granulos sueltos, micro-polvo para fogging y tabletas de difusión. Se adapta a cualquier método de aplicación industrial.</p>
+        <h3 data-i18n="prod.polvo.b1.title">Formato versátil</h3>
+        <p data-i18n="prod.polvo.b1.desc">Disponible en sachets, granulos sueltos, micro-polvo para fogging y tabletas de difusión. Se adapta a cualquier método de aplicación industrial.</p>
       </div>
       <div class="beneficio reveal reveal--d1">
         <div class="beneficio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.25 6.375c0 8.284-7.605 15-16.875 15-.622 0-1.24-.034-1.846-.1C3.4 20.69 4.5 19.935 5.35 19h.008c.498 0 .987-.046 1.468-.136a11.98 11.98 0 003.56-1.433 5.25 5.25 0 01-4.233-4.514 5.22 5.22 0 002.022.217 5.25 5.25 0 01-4.202-5.15 5.251 5.251 0 002.37.644A5.25 5.25 0 016.36 4.5a14.975 14.975 0 0010.877 5.523 5.25 5.25 0 018.926-4.786 10.49 10.49 0 003.324-1.273 5.267 5.267 0 01-2.305 2.897A10.481 10.481 0 0021 6.816a10.476 10.476 0 01-2.627 2.71.5.5 0 01-.188.108A14.91 14.91 0 0020.25 12c0 8.284-7.605 15-16.875 15"/></svg></div>
-        <h3>Hidro-testing</h3>
-        <p>GVP100-B es la solución estándar para pruebas hidrostáticas en tubería y recipientes a presión. Concentración: 0.2–2% en agua.</p>
+        <h3 data-i18n="prod.polvo.b2.title">Hidro-testing</h3>
+        <p data-i18n="prod.polvo.b2.desc">GVP100-B es la solución estándar para pruebas hidrostáticas en tubería y recipientes a presión. Concentración: 0.2–2% en agua.</p>
       </div>
       <div class="beneficio reveal reveal--d2">
         <div class="beneficio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg></div>
-        <h3>Certificación NACE</h3>
-        <p>Certificación NACE TM0208-2018 VIA y MIL-I-22110C compatibilidad con cobre. Cumple los estándares más exigentes del sector.</p>
+        <h3 data-i18n="prod.polvo.b3.title">Certificación NACE</h3>
+        <p data-i18n="prod.polvo.b3.desc">Certificación NACE TM0208-2018 VIA y MIL-I-22110C compatibilidad con cobre. Cumple los estándares más exigentes del sector.</p>
       </div>
     </div>
   </div>
@@ -137,20 +137,20 @@
 
 <section class="prod-section prod-section-alt">
   <div class="container">
-    <div class="eyebrow reveal">Línea de producto</div>
-    <h2 class="reveal">Modelos <span class="serif-accent">disponibles.</span></h2>
+    <div class="eyebrow reveal" data-i18n="prod.common.models.eyebrow">Línea de producto</div>
+    <h2 class="reveal" data-i18n-html="prod.common.models.title">Modelos <span class="serif-accent">disponibles.</span></h2>
     <div style="overflow-x:auto">
       <table class="tabla-modelos reveal">
-        <thead><tr><th>Modelo</th><th>Metales</th><th>Aplicación</th><th>Soluble en agua</th></tr></thead>
+        <thead><tr><th data-i18n="prod.common.col.model">Modelo</th><th data-i18n="prod.common.col.metals">Metales</th><th data-i18n="prod.common.col.application">Aplicación</th><th data-i18n="prod.polvo.col.waterSoluble">Soluble en agua</th></tr></thead>
         <tbody>
-          <tr><td>GVP100</td><td>Multi-metal</td><td>Uso general</td><td>Sí</td></tr>
-          <tr><td>GVP100-B</td><td>Multi-metal</td><td>Prueba hidrostática</td><td>Sí</td></tr>
-          <tr><td>GVP110</td><td>Multi-metal</td><td>Almacenamiento prolongado</td><td>No</td></tr>
-          <tr><td>GVP120</td><td>Multi-metal</td><td>Uso general</td><td>No</td></tr>
-          <tr><td>GVP200</td><td>Solo ferrosos</td><td>Spray / sachets</td><td>Sí</td></tr>
-          <tr><td>GVP300</td><td>Multi-metal</td><td>Calderas y tuberías</td><td>Sí</td></tr>
-          <tr><td>GVP500</td><td>Multi-metal</td><td>Uso general</td><td>Sí</td></tr>
-          <tr><td>GVP700</td><td>Multi-metal</td><td>Tableta difusora (10–20L)</td><td>No</td></tr>
+          <tr><td>GVP100</td><td data-i18n="prod.common.multi_metal">Multi-metal</td><td data-i18n="prod.polvo.m1.app">Uso general</td><td data-i18n="prod.common.yes">Sí</td></tr>
+          <tr><td>GVP100-B</td><td data-i18n="prod.common.multi_metal">Multi-metal</td><td data-i18n="prod.polvo.m2.app">Prueba hidrostática</td><td data-i18n="prod.common.yes">Sí</td></tr>
+          <tr><td>GVP110</td><td data-i18n="prod.common.multi_metal">Multi-metal</td><td data-i18n="prod.polvo.m3.app">Almacenamiento prolongado</td><td data-i18n="prod.common.no">No</td></tr>
+          <tr><td>GVP120</td><td data-i18n="prod.common.multi_metal">Multi-metal</td><td data-i18n="prod.polvo.m4.app">Uso general</td><td data-i18n="prod.common.no">No</td></tr>
+          <tr><td>GVP200</td><td data-i18n="prod.common.ferrous_only">Solo ferrosos</td><td data-i18n="prod.polvo.m5.app">Spray / sachets</td><td data-i18n="prod.common.yes">Sí</td></tr>
+          <tr><td>GVP300</td><td data-i18n="prod.common.multi_metal">Multi-metal</td><td data-i18n="prod.polvo.m6.app">Calderas y tuberías</td><td data-i18n="prod.common.yes">Sí</td></tr>
+          <tr><td>GVP500</td><td data-i18n="prod.common.multi_metal">Multi-metal</td><td data-i18n="prod.polvo.m7.app">Uso general</td><td data-i18n="prod.common.yes">Sí</td></tr>
+          <tr><td>GVP700</td><td data-i18n="prod.common.multi_metal">Multi-metal</td><td data-i18n="prod.polvo.m8.app">Tableta difusora (10–20L)</td><td data-i18n="prod.common.no">No</td></tr>
         </tbody>
       </table>
     </div>
@@ -159,15 +159,15 @@
 
 <section class="prod-section">
   <div class="container">
-    <div class="eyebrow reveal">Aplicaciones</div>
-    <h2 class="reveal">¿Dónde se <span class="serif-accent">usa?</span></h2>
+    <div class="eyebrow reveal" data-i18n="prod.common.apps.eyebrow">Aplicaciones</div>
+    <h2 class="reveal" data-i18n-html="prod.common.apps.title">¿Dónde se <span class="serif-accent">usa?</span></h2>
     <div class="aplicaciones-grid">
-      <div class="aplicacion reveal">🛢️ Mothballing de equipos industriales</div>
-      <div class="aplicacion reveal reveal--d1">🔧 Post-prueba hidrostática en tuberías</div>
-      <div class="aplicacion reveal reveal--d2">⚙️ Protección interna de motores y tanques</div>
-      <div class="aplicacion reveal">🚢 Protección durante transporte marítimo</div>
-      <div class="aplicacion reveal reveal--d1">🏭 Almacenamiento en acerías</div>
-      <div class="aplicacion reveal reveal--d2">⚡ Generadores y turbinas en stand-by</div>
+      <div class="aplicacion reveal" data-i18n="prod.polvo.app1">🛢️ Mothballing de equipos industriales</div>
+      <div class="aplicacion reveal reveal--d1" data-i18n="prod.polvo.app2">🔧 Post-prueba hidrostática en tuberías</div>
+      <div class="aplicacion reveal reveal--d2" data-i18n="prod.polvo.app3">⚙️ Protección interna de motores y tanques</div>
+      <div class="aplicacion reveal" data-i18n="prod.polvo.app4">🚢 Protección durante transporte marítimo</div>
+      <div class="aplicacion reveal reveal--d1" data-i18n="prod.polvo.app5">🏭 Almacenamiento en acerías</div>
+      <div class="aplicacion reveal reveal--d2" data-i18n="prod.polvo.app6">⚡ Generadores y turbinas en stand-by</div>
     </div>
     <div class="certs-row reveal">
       <span class="cert-badge">NACE TM0208-2018</span>
@@ -182,12 +182,12 @@
 
 <section class="prod-cta">
   <div class="container">
-    <div class="eyebrow eyebrow--dark" style="justify-content:center">Siguiente paso</div>
-    <h2 style="margin-top:20px">¿Listo para <em>cotizar?</em></h2>
-    <p>Cuéntanos el proceso, el metal y el volumen. Te recomendamos el modelo y la dosis correcta.</p>
+    <div class="eyebrow eyebrow--dark" style="justify-content:center" data-i18n="about.cta.eyebrow">Siguiente paso</div>
+    <h2 style="margin-top:20px" data-i18n-html="prod.common.cta.title">¿Listo para <em>cotizar?</em></h2>
+    <p data-i18n="prod.polvo.cta.desc">Cuéntanos el proceso, el metal y el volumen. Te recomendamos el modelo y la dosis correcta.</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <a href="../contacto.html" class="btn btn--primary">Solicitar cotización <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-      <a href="../fichas-tecnicas.html" class="btn btn--ghost-dark">Descargar ficha técnica</a>
+      <a href="../contacto.html" class="btn btn--primary"><span data-i18n="prod.common.cta.quote">Solicitar cotización</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="../fichas-tecnicas.html" class="btn btn--ghost-dark" data-i18n="prod.common.cta.download">Descargar ficha técnica</a>
     </div>
   </div>
 </section>
@@ -196,7 +196,7 @@
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand"><a href="../index.html" class="nav__logo" style="color:#FFF"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a><p data-i18n="footer.brand.lede">Líderes globales en tecnología VCI sostenible desde 1994.</p></div>
-      <div class="footer__col"><h5 data-i18n="footer.col.products">Productos</h5><a href="vci-film.html">VCI Film</a><a href="vci-polvo.html">VCI Polvo</a><a href="vci-masterbatch.html">VCI Masterbatch</a><a href="vci-emisor.html">VCI Emisor</a><a href="vci-liquido.html">VCI Líquido</a><a href="vci-papel.html">VCI Papel</a></div>
+      <div class="footer__col"><h5 data-i18n="footer.col.products">Productos</h5><a href="vci-film.html" data-i18n="nav.dd.film">VCI Film</a><a href="vci-polvo.html" data-i18n="nav.dd.polvo">VCI Polvo</a><a href="vci-masterbatch.html" data-i18n="nav.dd.masterbatch">VCI Masterbatch</a><a href="vci-emisor.html" data-i18n="nav.dd.emisor">VCI Emisor</a><a href="vci-liquido.html" data-i18n="nav.dd.liquido">VCI Líquido</a><a href="vci-papel.html" data-i18n="nav.dd.papel">VCI Papel</a></div>
       <div class="footer__col"><h5 data-i18n="footer.col.company">Empresa</h5><a href="../nosotros.html" data-i18n="footer.about">Nosotros</a><a href="../certificaciones.html" data-i18n="footer.certs">Certificaciones</a><a href="../noticias.html" data-i18n="footer.news">Noticias</a><a href="../carreras.html" data-i18n="footer.careers">Carreras</a></div>
       <div class="footer__col"><h5 data-i18n="footer.col.support">Soporte</h5><a href="../contacto.html" data-i18n="footer.contact">Contacto</a><a href="../fichas-tecnicas.html" data-i18n="footer.datasheets">Fichas Técnicas</a><a href="../faq.html" data-i18n="footer.faq">FAQ</a><a href="../recursos.html" data-i18n="footer.resources">Recursos</a></div>
     </div>

@@ -72,7 +72,7 @@
     <nav class="nav__links">
       <a href="nosotros.html" class="nav__link" data-i18n="nav.about">Nosotros</a>
       <div class="nav__dropdown">
-        <button class="nav__dropdown-toggle" data-i18n="nav.products">Productos <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <button class="nav__dropdown-toggle"><span data-i18n="nav.products">Productos</span> <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="nav__dropdown-menu">
           <a href="productos/vci-film.html" class="nav__dropdown-item" data-i18n="nav.dd.film">VCI Film</a>
           <a href="productos/vci-polvo.html" class="nav__dropdown-item" data-i18n="nav.dd.polvo">VCI Polvo</a>
@@ -87,10 +87,10 @@
       </div>
       <a href="servicios.html" class="nav__link" data-i18n="nav.services">Servicios</a>
       <div class="nav__dropdown">
-        <button class="nav__dropdown-toggle" data-i18n="nav.resources">Recursos <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <button class="nav__dropdown-toggle"><span data-i18n="nav.resources">Recursos</span> <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="nav__dropdown-menu">
-          <a href="recursos.html#consejos" class="nav__dropdown-item">Consejos Rápidos</a>
-          <a href="recursos.html#archivo" class="nav__dropdown-item">Archivo</a>
+          <a href="recursos.html#consejos" class="nav__dropdown-item" data-i18n="nav.dd.tips">Consejos Rápidos</a>
+          <a href="recursos.html#archivo" class="nav__dropdown-item" data-i18n="nav.dd.archive">Archivo</a>
           <a href="recursos.html#casos" class="nav__dropdown-item" data-i18n="nav.dd.cases">Casos de Estudio</a>
           <a href="fichas-tecnicas.html" class="nav__dropdown-item" data-i18n="nav.dd.fichas">Fichas Técnicas</a>
         </div>
@@ -98,7 +98,7 @@
     </nav>
     <div style="display:flex; align-items:center; gap:20px">
       <div class="nav__lang"><button class="active">ES</button><button>EN</button><button>KO</button></div>
-      <a href="contacto.html" class="nav__cta" data-i18n="nav.cta">Cotizar <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="contacto.html" class="nav__cta"><span data-i18n="nav.cta">Cotizar</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </header>
@@ -110,9 +110,9 @@
     <div class="rec-hero__grad"></div>
   </div>
   <div class="container rec-hero__inner">
-    <div class="eyebrow eyebrow--dark">Recursos técnicos · GreenVCI</div>
-    <h1>Conocimiento para <em>ingenieros</em>.</h1>
-    <p class="rec-hero__lede">Consejos prácticos, casos de estudio reales, archivo técnico y fichas de producto. Todo lo que necesitas para tomar decisiones informadas sobre protección anticorrosiva.</p>
+    <div class="eyebrow eyebrow--dark" data-i18n="resources.hero.eyebrow">Recursos técnicos · GreenVCI</div>
+    <h1 data-i18n-html="resources.hero.title.html">Conocimiento para <em>ingenieros</em>.</h1>
+    <p class="rec-hero__lede" data-i18n="resources.hero.lede">Consejos prácticos, casos de estudio reales, archivo técnico y fichas de producto. Todo lo que necesitas para tomar decisiones informadas sobre protección anticorrosiva.</p>
   </div>
 </section>
 
@@ -120,10 +120,10 @@
 <div class="rec-tabs">
   <div class="container">
     <div class="rec-tabs__inner">
-      <a href="#consejos" class="rec-tab active">Consejos Rápidos</a>
-      <a href="#casos" class="rec-tab">Casos de Estudio</a>
-      <a href="#archivo" class="rec-tab">Archivo</a>
-      <a href="fichas-tecnicas.html" class="rec-tab">Fichas Técnicas</a>
+      <a href="#consejos" class="rec-tab active" data-i18n="nav.dd.tips">Consejos Rápidos</a>
+      <a href="#casos" class="rec-tab" data-i18n="nav.dd.cases">Casos de Estudio</a>
+      <a href="#archivo" class="rec-tab" data-i18n="nav.dd.archive">Archivo</a>
+      <a href="fichas-tecnicas.html" class="rec-tab" data-i18n="nav.dd.fichas">Fichas Técnicas</a>
     </div>
   </div>
 </div>
@@ -131,45 +131,45 @@
 <!-- CONSEJOS RÁPIDOS -->
 <section class="rec-section" id="consejos">
   <div class="container">
-    <div class="eyebrow reveal">Quick Tips</div>
-    <h2 class="display-lg reveal" style="margin-top:20px">Consejos que <span class="serif-accent">funcionan</span>.</h2>
-    <p style="max-width:55ch; color:var(--ink-600); margin-top:16px; font-size:16px; line-height:1.7;" class="reveal">Recomendaciones prácticas de nuestro equipo técnico, basadas en 30 años de visitas a planta.</p>
+    <div class="eyebrow reveal" data-i18n="resources.tips.eyebrow">Quick Tips</div>
+    <h2 class="display-lg reveal" style="margin-top:20px" data-i18n-html="resources.tips.title">Consejos que <span class="serif-accent">funcionan</span>.</h2>
+    <p style="max-width:55ch; color:var(--ink-600); margin-top:16px; font-size:16px; line-height:1.7;" class="reveal" data-i18n="resources.tips.lede">Recomendaciones prácticas de nuestro equipo técnico, basadas en 30 años de visitas a planta.</p>
     <div class="consejos-grid">
       <div class="consejo reveal">
         <div class="consejo__num">TIP 01</div>
-        <h3 class="consejo__title">Sellado hermético: la regla de oro</h3>
-        <p class="consejo__desc">El VCI solo funciona en espacios confinados. Un sello deficiente deja escapar las moléculas inhibidoras antes de que formen la barrera molecular. Verifica siempre la integridad del sellado antes de almacenar.</p>
-        <span class="consejo__tag">Aplicación</span>
+        <h3 class="consejo__title" data-i18n="resources.tip1.title">Sellado hermético: la regla de oro</h3>
+        <p class="consejo__desc" data-i18n="resources.tip1.desc">El VCI solo funciona en espacios confinados. Un sello deficiente deja escapar las moléculas inhibidoras antes de que formen la barrera molecular. Verifica siempre la integridad del sellado antes de almacenar.</p>
+        <span class="consejo__tag" data-i18n="resources.tag.application">Aplicación</span>
       </div>
       <div class="consejo reveal reveal--d1">
         <div class="consejo__num">TIP 02</div>
-        <h3 class="consejo__title">Calcula el volumen correcto</h3>
-        <p class="consejo__desc">La cobertura estándar es 1 m³ por dispositivo emisor para espacios no ventilados. En espacios con fugas de aire o temperaturas extremas, aumenta la dosis un 25–50% para garantizar saturación.</p>
-        <span class="consejo__tag">Dosificación</span>
+        <h3 class="consejo__title" data-i18n="resources.tip2.title">Calcula el volumen correcto</h3>
+        <p class="consejo__desc" data-i18n="resources.tip2.desc">La cobertura estándar es 1 m³ por dispositivo emisor para espacios no ventilados. En espacios con fugas de aire o temperaturas extremas, aumenta la dosis un 25–50% para garantizar saturación.</p>
+        <span class="consejo__tag" data-i18n="resources.tag.dosing">Dosificación</span>
       </div>
       <div class="consejo reveal reveal--d2">
         <div class="consejo__num">TIP 03</div>
-        <h3 class="consejo__title">Temperatura afecta la emisión</h3>
-        <p class="consejo__desc">A temperaturas elevadas (+40°C), la velocidad de emisión VCI aumenta significativamente. Reduce el periodo de recambio o usa formulaciones de emisión controlada (GVE200) para climas calientes.</p>
-        <span class="consejo__tag">Clima</span>
+        <h3 class="consejo__title" data-i18n="resources.tip3.title">Temperatura afecta la emisión</h3>
+        <p class="consejo__desc" data-i18n="resources.tip3.desc">A temperaturas elevadas (+40°C), la velocidad de emisión VCI aumenta significativamente. Reduce el periodo de recambio o usa formulaciones de emisión controlada (GVE200) para climas calientes.</p>
+        <span class="consejo__tag" data-i18n="resources.tag.climate">Clima</span>
       </div>
       <div class="consejo reveal">
         <div class="consejo__num">TIP 04</div>
-        <h3 class="consejo__title">No mezcles metales sin verificar</h3>
-        <p class="consejo__desc">El VCI multi-metal protege la mayoría de las aleaciones, pero el cobre y la plata requieren formulaciones específicas. Un VCI para acero puede acelerar la corrosión galvánica en contacto con aluminio.</p>
-        <span class="consejo__tag">Selección</span>
+        <h3 class="consejo__title" data-i18n="resources.tip4.title">No mezcles metales sin verificar</h3>
+        <p class="consejo__desc" data-i18n="resources.tip4.desc">El VCI multi-metal protege la mayoría de las aleaciones, pero el cobre y la plata requieren formulaciones específicas. Un VCI para acero puede acelerar la corrosión galvánica en contacto con aluminio.</p>
+        <span class="consejo__tag" data-i18n="resources.tag.selection">Selección</span>
       </div>
       <div class="consejo reveal reveal--d1">
         <div class="consejo__num">TIP 05</div>
-        <h3 class="consejo__title">VCI Papel vs. VCI Film: ¿cuándo usar cada uno?</h3>
-        <p class="consejo__desc">El papel es ideal para piezas individuales con geometría irregular, mientras que el film sirve mejor para conjuntos grandes en empaque secundario. Combínalos para protección de doble capa en exportaciones.</p>
-        <span class="consejo__tag">Selección</span>
+        <h3 class="consejo__title" data-i18n="resources.tip5.title">VCI Papel vs. VCI Film: ¿cuándo usar cada uno?</h3>
+        <p class="consejo__desc" data-i18n="resources.tip5.desc">El papel es ideal para piezas individuales con geometría irregular, mientras que el film sirve mejor para conjuntos grandes en empaque secundario. Combínalos para protección de doble capa en exportaciones.</p>
+        <span class="consejo__tag" data-i18n="resources.tag.selection">Selección</span>
       </div>
       <div class="consejo reveal reveal--d2">
         <div class="consejo__num">TIP 06</div>
-        <h3 class="consejo__title">Prueba la eficacia con papel indicador</h3>
-        <p class="consejo__desc">Usa papel indicador de pH o tiras de cobre dentro del empaque sellado para verificar que la concentración VCI sea suficiente antes de aprobar el lote para almacenamiento o embarque.</p>
-        <span class="consejo__tag">Control de calidad</span>
+        <h3 class="consejo__title" data-i18n="resources.tip6.title">Prueba la eficacia con papel indicador</h3>
+        <p class="consejo__desc" data-i18n="resources.tip6.desc">Usa papel indicador de pH o tiras de cobre dentro del empaque sellado para verificar que la concentración VCI sea suficiente antes de aprobar el lote para almacenamiento o embarque.</p>
+        <span class="consejo__tag" data-i18n="resources.tag.qc">Control de calidad</span>
       </div>
     </div>
   </div>
@@ -178,54 +178,54 @@
 <!-- CASOS DE ESTUDIO -->
 <section class="rec-section" id="casos">
   <div class="container">
-    <div class="eyebrow reveal">Case Studies</div>
-    <h2 class="display-lg reveal" style="margin-top:20px">Resultados <span class="serif-accent">reales</span>.</h2>
+    <div class="eyebrow reveal" data-i18n="resources.cases.eyebrow">Case Studies</div>
+    <h2 class="display-lg reveal" style="margin-top:20px" data-i18n-html="resources.cases.title">Resultados <span class="serif-accent">reales</span>.</h2>
     <div class="casos-grid">
       <div class="caso reveal">
         <div class="caso__img"><img src="images/automotive-assembly-line.jpg" alt="Caso automotriz"></div>
         <div class="caso__body">
-          <div class="caso__sector">Automotriz · CKD Export</div>
-          <h3 class="caso__title">Protección de motores Hyundai en exportación a EE.UU.</h3>
-          <p class="caso__desc">Implementación de VCI Film GVF100 y VCI Polvo GVP100 en línea de empaque de motores para exportación transpacífica. Duración: 18 meses de tránsito y almacenamiento en destino.</p>
+          <div class="caso__sector" data-i18n="resources.case1.sector">Automotriz · CKD Export</div>
+          <h3 class="caso__title" data-i18n="resources.case1.title">Protección de motores Hyundai en exportación a EE.UU.</h3>
+          <p class="caso__desc" data-i18n="resources.case1.desc">Implementación de VCI Film GVF100 y VCI Polvo GVP100 en línea de empaque de motores para exportación transpacífica. Duración: 18 meses de tránsito y almacenamiento en destino.</p>
           <div class="caso__resultado">
-            <span>Resultado</span>
-            <strong>0 reclamos por corrosión en 3 años · 35% reducción de costo vs. aceite inhibidor</strong>
+            <span data-i18n="resources.result">Resultado</span>
+            <strong data-i18n="resources.case1.result">0 reclamos por corrosión en 3 años · 35% reducción de costo vs. aceite inhibidor</strong>
           </div>
         </div>
       </div>
       <div class="caso reveal reveal--d1">
         <div class="caso__img"><img src="images/oil-gas-offshore-platform.jpg" alt="Caso Oil & Gas"></div>
         <div class="caso__body">
-          <div class="caso__sector">Petróleo &amp; Gas · Saudi Aramco</div>
-          <h3 class="caso__title">Mothballing de compresores en plataforma offshore</h3>
-          <p class="caso__desc">Proyecto de conservación de compresores de gas durante parada programada de 24 meses. Uso de VCI Polvo GVP300 en sistema de tubería y GVH200 para empaque externo.</p>
+          <div class="caso__sector" data-i18n="resources.case2.sector">Petróleo &amp; Gas · Saudi Aramco</div>
+          <h3 class="caso__title" data-i18n="resources.case2.title">Mothballing de compresores en plataforma offshore</h3>
+          <p class="caso__desc" data-i18n="resources.case2.desc">Proyecto de conservación de compresores de gas durante parada programada de 24 meses. Uso de VCI Polvo GVP300 en sistema de tubería y GVH200 para empaque externo.</p>
           <div class="caso__resultado">
-            <span>Resultado</span>
-            <strong>24 meses protección sin re-tratamiento · Costo —60% vs. método anterior</strong>
+            <span data-i18n="resources.result">Resultado</span>
+            <strong data-i18n="resources.case2.result">24 meses protección sin re-tratamiento · Costo —60% vs. método anterior</strong>
           </div>
         </div>
       </div>
       <div class="caso reveal">
         <div class="caso__img"><img src="images/military-defense-equipment.jpg" alt="Caso defensa"></div>
         <div class="caso__body">
-          <div class="caso__sector">Defensa · Contratista DoD</div>
-          <h3 class="caso__title">Protección de componentes aéreos durante almacenamiento largo plazo</h3>
-          <p class="caso__desc">Sistema de protección para piezas de repuesto aeronáuticas en bodega climatizada. Combinación de GVH100 (film con shrink) y GVE200 (emisores de 24 meses) con trazabilidad MIL-SPEC.</p>
+          <div class="caso__sector" data-i18n="resources.case3.sector">Defensa · Contratista DoD</div>
+          <h3 class="caso__title" data-i18n="resources.case3.title">Protección de componentes aéreos durante almacenamiento largo plazo</h3>
+          <p class="caso__desc" data-i18n="resources.case3.desc">Sistema de protección para piezas de repuesto aeronáuticas en bodega climatizada. Combinación de GVH100 (film con shrink) y GVE200 (emisores de 24 meses) con trazabilidad MIL-SPEC.</p>
           <div class="caso__resultado">
-            <span>Resultado</span>
-            <strong>100% conformidad en auditoría DoD · Extensión del ciclo a 36 meses</strong>
+            <span data-i18n="resources.result">Resultado</span>
+            <strong data-i18n="resources.case3.result">100% conformidad en auditoría DoD · Extensión del ciclo a 36 meses</strong>
           </div>
         </div>
       </div>
       <div class="caso reveal reveal--d1">
         <div class="caso__img"><img src="images/deep-tech-semiconductor-fab.jpg" alt="Caso semiconductores"></div>
         <div class="caso__body">
-          <div class="caso__sector">Semiconductores · EV Manufacturer</div>
-          <h3 class="caso__title">Protección de baterías EV durante transit de Corea a México</h3>
-          <p class="caso__desc">Desarrollo de empaque personalizado con VCI Fabricación GAB100 (bandeja ABS antiestática) para módulos de batería de vehículo eléctrico. Trayecto de 45 días vía marítima.</p>
+          <div class="caso__sector" data-i18n="resources.case4.sector">Semiconductores · EV Manufacturer</div>
+          <h3 class="caso__title" data-i18n="resources.case4.title">Protección de baterías EV durante transit de Corea a México</h3>
+          <p class="caso__desc" data-i18n="resources.case4.desc">Desarrollo de empaque personalizado con VCI Fabricación GAB100 (bandeja ABS antiestática) para módulos de batería de vehículo eléctrico. Trayecto de 45 días vía marítima.</p>
           <div class="caso__resultado">
-            <span>Resultado</span>
-            <strong>0 daños por humedad o corrosión en 2,000+ unidades · Certificación OEM</strong>
+            <span data-i18n="resources.result">Resultado</span>
+            <strong data-i18n="resources.case4.result">0 daños por humedad o corrosión en 2,000+ unidades · Certificación OEM</strong>
           </div>
         </div>
       </div>
@@ -236,56 +236,56 @@
 <!-- ARCHIVO -->
 <section class="rec-section" id="archivo">
   <div class="container">
-    <div class="eyebrow reveal">Archivo técnico</div>
-    <h2 class="display-lg reveal" style="margin-top:20px">Artículos &amp; <span class="serif-accent">publicaciones</span>.</h2>
+    <div class="eyebrow reveal" data-i18n="resources.archive.eyebrow">Archivo técnico</div>
+    <h2 class="display-lg reveal" style="margin-top:20px" data-i18n-html="resources.archive.title">Artículos &amp; <span class="serif-accent">publicaciones</span>.</h2>
     <div class="archivo-list reveal">
       <div class="archivo-item">
-        <span class="archivo-item__date">MAR 2026</span>
+        <span class="archivo-item__date" data-i18n="resources.a1.date">MAR 2026</span>
         <div class="archivo-item__content">
-          <h4 class="archivo-item__title">VCI en Celdas de Batería: Retos y Soluciones para EV</h4>
-          <p class="archivo-item__excerpt">Análisis de los desafíos específicos de inhibición de corrosión en el proceso de fabricación y transporte de celdas de litio.</p>
+          <h4 class="archivo-item__title" data-i18n="resources.a1.title">VCI en Celdas de Batería: Retos y Soluciones para EV</h4>
+          <p class="archivo-item__excerpt" data-i18n="resources.a1.excerpt">Análisis de los desafíos específicos de inhibición de corrosión en el proceso de fabricación y transporte de celdas de litio.</p>
         </div>
-        <span class="archivo-item__tag">I+D</span>
+        <span class="archivo-item__tag" data-i18n="resources.a1.tag">I+D</span>
       </div>
       <div class="archivo-item">
-        <span class="archivo-item__date">ENE 2026</span>
+        <span class="archivo-item__date" data-i18n="resources.a2.date">ENE 2026</span>
         <div class="archivo-item__content">
-          <h4 class="archivo-item__title">Biodegradabilidad en Empaques VCI: Mitos y Realidades</h4>
-          <p class="archivo-item__excerpt">Revisión de los estándares ISO 7827 y ASTM D5988 aplicados a empaques VCI biodegradables y cómo interpretarlos correctamente.</p>
+          <h4 class="archivo-item__title" data-i18n="resources.a2.title">Biodegradabilidad en Empaques VCI: Mitos y Realidades</h4>
+          <p class="archivo-item__excerpt" data-i18n="resources.a2.excerpt">Revisión de los estándares ISO 7827 y ASTM D5988 aplicados a empaques VCI biodegradables y cómo interpretarlos correctamente.</p>
         </div>
-        <span class="archivo-item__tag">Sostenibilidad</span>
+        <span class="archivo-item__tag" data-i18n="resources.a2.tag">Sostenibilidad</span>
       </div>
       <div class="archivo-item">
-        <span class="archivo-item__date">NOV 2025</span>
+        <span class="archivo-item__date" data-i18n="resources.a3.date">NOV 2025</span>
         <div class="archivo-item__content">
-          <h4 class="archivo-item__title">Guía de Selección: VCI para Ambientes de Alta Salinidad</h4>
-          <p class="archivo-item__excerpt">Metodología paso a paso para seleccionar el producto VCI correcto en aplicaciones offshore, marinas y costeras con alta concentración de cloruros.</p>
+          <h4 class="archivo-item__title" data-i18n="resources.a3.title">Guía de Selección: VCI para Ambientes de Alta Salinidad</h4>
+          <p class="archivo-item__excerpt" data-i18n="resources.a3.excerpt">Metodología paso a paso para seleccionar el producto VCI correcto en aplicaciones offshore, marinas y costeras con alta concentración de cloruros.</p>
         </div>
-        <span class="archivo-item__tag">Selección</span>
+        <span class="archivo-item__tag" data-i18n="resources.tag.selection">Selección</span>
       </div>
       <div class="archivo-item">
-        <span class="archivo-item__date">SEP 2025</span>
+        <span class="archivo-item__date" data-i18n="resources.a4.date">SEP 2025</span>
         <div class="archivo-item__content">
-          <h4 class="archivo-item__title">Comparativa: VCI Polvo vs. VCI Líquido para Tubería Industrial</h4>
-          <p class="archivo-item__excerpt">Evaluación técnica y económica de ambos métodos para protección interna de tuberías en paradas de planta y almacenamiento de largo plazo.</p>
+          <h4 class="archivo-item__title" data-i18n="resources.a4.title">Comparativa: VCI Polvo vs. VCI Líquido para Tubería Industrial</h4>
+          <p class="archivo-item__excerpt" data-i18n="resources.a4.excerpt">Evaluación técnica y económica de ambos métodos para protección interna de tuberías en paradas de planta y almacenamiento de largo plazo.</p>
         </div>
-        <span class="archivo-item__tag">Comparativa</span>
+        <span class="archivo-item__tag" data-i18n="resources.a4.tag">Comparativa</span>
       </div>
       <div class="archivo-item">
-        <span class="archivo-item__date">JUL 2025</span>
+        <span class="archivo-item__date" data-i18n="resources.a5.date">JUL 2025</span>
         <div class="archivo-item__content">
-          <h4 class="archivo-item__title">Pruebas de Cámara de Niebla Salina: Protocolo GreenVCI</h4>
-          <p class="archivo-item__excerpt">Descripción del protocolo interno de pruebas ASTM B117 y MIL-STD-3010C que aplica GreenVCI en cada lote de producción.</p>
+          <h4 class="archivo-item__title" data-i18n="resources.a5.title">Pruebas de Cámara de Niebla Salina: Protocolo GreenVCI</h4>
+          <p class="archivo-item__excerpt" data-i18n="resources.a5.excerpt">Descripción del protocolo interno de pruebas ASTM B117 y MIL-STD-3010C que aplica GreenVCI en cada lote de producción.</p>
         </div>
-        <span class="archivo-item__tag">Pruebas</span>
+        <span class="archivo-item__tag" data-i18n="resources.a5.tag">Pruebas</span>
       </div>
       <div class="archivo-item">
-        <span class="archivo-item__date">MAY 2025</span>
+        <span class="archivo-item__date" data-i18n="resources.a6.date">MAY 2025</span>
         <div class="archivo-item__content">
-          <h4 class="archivo-item__title">El Futuro del Empaque Anticorrosivo: Tendencias 2025–2030</h4>
-          <p class="archivo-item__excerpt">Perspectivas del mercado global de VCI, nuevas regulaciones ambientales y el impacto de la electrificación vehicular en la demanda de soluciones de protección.</p>
+          <h4 class="archivo-item__title" data-i18n="resources.a6.title">El Futuro del Empaque Anticorrosivo: Tendencias 2025–2030</h4>
+          <p class="archivo-item__excerpt" data-i18n="resources.a6.excerpt">Perspectivas del mercado global de VCI, nuevas regulaciones ambientales y el impacto de la electrificación vehicular en la demanda de soluciones de protección.</p>
         </div>
-        <span class="archivo-item__tag">Mercado</span>
+        <span class="archivo-item__tag" data-i18n="resources.a6.tag">Mercado</span>
       </div>
     </div>
   </div>
@@ -294,12 +294,12 @@
 <!-- CTA -->
 <section style="padding:100px 0; background:var(--moss-50); text-align:center;">
   <div class="container">
-    <div class="eyebrow" style="justify-content:center">¿Necesitas más?</div>
-    <h2 class="display-lg" style="margin-top:20px">Descarga <span class="serif-accent">fichas técnicas</span>.</h2>
-    <p style="max-width:48ch; margin:20px auto 40px; color:var(--ink-600); font-size:18px; line-height:1.6;">Especificaciones completas, tablas de modelos y guías de aplicación para todos los productos GreenVCI.</p>
+    <div class="eyebrow" style="justify-content:center" data-i18n="resources.cta.eyebrow">¿Necesitas más?</div>
+    <h2 class="display-lg" style="margin-top:20px" data-i18n-html="resources.cta.title">Descarga <span class="serif-accent">fichas técnicas</span>.</h2>
+    <p style="max-width:48ch; margin:20px auto 40px; color:var(--ink-600); font-size:18px; line-height:1.6;" data-i18n="resources.cta.desc">Especificaciones completas, tablas de modelos y guías de aplicación para todos los productos GreenVCI.</p>
     <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap">
-      <a href="fichas-tecnicas.html" class="btn btn--primary">Ver fichas técnicas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-      <a href="contacto.html" class="btn btn--ghost-light">Hablar con un ingeniero</a>
+      <a href="fichas-tecnicas.html" class="btn btn--primary"><span data-i18n="resources.cta.btn1">Ver fichas técnicas</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="contacto.html" class="btn btn--ghost-light" data-i18n="cta.contact">Hablar con un ingeniero</a>
     </div>
   </div>
 </section>
@@ -312,11 +312,11 @@
         <a href="index.html" class="nav__logo" style="color:#FFF"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a>
         <p data-i18n="footer.brand.lede">Líderes globales en tecnología VCI sostenible desde 1994.</p>
       </div>
-      <div class="footer__col"><h5 data-i18n="footer.col.products">Productos</h5><a href="productos/vci-film.html">VCI Film</a><a href="productos/vci-polvo.html">VCI Polvo</a><a href="productos/vci-masterbatch.html">VCI Masterbatch</a><a href="productos/vci-emisor.html">VCI Emisor</a><a href="productos/vci-liquido.html">VCI Líquido</a><a href="productos/vci-papel.html">VCI Papel</a></div>
+      <div class="footer__col"><h5 data-i18n="footer.col.products">Productos</h5><a href="productos/vci-film.html" data-i18n="nav.dd.film">VCI Film</a><a href="productos/vci-polvo.html" data-i18n="nav.dd.polvo">VCI Polvo</a><a href="productos/vci-masterbatch.html" data-i18n="nav.dd.masterbatch">VCI Masterbatch</a><a href="productos/vci-emisor.html" data-i18n="nav.dd.emisor">VCI Emisor</a><a href="productos/vci-liquido.html" data-i18n="nav.dd.liquido">VCI Líquido</a><a href="productos/vci-papel.html" data-i18n="nav.dd.papel">VCI Papel</a></div>
       <div class="footer__col"><h5 data-i18n="footer.col.company">Empresa</h5><a href="nosotros.html" data-i18n="footer.about">Nosotros</a><a href="certificaciones.html" data-i18n="footer.certs">Certificaciones</a><a href="noticias.html" data-i18n="footer.news">Noticias</a><a href="carreras.html" data-i18n="footer.careers">Carreras</a><a href="distribuidores.html" data-i18n="footer.distributors">Distribuidores</a></div>
       <div class="footer__col"><h5 data-i18n="footer.col.support">Soporte</h5><a href="contacto.html" data-i18n="footer.contact">Contacto</a><a href="fichas-tecnicas.html" data-i18n="footer.datasheets">Fichas Técnicas</a><a href="faq.html" data-i18n="footer.faq">FAQ</a><a href="recursos.html" data-i18n="footer.resources">Recursos</a></div>
     </div>
-    <div class="footer__bottom"><div>© 2026 GreenVCI R&amp;D Co., Ltd. · Hwaseong-si, Gyeonggi-do, República de Corea</div></div>
+    <div class="footer__bottom"><div data-i18n="footer.copy.address">© 2026 GreenVCI R&amp;D Co., Ltd. · Hwaseong-si, Gyeonggi-do, República de Corea</div></div>
   </div>
 </footer>
 

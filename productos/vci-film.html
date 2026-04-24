@@ -70,7 +70,7 @@
 <body>
 
 <!-- NAV -->
-<header class="nav" id="nav">
+<header class="nav nav--over-dark" id="nav">
   <div class="container nav__inner">
     <a href="../index.html" class="nav__logo"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a>
     <nav class="nav__links">
@@ -93,8 +93,8 @@
       <div class="nav__dropdown">
         <button class="nav__dropdown-toggle" data-i18n="nav.resources">Recursos <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="nav__dropdown-menu">
-          <a href="../recursos.html#consejos" class="nav__dropdown-item">Consejos Rápidos</a>
-          <a href="../recursos.html#archivo" class="nav__dropdown-item">Archivo</a>
+          <a href="../recursos.html#consejos" class="nav__dropdown-item" data-i18n="nav.dd.tips">Consejos Rápidos</a>
+          <a href="../recursos.html#archivo" class="nav__dropdown-item" data-i18n="nav.dd.archive">Archivo</a>
           <a href="../recursos.html#casos" class="nav__dropdown-item" data-i18n="nav.dd.cases">Casos de Estudio</a>
           <a href="../fichas-tecnicas.html" class="nav__dropdown-item" data-i18n="nav.dd.fichas">Fichas Técnicas</a>
         </div>
@@ -102,7 +102,7 @@
     </nav>
     <div style="display:flex; align-items:center; gap:20px">
       <div class="nav__lang"><button class="active">ES</button><button>EN</button><button>KO</button></div>
-      <a href="../contacto.html" class="nav__cta">Cotizar <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="../contacto.html" class="nav__cta"><span data-i18n="nav.cta">Cotizar</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </header>
@@ -116,18 +116,18 @@
   <div class="container prod-hero__inner">
     <div class="prod-hero__grid">
       <div>
-        <div class="eyebrow eyebrow--dark">Producto · GreenVCI</div>
-        <h1 class="prod-hero__title">VCI <em>Film</em></h1>
-        <p class="prod-hero__lede">Película LDPE con inhibición de corrosión en fase vapor y contacto para metales ferrosos y no ferrosos. Protección hasta 24 meses en sellado hermético.</p>
+        <div class="eyebrow eyebrow--dark" data-i18n="prod.common.eyebrow">Producto · GreenVCI</div>
+        <h1 class="prod-hero__title" data-i18n-html="prod.film.hero.title">VCI <em>Film</em></h1>
+        <p class="prod-hero__lede" data-i18n="prod.film.hero.lede">Película LDPE con inhibición de corrosión en fase vapor y contacto para metales ferrosos y no ferrosos. Protección hasta 24 meses en sellado hermético.</p>
         <div class="prod-hero__specs">
-          <div class="prod-spec"><div class="prod-spec__l">Duración</div><div class="prod-spec__v">Hasta 24 meses</div></div>
-          <div class="prod-spec"><div class="prod-spec__l">Cobertura</div><div class="prod-spec__v">6 m²/m³</div></div>
-          <div class="prod-spec"><div class="prod-spec__l">Nitritos</div><div class="prod-spec__v">0%</div></div>
-          <div class="prod-spec"><div class="prod-spec__l">Aprobación</div><div class="prod-spec__v">VW · BMW · MB</div></div>
+          <div class="prod-spec"><div class="prod-spec__l" data-i18n="prod.common.spec.duration">Duración</div><div class="prod-spec__v" data-i18n="prod.film.spec1.val">Hasta 24 meses</div></div>
+          <div class="prod-spec"><div class="prod-spec__l" data-i18n="prod.common.spec.coverage">Cobertura</div><div class="prod-spec__v">6 m²/m³</div></div>
+          <div class="prod-spec"><div class="prod-spec__l" data-i18n="prod.common.spec.nitrites">Nitritos</div><div class="prod-spec__v">0%</div></div>
+          <div class="prod-spec"><div class="prod-spec__l" data-i18n="prod.common.spec.approval">Aprobación</div><div class="prod-spec__v">VW · BMW · MB</div></div>
         </div>
         <div style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap">
-          <a href="../contacto.html" class="btn btn--ghost-dark">Solicitar muestra <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-          <a href="../fichas-tecnicas.html" class="btn" style="background:rgba(255,255,255,0.08); color:#FFF; border:1px solid rgba(255,255,255,0.2);">Ficha técnica</a>
+          <a href="../contacto.html" class="btn btn--ghost-dark"><span data-i18n="section.sample">Solicitar muestra</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+          <a href="../fichas-tecnicas.html" class="btn" style="background:rgba(255,255,255,0.08); color:#FFF; border:1px solid rgba(255,255,255,0.2);" data-i18n="section.datasheet">Ficha técnica</a>
         </div>
       </div>
       <div class="prod-hero__img"><img src="../images/producto-vci-film.jpg" alt="Rollo de VCI Film"></div>
@@ -138,38 +138,38 @@
 <!-- BENEFICIOS -->
 <section class="prod-section">
   <div class="container">
-    <div class="eyebrow reveal">¿Por qué VCI Film?</div>
-    <h2 class="reveal">Características <span class="serif-accent">clave.</span></h2>
+    <div class="eyebrow reveal" data-i18n="prod.film.benefits.eyebrow">¿Por qué VCI Film?</div>
+    <h2 class="reveal" data-i18n-html="prod.common.benefits.title">Características <span class="serif-accent">clave.</span></h2>
     <div class="beneficios-grid">
       <div class="beneficio reveal">
         <div class="beneficio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg></div>
-        <h3>Aprobación OEM</h3>
-        <p>Aprobado por Volkswagen (VW 50164), Daimler Mercedes-Benz (DBL 6994), BMW (GS 94003) y el Departamento de Defensa de EE.UU. (MIL-PRF-22019E).</p>
+        <h3 data-i18n="prod.film.b1.title">Aprobación OEM</h3>
+        <p data-i18n="prod.film.b1.desc">Aprobado por Volkswagen (VW 50164), Daimler Mercedes-Benz (DBL 6994), BMW (GS 94003) y el Departamento de Defensa de EE.UU. (MIL-PRF-22019E).</p>
       </div>
       <div class="beneficio reveal reveal--d1">
         <div class="beneficio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg></div>
-        <h3>Doble protección</h3>
-        <p>Acción en fase vapor (VCI) y contacto simultáneamente. El inhibidor sublima y forma una barrera molecular de una sola molécula de espesor sobre la superficie metálica.</p>
+        <h3 data-i18n="prod.film.b2.title">Doble protección</h3>
+        <p data-i18n="prod.film.b2.desc">Acción en fase vapor (VCI) y contacto simultáneamente. El inhibidor sublima y forma una barrera molecular de una sola molécula de espesor sobre la superficie metálica.</p>
       </div>
       <div class="beneficio reveal reveal--d2">
         <div class="beneficio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg></div>
-        <h3>Multi-metal</h3>
-        <p>Protege simultáneamente acero, hierro fundido, aluminio, cobre, latón y sus aleaciones en el mismo empaque, sin interferencia galvánica.</p>
+        <h3 data-i18n="prod.film.b3.title">Multi-metal</h3>
+        <p data-i18n="prod.film.b3.desc">Protege simultáneamente acero, hierro fundido, aluminio, cobre, latón y sus aleaciones en el mismo empaque, sin interferencia galvánica.</p>
       </div>
       <div class="beneficio reveal">
         <div class="beneficio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg></div>
-        <h3>Formulación verde</h3>
-        <p>0% nitritos, 0% aminas secundarias, 0% metales pesados. Cumple REACH (SVHC), RoHS y TRGS 615. Disponible en versión biodegradable (GVF700).</p>
+        <h3 data-i18n="prod.film.b4.title">Formulación verde</h3>
+        <p data-i18n="prod.film.b4.desc">0% nitritos, 0% aminas secundarias, 0% metales pesados. Cumple REACH (SVHC), RoHS y TRGS 615. Disponible en versión biodegradable (GVF700).</p>
       </div>
       <div class="beneficio reveal reveal--d1">
         <div class="beneficio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z"/></svg></div>
-        <h3>6 variantes especializadas</h3>
-        <p>Desde LDPE multi-metal estándar hasta stretch film de alta resistencia y versiones con protección UV para almacenamiento exterior.</p>
+        <h3 data-i18n="prod.film.b5.title">6 variantes especializadas</h3>
+        <p data-i18n="prod.film.b5.desc">Desde LDPE multi-metal estándar hasta stretch film de alta resistencia y versiones con protección UV para almacenamiento exterior.</p>
       </div>
       <div class="beneficio reveal reveal--d2">
         <div class="beneficio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg></div>
-        <h3>Certificación independiente</h3>
-        <p>Cada lote es verificado en nuestro laboratorio interno (NACE TM0208, MIL-I-22110C) y validado por organismos externos antes de salir a producción.</p>
+        <h3 data-i18n="prod.film.b6.title">Certificación independiente</h3>
+        <p data-i18n="prod.film.b6.desc">Cada lote es verificado en nuestro laboratorio interno (NACE TM0208, MIL-I-22110C) y validado por organismos externos antes de salir a producción.</p>
       </div>
     </div>
   </div>
@@ -178,25 +178,25 @@
 <!-- MODELOS -->
 <section class="prod-section prod-section-alt">
   <div class="container">
-    <div class="eyebrow reveal">Línea de producto</div>
-    <h2 class="reveal">Modelos <span class="serif-accent">disponibles.</span></h2>
+    <div class="eyebrow reveal" data-i18n="prod.common.models.eyebrow">Línea de producto</div>
+    <h2 class="reveal" data-i18n-html="prod.common.models.title">Modelos <span class="serif-accent">disponibles.</span></h2>
     <div style="overflow-x:auto">
       <table class="tabla-modelos reveal">
         <thead>
           <tr>
-            <th>Modelo</th>
-            <th>Tipo</th>
-            <th>Aplicación principal</th>
-            <th>Cobertura</th>
+            <th data-i18n="prod.common.col.model">Modelo</th>
+            <th data-i18n="prod.common.col.type">Tipo</th>
+            <th data-i18n="prod.film.col.mainApp">Aplicación principal</th>
+            <th data-i18n="prod.common.col.coverage">Cobertura</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>GVF100</td><td>Multi-metal LDPE</td><td>Empaque automotriz general</td><td>6 m²/m³</td></tr>
-          <tr><td>GVF110</td><td>Multi-metal</td><td>Electrónica y semiconductores</td><td>6 m²/m³</td></tr>
-          <tr><td>GVF120</td><td>Multi-metal + UV</td><td>Industria pesada con exposición solar</td><td>6 m²/m³</td></tr>
-          <tr><td>GVF200</td><td>Solo ferrosos</td><td>Acerías y construcción</td><td>6 m²/m³</td></tr>
-          <tr><td>GVF300</td><td>Solo no ferrosos</td><td>Electrónica avanzada</td><td>6 m²/m³</td></tr>
-          <tr><td>GVF600</td><td>Multi-metal stretch</td><td>Industria pesada, maquinaria</td><td>12–18 m²/m³</td></tr>
+          <tr><td>GVF100</td><td data-i18n="prod.film.m1.type">Multi-metal LDPE</td><td data-i18n="prod.film.m1.app">Empaque automotriz general</td><td>6 m²/m³</td></tr>
+          <tr><td>GVF110</td><td data-i18n="prod.film.m2.type">Multi-metal</td><td data-i18n="prod.film.m2.app">Electrónica y semiconductores</td><td>6 m²/m³</td></tr>
+          <tr><td>GVF120</td><td data-i18n="prod.film.m3.type">Multi-metal + UV</td><td data-i18n="prod.film.m3.app">Industria pesada con exposición solar</td><td>6 m²/m³</td></tr>
+          <tr><td>GVF200</td><td data-i18n="prod.film.m4.type">Solo ferrosos</td><td data-i18n="prod.film.m4.app">Acerías y construcción</td><td>6 m²/m³</td></tr>
+          <tr><td>GVF300</td><td data-i18n="prod.film.m5.type">Solo no ferrosos</td><td data-i18n="prod.film.m5.app">Electrónica avanzada</td><td>6 m²/m³</td></tr>
+          <tr><td>GVF600</td><td data-i18n="prod.film.m6.type">Multi-metal stretch</td><td data-i18n="prod.film.m6.app">Industria pesada, maquinaria</td><td>12–18 m²/m³</td></tr>
         </tbody>
       </table>
     </div>
@@ -206,15 +206,15 @@
 <!-- APLICACIONES -->
 <section class="prod-section">
   <div class="container">
-    <div class="eyebrow reveal">Aplicaciones</div>
-    <h2 class="reveal">¿Dónde se <span class="serif-accent">usa?</span></h2>
+    <div class="eyebrow reveal" data-i18n="prod.common.apps.eyebrow">Aplicaciones</div>
+    <h2 class="reveal" data-i18n-html="prod.common.apps.title">¿Dónde se <span class="serif-accent">usa?</span></h2>
     <div class="aplicaciones-grid">
-      <div class="aplicacion reveal">🚗 Empaque de piezas CKD/SKD automotriz</div>
-      <div class="aplicacion reveal reveal--d1">⚙️ Conservación de maquinaria industrial</div>
-      <div class="aplicacion reveal reveal--d2">🏗️ Almacenamiento de estructuras de acero</div>
-      <div class="aplicacion reveal">🛡️ Empaque para exportación militar</div>
-      <div class="aplicacion reveal reveal--d1">🔩 Protección de componentes de remanufactura</div>
-      <div class="aplicacion reveal reveal--d2">⚡ Empaques para baterías EV</div>
+      <div class="aplicacion reveal" data-i18n="prod.film.app1">🚗 Empaque de piezas CKD/SKD automotriz</div>
+      <div class="aplicacion reveal reveal--d1" data-i18n="prod.film.app2">⚙️ Conservación de maquinaria industrial</div>
+      <div class="aplicacion reveal reveal--d2" data-i18n="prod.film.app3">🏗️ Almacenamiento de estructuras de acero</div>
+      <div class="aplicacion reveal" data-i18n="prod.film.app4">🛡️ Empaque para exportación militar</div>
+      <div class="aplicacion reveal reveal--d1" data-i18n="prod.film.app5">🔩 Protección de componentes de remanufactura</div>
+      <div class="aplicacion reveal reveal--d2" data-i18n="prod.film.app6">⚡ Empaques para baterías EV</div>
     </div>
     <div class="certs-row reveal">
       <span class="cert-badge">VW 50164</span>
@@ -231,13 +231,13 @@
 <!-- PRODUCTOS RELACIONADOS -->
 <section class="prod-section prod-section-alt">
   <div class="container">
-    <div class="eyebrow reveal">También te puede interesar</div>
-    <h2 class="reveal">Productos <span class="serif-accent">complementarios.</span></h2>
+    <div class="eyebrow reveal" data-i18n="prod.common.related.eyebrow">También te puede interesar</div>
+    <h2 class="reveal" data-i18n-html="prod.common.related.title">Productos <span class="serif-accent">complementarios.</span></h2>
     <div class="productos-relacionados">
-      <a href="vci-masterbatch.html" class="prod-rel reveal"><div class="prod-rel__name">VCI Masterbatch</div><div class="prod-rel__desc">Resina para fabricar tu propio film VCI con fórmula personalizada</div></a>
-      <a href="vci-papel.html" class="prod-rel reveal reveal--d1"><div class="prod-rel__name">VCI Papel</div><div class="prod-rel__desc">Para piezas individuales y geometrías irregulares</div></a>
-      <a href="vci-emisor.html" class="prod-rel reveal reveal--d2"><div class="prod-rel__name">VCI Emisor</div><div class="prod-rel__desc">Complemento ideal para espacios confinados como cajas de control</div></a>
-      <a href="vci-fabricacion.html" class="prod-rel reveal reveal--d3"><div class="prod-rel__name">VCI Fabricación</div><div class="prod-rel__desc">Film personalizado con heat-shrink, UV o estructura compuesta</div></a>
+      <a href="vci-masterbatch.html" class="prod-rel reveal"><div class="prod-rel__name" data-i18n="prod.masterbatch.title">VCI Masterbatch</div><div class="prod-rel__desc" data-i18n="prod.film.rel1.desc">Resina para fabricar tu propio film VCI con fórmula personalizada</div></a>
+      <a href="vci-papel.html" class="prod-rel reveal reveal--d1"><div class="prod-rel__name" data-i18n="prod.papel.title">VCI Papel</div><div class="prod-rel__desc" data-i18n="prod.film.rel2.desc">Para piezas individuales y geometrías irregulares</div></a>
+      <a href="vci-emisor.html" class="prod-rel reveal reveal--d2"><div class="prod-rel__name" data-i18n="prod.emisor.title">VCI Emisor</div><div class="prod-rel__desc" data-i18n="prod.film.rel3.desc">Complemento ideal para espacios confinados como cajas de control</div></a>
+      <a href="vci-fabricacion.html" class="prod-rel reveal reveal--d3"><div class="prod-rel__name" data-i18n="prod.fabricacion.title">VCI Fabricación</div><div class="prod-rel__desc" data-i18n="prod.film.rel4.desc">Film personalizado con heat-shrink, UV o estructura compuesta</div></a>
     </div>
   </div>
 </section>
@@ -245,12 +245,12 @@
 <!-- CTA -->
 <section class="prod-cta">
   <div class="container">
-    <div class="eyebrow eyebrow--dark" style="justify-content:center">Siguiente paso</div>
-    <h2 style="margin-top:20px">¿Listo para <em>cotizar?</em></h2>
-    <p>Cuéntanos el metal, el volumen y la duración requerida. Nuestro equipo técnico te recomienda el modelo correcto.</p>
+    <div class="eyebrow eyebrow--dark" style="justify-content:center" data-i18n="about.cta.eyebrow">Siguiente paso</div>
+    <h2 style="margin-top:20px" data-i18n-html="prod.common.cta.title">¿Listo para <em>cotizar?</em></h2>
+    <p data-i18n="prod.film.cta.desc">Cuéntanos el metal, el volumen y la duración requerida. Nuestro equipo técnico te recomienda el modelo correcto.</p>
     <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap">
-      <a href="../contacto.html" class="btn btn--primary">Solicitar cotización <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-      <a href="../fichas-tecnicas.html" class="btn btn--ghost-dark">Descargar ficha técnica</a>
+      <a href="../contacto.html" class="btn btn--primary"><span data-i18n="prod.common.cta.quote">Solicitar cotización</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="../fichas-tecnicas.html" class="btn btn--ghost-dark" data-i18n="prod.common.cta.download">Descargar ficha técnica</a>
     </div>
   </div>
 </section>
@@ -263,7 +263,7 @@
         <a href="../index.html" class="nav__logo" style="color:#FFF"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a>
         <p data-i18n="footer.brand.lede">Líderes globales en tecnología VCI sostenible desde 1994.</p>
       </div>
-      <div class="footer__col"><h5 data-i18n="footer.col.products">Productos</h5><a href="vci-film.html">VCI Film</a><a href="vci-polvo.html">VCI Polvo</a><a href="vci-masterbatch.html">VCI Masterbatch</a><a href="vci-emisor.html">VCI Emisor</a><a href="vci-liquido.html">VCI Líquido</a><a href="vci-papel.html">VCI Papel</a></div>
+      <div class="footer__col"><h5 data-i18n="footer.col.products">Productos</h5><a href="vci-film.html" data-i18n="nav.dd.film">VCI Film</a><a href="vci-polvo.html" data-i18n="nav.dd.polvo">VCI Polvo</a><a href="vci-masterbatch.html" data-i18n="nav.dd.masterbatch">VCI Masterbatch</a><a href="vci-emisor.html" data-i18n="nav.dd.emisor">VCI Emisor</a><a href="vci-liquido.html" data-i18n="nav.dd.liquido">VCI Líquido</a><a href="vci-papel.html" data-i18n="nav.dd.papel">VCI Papel</a></div>
       <div class="footer__col"><h5 data-i18n="footer.col.company">Empresa</h5><a href="../nosotros.html" data-i18n="footer.about">Nosotros</a><a href="../certificaciones.html" data-i18n="footer.certs">Certificaciones</a><a href="../noticias.html" data-i18n="footer.news">Noticias</a><a href="../carreras.html" data-i18n="footer.careers">Carreras</a></div>
       <div class="footer__col"><h5 data-i18n="footer.col.support">Soporte</h5><a href="../contacto.html" data-i18n="footer.contact">Contacto</a><a href="../fichas-tecnicas.html" data-i18n="footer.datasheets">Fichas Técnicas</a><a href="../faq.html" data-i18n="footer.faq">FAQ</a><a href="../recursos.html" data-i18n="footer.resources">Recursos</a></div>
     </div>

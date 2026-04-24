@@ -74,7 +74,7 @@
     <nav class="nav__links">
       <a href="nosotros.html" class="nav__link" data-i18n="nav.about">Nosotros</a>
       <div class="nav__dropdown">
-        <button class="nav__dropdown-toggle" data-i18n="nav.products">Productos <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <button class="nav__dropdown-toggle"><span data-i18n="nav.products">Productos</span> <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="nav__dropdown-menu">
           <a href="productos/vci-film.html" class="nav__dropdown-item" data-i18n="nav.dd.film">VCI Film</a>
           <a href="productos/vci-polvo.html" class="nav__dropdown-item" data-i18n="nav.dd.polvo">VCI Polvo</a>
@@ -89,10 +89,10 @@
       </div>
       <a href="servicios.html" class="nav__link" data-i18n="nav.services">Servicios</a>
       <div class="nav__dropdown">
-        <button class="nav__dropdown-toggle" data-i18n="nav.resources">Recursos <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+        <button class="nav__dropdown-toggle"><span data-i18n="nav.resources">Recursos</span> <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="nav__dropdown-menu">
-          <a href="recursos.html#consejos" class="nav__dropdown-item">Consejos Rápidos</a>
-          <a href="recursos.html#archivo" class="nav__dropdown-item">Archivo</a>
+          <a href="recursos.html#consejos" class="nav__dropdown-item" data-i18n="nav.dd.tips">Consejos Rápidos</a>
+          <a href="recursos.html#archivo" class="nav__dropdown-item" data-i18n="nav.dd.archive">Archivo</a>
           <a href="recursos.html#casos" class="nav__dropdown-item" data-i18n="nav.dd.cases">Casos de Estudio</a>
           <a href="fichas-tecnicas.html" class="nav__dropdown-item" data-i18n="nav.dd.fichas">Fichas Técnicas</a>
         </div>
@@ -100,7 +100,7 @@
     </nav>
     <div style="display:flex; align-items:center; gap:20px">
       <div class="nav__lang"><button class="active">ES</button><button>EN</button><button>KO</button></div>
-      <a href="contacto.html" class="nav__cta" data-i18n="nav.cta">Cotizar <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="contacto.html" class="nav__cta"><span data-i18n="nav.cta">Cotizar</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </header>
@@ -112,9 +112,9 @@
     <div class="contact-hero__grad"></div>
   </div>
   <div class="container contact-hero__inner">
-    <div class="eyebrow eyebrow--dark">Contacto · GreenVCI R&amp;D</div>
-    <h1>Hablemos de tu <em>proceso.</em></h1>
-    <p class="contact-hero__lede">Primera consulta técnica sin costo. Cuéntanos qué metales proteges, en qué industria operas y cuál es tu mayor desafío anticorrosivo.</p>
+    <div class="eyebrow eyebrow--dark" data-i18n="contact.hero.eyebrow">Contacto · GreenVCI R&amp;D</div>
+    <h1 data-i18n-html="contact.hero.title.html">Hablemos de tu <em>proceso.</em></h1>
+    <p class="contact-hero__lede" data-i18n="contact.hero.lede">Primera consulta técnica sin costo. Cuéntanos qué metales proteges, en qué industria operas y cuál es tu mayor desafío anticorrosivo.</p>
   </div>
 </section>
 
@@ -125,9 +125,9 @@
 
       <!-- Info -->
       <div class="contact-info reveal">
-        <div class="eyebrow">Habla con nosotros</div>
-        <h2 style="margin-top:16px">Respondemos en menos de 24 horas.</h2>
-        <p>Nuestro equipo técnico está listo para asesorarte. No vendemos catálogo — diseñamos protección para tu proceso específico.</p>
+        <div class="eyebrow" data-i18n="contact.info.eyebrow">Habla con nosotros</div>
+        <h2 style="margin-top:16px" data-i18n="contact.info.title">Respondemos en menos de 24 horas.</h2>
+        <p data-i18n="contact.info.desc">Nuestro equipo técnico está listo para asesorarte. No vendemos catálogo — diseñamos protección para tu proceso específico.</p>
 
         <div class="contact-items">
           <div class="contact-item">
@@ -153,8 +153,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
             </div>
             <div>
-              <h4>Sede central</h4>
-              <p>480-72, Jangan-ro, Jangan-myeon<br>Hwaseong-si, Gyeonggi-do<br>República de Corea 18583</p>
+              <h4 data-i18n="contact.hq.label">Sede central</h4>
+              <p data-i18n-html="contact.hq.val">480-72, Jangan-ro, Jangan-myeon<br>Hwaseong-si, Gyeonggi-do<br>República de Corea 18583</p>
             </div>
           </div>
           <div class="contact-item">
@@ -162,8 +162,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             </div>
             <div>
-              <h4>Horario de atención</h4>
-              <p>Lunes a Viernes: 9:00 — 18:00 KST<br>Zona horaria: UTC+9 (Corea)</p>
+              <h4 data-i18n="contact.hours.label">Horario de atención</h4>
+              <p data-i18n-html="contact.hours.val">Lunes a Viernes: 9:00 — 18:00 KST<br>Zona horaria: UTC+9 (Corea)</p>
             </div>
           </div>
         </div>
@@ -171,75 +171,75 @@
 
       <!-- Formulario -->
       <div class="contact-form-wrap reveal reveal--d1">
-        <h3>Solicitar cotización</h3>
-        <p>Completa el formulario y un ingeniero se pondrá en contacto contigo.</p>
+        <h3 data-i18n="contact.form.heading">Solicitar cotización</h3>
+        <p data-i18n="contact.form.sub">Completa el formulario y un ingeniero se pondrá en contacto contigo.</p>
         <form action="#" method="POST" onsubmit="handleSubmit(event)">
           <div class="cf-row">
             <div class="cf-group">
               <label data-i18n="home.contact.name">Nombre *</label>
-              <input type="text" name="nombre" placeholder="Tu nombre" required>
+              <input type="text" name="nombre" placeholder="Tu nombre" data-i18n-placeholder="home.contact.name.ph" required>
             </div>
             <div class="cf-group">
-              <label>Cargo / Posición</label>
-              <input type="text" name="cargo" placeholder="Ej. Gerente de Empaque">
+              <label data-i18n="contact.form.role">Cargo / Posición</label>
+              <input type="text" name="cargo" placeholder="Ej. Gerente de Empaque" data-i18n-placeholder="contact.form.role.ph">
             </div>
           </div>
           <div class="cf-row">
             <div class="cf-group">
               <label data-i18n="home.contact.company">Empresa *</label>
-              <input type="text" name="empresa" placeholder="Nombre de tu empresa" required>
+              <input type="text" name="empresa" placeholder="Nombre de tu empresa" data-i18n-placeholder="home.contact.company.ph" required>
             </div>
             <div class="cf-group">
-              <label>País</label>
-              <input type="text" name="pais" placeholder="México, Brasil, EE.UU...">
+              <label data-i18n="contact.form.country">País</label>
+              <input type="text" name="pais" placeholder="México, Brasil, EE.UU..." data-i18n-placeholder="contact.form.country.ph">
             </div>
           </div>
           <div class="cf-row">
             <div class="cf-group">
               <label data-i18n="home.contact.email.f">Email *</label>
-              <input type="email" name="email" placeholder="tu@empresa.com" required>
+              <input type="email" name="email" placeholder="tu@empresa.com" data-i18n-placeholder="contact.form.email.ph" required>
             </div>
             <div class="cf-group">
               <label data-i18n="home.contact.phone.f">Teléfono</label>
-              <input type="tel" name="telefono" placeholder="+52 55 0000 0000">
+              <input type="tel" name="telefono" placeholder="+52 55 0000 0000" data-i18n-placeholder="contact.form.phone.ph">
             </div>
           </div>
           <div class="cf-group">
-            <label>Industria *</label>
+            <label data-i18n="contact.form.industry">Industria *</label>
             <select name="industria" required>
-              <option value="" disabled selected>Selecciona tu industria</option>
-              <option>Automotriz / Vehículos eléctricos</option>
-              <option>Deep Tech / Semiconductores</option>
-              <option>Industria pesada / Acero</option>
-              <option>Petróleo &amp; Gas</option>
-              <option>Militar / Defensa / Aeroespacial</option>
-              <option>Marina / Transporte marítimo</option>
-              <option>Fabricación general</option>
-              <option>Otra</option>
+              <option value="" disabled selected data-i18n="contact.form.industry.select">Selecciona tu industria</option>
+              <option data-i18n="contact.form.ind.auto">Automotriz / Vehículos eléctricos</option>
+              <option data-i18n="contact.form.ind.tech">Deep Tech / Semiconductores</option>
+              <option data-i18n="contact.form.ind.heavy">Industria pesada / Acero</option>
+              <option data-i18n="contact.form.ind.oil">Petróleo &amp; Gas</option>
+              <option data-i18n="contact.form.ind.mil">Militar / Defensa / Aeroespacial</option>
+              <option data-i18n="contact.form.ind.mar">Marina / Transporte marítimo</option>
+              <option data-i18n="contact.form.ind.mfg">Fabricación general</option>
+              <option data-i18n="contact.form.ind.other">Otra</option>
             </select>
           </div>
           <div class="cf-group">
-            <label>Producto de interés</label>
+            <label data-i18n="contact.form.product">Producto de interés</label>
             <select name="producto">
-              <option value="" disabled selected>¿Qué producto te interesa?</option>
-              <option>VCI Film</option>
-              <option>VCI Polvo</option>
-              <option>VCI Masterbatch</option>
-              <option>VCI Emisor</option>
-              <option>VCI Líquido</option>
-              <option>VCI Desecante</option>
-              <option>VCI Papel</option>
-              <option>VCI Limpiador (EDC)</option>
-              <option>VCI Fabricación personalizada</option>
-              <option>No sé todavía — necesito asesoría</option>
+              <option value="" disabled selected data-i18n="contact.form.product.select">¿Qué producto te interesa?</option>
+              <option data-i18n="nav.dd.film">VCI Film</option>
+              <option data-i18n="nav.dd.polvo">VCI Polvo</option>
+              <option data-i18n="nav.dd.masterbatch">VCI Masterbatch</option>
+              <option data-i18n="nav.dd.emisor">VCI Emisor</option>
+              <option data-i18n="nav.dd.liquido">VCI Líquido</option>
+              <option data-i18n="nav.dd.desecante">VCI Desecante</option>
+              <option data-i18n="nav.dd.papel">VCI Papel</option>
+              <option data-i18n="contact.form.prod.cleaner">VCI Limpiador (EDC)</option>
+              <option data-i18n="contact.form.prod.custom">VCI Fabricación personalizada</option>
+              <option data-i18n="contact.form.prod.unknown">No sé todavía — necesito asesoría</option>
             </select>
           </div>
           <div class="cf-group">
-            <label>Descripción del desafío</label>
-            <textarea name="mensaje" placeholder="Describe brevemente qué metales proteges, en qué ambiente, volumen mensual aproximado y cuál es el problema actual que enfrentas..."></textarea>
+            <label data-i18n="contact.form.challenge">Descripción del desafío</label>
+            <textarea name="mensaje" placeholder="Describe brevemente qué metales proteges, en qué ambiente, volumen mensual aproximado y cuál es el problema actual que enfrentas..." data-i18n-placeholder="contact.form.challenge.ph"></textarea>
           </div>
-          <button type="submit" class="cf-submit">Enviar solicitud →</button>
-          <p class="cf-note">Sin compromiso. Respondemos en menos de 24 horas hábiles.</p>
+          <button type="submit" class="cf-submit" data-i18n="contact.form.submit.btn">Enviar solicitud →</button>
+          <p class="cf-note" data-i18n="contact.form.note">Sin compromiso. Respondemos en menos de 24 horas hábiles.</p>
         </form>
       </div>
 
@@ -250,42 +250,42 @@
 <!-- DISTRIBUIDORES -->
 <section class="contact-offices">
   <div class="container">
-    <div class="eyebrow reveal">Presencia global</div>
-    <h2 class="display-lg reveal" style="margin-top:20px">Distribuidores en <span class="serif-accent">50+ países</span>.</h2>
+    <div class="eyebrow reveal" data-i18n="contact.global.eyebrow">Presencia global</div>
+    <h2 class="display-lg reveal" style="margin-top:20px" data-i18n-html="contact.global.title">Distribuidores en <span class="serif-accent">50+ países</span>.</h2>
     <div class="offices-grid">
       <div class="office-card reveal">
-        <div class="office-card__region">Asia Pacífico</div>
-        <h3 class="office-card__name">Corea del Sur</h3>
-        <p>Sede central y laboratorio I+D principal.<br>Hwaseong-si, Gyeonggi-do<br><a href="tel:+82318043-5568">+82) 31-8043-5568</a></p>
+        <div class="office-card__region" data-i18n="contact.office.kr.region">Asia Pacífico</div>
+        <h3 class="office-card__name" data-i18n="contact.office.kr.name">Corea del Sur</h3>
+        <p data-i18n-html="contact.office.kr.desc">Sede central y laboratorio I+D principal.<br>Hwaseong-si, Gyeonggi-do<br><a href="tel:+82318043-5568">+82) 31-8043-5568</a></p>
       </div>
       <div class="office-card reveal reveal--d1">
-        <div class="office-card__region">Asia Oriental</div>
-        <h3 class="office-card__name">China</h3>
-        <p>Distribuidores oficiales en Shanghái, Guangzhou y Pekín.<br>Cobertura: manufactura automotriz y electrónica.<br><a href="#">greenvci.cn</a></p>
+        <div class="office-card__region" data-i18n="contact.office.cn.region">Asia Oriental</div>
+        <h3 class="office-card__name" data-i18n="contact.office.cn.name">China</h3>
+        <p data-i18n-html="contact.office.cn.desc">Distribuidores oficiales en Shanghái, Guangzhou y Pekín.<br>Cobertura: manufactura automotriz y electrónica.<br><a href="#">greenvci.cn</a></p>
       </div>
       <div class="office-card reveal reveal--d2">
-        <div class="office-card__region">América Latina</div>
-        <h3 class="office-card__name">México</h3>
-        <p>Distribuidor certificado para el mercado mexicano.<br>Cobertura: Monterrey, CDMX, Puebla, Bajío.<br><a href="#">greenvci.mx</a></p>
+        <div class="office-card__region" data-i18n="contact.office.mx.region">América Latina</div>
+        <h3 class="office-card__name" data-i18n="contact.office.mx.name">México</h3>
+        <p data-i18n-html="contact.office.mx.desc">Distribuidor certificado para el mercado mexicano.<br>Cobertura: Monterrey, CDMX, Puebla, Bajío.<br><a href="#">greenvci.mx</a></p>
       </div>
       <div class="office-card reveal">
-        <div class="office-card__region">Europa</div>
-        <h3 class="office-card__name">Alemania</h3>
-        <p>Socios técnicos certificados por OEM alemanes.<br>Certificaciones VW 50164, DBL 6994, BMW GS 94003.<br><a href="contacto.html">Contactar</a></p>
+        <div class="office-card__region" data-i18n="contact.office.de.region">Europa</div>
+        <h3 class="office-card__name" data-i18n="contact.office.de.name">Alemania</h3>
+        <p data-i18n-html="contact.office.de.desc">Socios técnicos certificados por OEM alemanes.<br>Certificaciones VW 50164, DBL 6994, BMW GS 94003.<br><a href="contacto.html">Contactar</a></p>
       </div>
       <div class="office-card reveal reveal--d1">
-        <div class="office-card__region">Medio Oriente</div>
-        <h3 class="office-card__name">Arabia Saudita</h3>
-        <p>Partner oficial para sector Oil &amp; Gas.<br>Aramco, SABIC y contractors regionales.<br><a href="contacto.html">Contactar</a></p>
+        <div class="office-card__region" data-i18n="contact.office.sa.region">Medio Oriente</div>
+        <h3 class="office-card__name" data-i18n="contact.office.sa.name">Arabia Saudita</h3>
+        <p data-i18n-html="contact.office.sa.desc">Partner oficial para sector Oil &amp; Gas.<br>Aramco, SABIC y contractors regionales.<br><a href="contacto.html">Contactar</a></p>
       </div>
       <div class="office-card reveal reveal--d2">
-        <div class="office-card__region">América del Norte</div>
-        <h3 class="office-card__name">Estados Unidos</h3>
-        <p>Distribuidor con certificación MIL-SPEC y Boeing D6.<br>Cobertura: defensa, aeroespacial y automotriz.<br><a href="contacto.html">Contactar</a></p>
+        <div class="office-card__region" data-i18n="contact.office.us.region">América del Norte</div>
+        <h3 class="office-card__name" data-i18n="contact.office.us.name">Estados Unidos</h3>
+        <p data-i18n-html="contact.office.us.desc">Distribuidor con certificación MIL-SPEC y Boeing D6.<br>Cobertura: defensa, aeroespacial y automotriz.<br><a href="contacto.html">Contactar</a></p>
       </div>
     </div>
     <div style="text-align:center; margin-top:48px">
-      <a href="distribuidores.html" class="btn btn--primary">Ver todos los distribuidores <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="distribuidores.html" class="btn btn--primary"><span data-i18n="contact.global.cta">Ver todos los distribuidores</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
@@ -298,11 +298,11 @@
         <a href="index.html" class="nav__logo" style="color:#FFF"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a>
         <p data-i18n="footer.brand.lede">Líderes globales en tecnología VCI sostenible desde 1994.</p>
       </div>
-      <div class="footer__col"><h5 data-i18n="footer.col.products">Productos</h5><a href="productos/vci-film.html">VCI Film</a><a href="productos/vci-polvo.html">VCI Polvo</a><a href="productos/vci-masterbatch.html">VCI Masterbatch</a><a href="productos/vci-emisor.html">VCI Emisor</a><a href="productos/vci-liquido.html">VCI Líquido</a><a href="productos/vci-papel.html">VCI Papel</a></div>
+      <div class="footer__col"><h5 data-i18n="footer.col.products">Productos</h5><a href="productos/vci-film.html" data-i18n="nav.dd.film">VCI Film</a><a href="productos/vci-polvo.html" data-i18n="nav.dd.polvo">VCI Polvo</a><a href="productos/vci-masterbatch.html" data-i18n="nav.dd.masterbatch">VCI Masterbatch</a><a href="productos/vci-emisor.html" data-i18n="nav.dd.emisor">VCI Emisor</a><a href="productos/vci-liquido.html" data-i18n="nav.dd.liquido">VCI Líquido</a><a href="productos/vci-papel.html" data-i18n="nav.dd.papel">VCI Papel</a></div>
       <div class="footer__col"><h5 data-i18n="footer.col.company">Empresa</h5><a href="nosotros.html" data-i18n="footer.about">Nosotros</a><a href="certificaciones.html" data-i18n="footer.certs">Certificaciones</a><a href="noticias.html" data-i18n="footer.news">Noticias</a><a href="carreras.html" data-i18n="footer.careers">Carreras</a><a href="distribuidores.html" data-i18n="footer.distributors">Distribuidores</a></div>
       <div class="footer__col"><h5 data-i18n="footer.col.support">Soporte</h5><a href="contacto.html" data-i18n="footer.contact">Contacto</a><a href="fichas-tecnicas.html" data-i18n="footer.datasheets">Fichas Técnicas</a><a href="faq.html" data-i18n="footer.faq">FAQ</a><a href="recursos.html" data-i18n="footer.resources">Recursos</a></div>
     </div>
-    <div class="footer__bottom"><div>© 2026 GreenVCI R&amp;D Co., Ltd. · Hwaseong-si, Gyeonggi-do, República de Corea</div></div>
+    <div class="footer__bottom"><div data-i18n="footer.copy.address">© 2026 GreenVCI R&amp;D Co., Ltd. · Hwaseong-si, Gyeonggi-do, República de Corea</div></div>
   </div>
 </footer>
 

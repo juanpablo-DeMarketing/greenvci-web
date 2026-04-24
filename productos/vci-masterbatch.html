@@ -45,7 +45,7 @@
 </style>
 </head>
 <body>
-<header class="nav" id="nav">
+<header class="nav nav--over-dark" id="nav">
   <div class="container nav__inner">
     <a href="../index.html" class="nav__logo"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a>
     <nav class="nav__links">
@@ -64,8 +64,8 @@
       <div class="nav__dropdown">
         <button class="nav__dropdown-toggle" data-i18n="nav.resources">Recursos <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="nav__dropdown-menu">
-          <a href="../recursos.html#consejos" class="nav__dropdown-item">Consejos Rápidos</a>
-          <a href="../recursos.html#archivo" class="nav__dropdown-item">Archivo</a>
+          <a href="../recursos.html#consejos" class="nav__dropdown-item" data-i18n="nav.dd.tips">Consejos Rápidos</a>
+          <a href="../recursos.html#archivo" class="nav__dropdown-item" data-i18n="nav.dd.archive">Archivo</a>
           <a href="../recursos.html#casos" class="nav__dropdown-item" data-i18n="nav.dd.cases">Casos de Estudio</a>
           <a href="../fichas-tecnicas.html" class="nav__dropdown-item" data-i18n="nav.dd.fichas">Fichas Técnicas</a>
         </div>
@@ -73,7 +73,7 @@
     </nav>
     <div style="display:flex;align-items:center;gap:20px">
       <div class="nav__lang"><button class="active">ES</button><button>EN</button><button>KO</button></div>
-      <a href="../contacto.html" class="nav__cta">Cotizar <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="../contacto.html" class="nav__cta"><span data-i18n="nav.cta">Cotizar</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </header>
@@ -83,17 +83,17 @@
   <div class="container prod-hero__inner">
     <div class="prod-hero__grid">
       <div>
-        <div class="eyebrow eyebrow--dark">Producto · GreenVCI</div>
-        <h1 class="prod-hero__title">VCI <em>Master&shy;batch</em></h1>
-        <p class="prod-hero__lede">Resina concentrada VCI para la fabricación de films y empaques de protección anticorrosiva. Aprobado por los Big Three alemanes. Compatible con LDPE, LLDPE y MDPE.</p>
+        <div class="eyebrow eyebrow--dark" data-i18n="prod.common.eyebrow">Producto · GreenVCI</div>
+        <h1 class="prod-hero__title" data-i18n-html="prod.masterbatch.hero.title">VCI <em>Master&shy;batch</em></h1>
+        <p class="prod-hero__lede" data-i18n="prod.masterbatch.hero.lede">Resina concentrada VCI para la fabricación de films y empaques de protección anticorrosiva. Aprobado por los Big Three alemanes. Compatible con LDPE, LLDPE y MDPE.</p>
         <div class="prod-hero__specs">
-          <div class="prod-spec"><div class="prod-spec__l">Duración film resultante</div><div class="prod-spec__v">Hasta 24 meses</div></div>
-          <div class="prod-spec"><div class="prod-spec__l">Compatibilidad</div><div class="prod-spec__v">LDPE · LLDPE · MDPE</div></div>
-          <div class="prod-spec"><div class="prod-spec__l">Nitritos</div><div class="prod-spec__v">0%</div></div>
-          <div class="prod-spec"><div class="prod-spec__l">Aprobación</div><div class="prod-spec__v">VW · BMW · MB · DoD</div></div>
+          <div class="prod-spec"><div class="prod-spec__l" data-i18n="prod.masterbatch.spec.filmDuration">Duración film resultante</div><div class="prod-spec__v" data-i18n="prod.film.spec1.val">Hasta 24 meses</div></div>
+          <div class="prod-spec"><div class="prod-spec__l" data-i18n="prod.masterbatch.spec.compat">Compatibilidad</div><div class="prod-spec__v">LDPE · LLDPE · MDPE</div></div>
+          <div class="prod-spec"><div class="prod-spec__l" data-i18n="prod.common.spec.nitrites">Nitritos</div><div class="prod-spec__v">0%</div></div>
+          <div class="prod-spec"><div class="prod-spec__l" data-i18n="prod.common.spec.approval">Aprobación</div><div class="prod-spec__v">VW · BMW · MB · DoD</div></div>
         </div>
         <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap">
-          <a href="../contacto.html" class="btn btn--ghost-dark">Solicitar muestra <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+          <a href="../contacto.html" class="btn btn--ghost-dark"><span data-i18n="section.sample">Solicitar muestra</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
         </div>
       </div>
       <div class="prod-hero__img"><img src="../images/vci-masterbatch-pellets.jpg" alt="Pellets VCI Masterbatch"></div>
@@ -103,23 +103,23 @@
 
 <section class="prod-section">
   <div class="container">
-    <div class="eyebrow reveal">¿Por qué VCI Masterbatch?</div>
-    <h2 class="reveal">Características <span class="serif-accent">clave.</span></h2>
+    <div class="eyebrow reveal" data-i18n="prod.masterbatch.benefits.eyebrow">¿Por qué VCI Masterbatch?</div>
+    <h2 class="reveal" data-i18n-html="prod.common.benefits.title">Características <span class="serif-accent">clave.</span></h2>
     <div class="beneficios-grid">
       <div class="beneficio reveal">
         <div class="beneficio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg></div>
-        <h3>Fabricación propia</h3>
-        <p>Permite a fabricantes de empaque producir sus propios films VCI con la fórmula certificada de GreenVCI, integrando la protección directamente en el proceso de extrusión.</p>
+        <h3 data-i18n="prod.masterbatch.b1.title">Fabricación propia</h3>
+        <p data-i18n="prod.masterbatch.b1.desc">Permite a fabricantes de empaque producir sus propios films VCI con la fórmula certificada de GreenVCI, integrando la protección directamente en el proceso de extrusión.</p>
       </div>
       <div class="beneficio reveal reveal--d1">
         <div class="beneficio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></svg></div>
-        <h3>Aprobación OEM triple</h3>
-        <p>GVR-SP y GVR100 están aprobados por Volkswagen, BMW y Mercedes-Benz — los estándares más exigentes del sector automotriz global.</p>
+        <h3 data-i18n="prod.masterbatch.b2.title">Aprobación OEM triple</h3>
+        <p data-i18n="prod.masterbatch.b2.desc">GVR-SP y GVR100 están aprobados por Volkswagen, BMW y Mercedes-Benz — los estándares más exigentes del sector automotriz global.</p>
       </div>
       <div class="beneficio reveal reveal--d2">
         <div class="beneficio__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div>
-        <h3>Biodegradable disponible</h3>
-        <p>GVR700 es la variante biodegradable certificada bajo KS I ISO 7827. Ideal para marcas con compromisos de sostenibilidad o reglamentaciones ambientales estrictas.</p>
+        <h3 data-i18n="prod.masterbatch.b3.title">Biodegradable disponible</h3>
+        <p data-i18n="prod.masterbatch.b3.desc">GVR700 es la variante biodegradable certificada bajo KS I ISO 7827. Ideal para marcas con compromisos de sostenibilidad o reglamentaciones ambientales estrictas.</p>
       </div>
     </div>
   </div>
@@ -127,20 +127,20 @@
 
 <section class="prod-section prod-section-alt">
   <div class="container">
-    <div class="eyebrow reveal">Línea de producto</div>
-    <h2 class="reveal">Variantes <span class="serif-accent">disponibles.</span></h2>
+    <div class="eyebrow reveal" data-i18n="prod.common.models.eyebrow">Línea de producto</div>
+    <h2 class="reveal" data-i18n-html="prod.masterbatch.variants.title">Variantes <span class="serif-accent">disponibles.</span></h2>
     <div style="overflow-x:auto">
       <table class="tabla-modelos reveal">
-        <thead><tr><th>Modelo</th><th>Metales objetivo</th><th>Variante especial</th></tr></thead>
+        <thead><tr><th data-i18n="prod.common.col.model">Modelo</th><th data-i18n="prod.masterbatch.col.targetMetals">Metales objetivo</th><th data-i18n="prod.masterbatch.col.specialVariant">Variante especial</th></tr></thead>
         <tbody>
-          <tr><td>GVR-SP</td><td>Multi-metal</td><td>Flagship premium</td></tr>
-          <tr><td>GVR100</td><td>Multi-metal</td><td>Uso general</td></tr>
-          <tr><td>GVR200</td><td>Solo ferrosos</td><td>Acero e hierro</td></tr>
-          <tr><td>GVR300</td><td>No ferrosos</td><td>Aluminio y cobre</td></tr>
-          <tr><td>GVR400</td><td>No ferrosos electrónica</td><td>Plata / cobre / latón</td></tr>
-          <tr><td>GVR500</td><td>Multi-metal</td><td>Antiestático</td></tr>
-          <tr><td>GVR600</td><td>Multi-metal</td><td>Formulación stretch</td></tr>
-          <tr><td>GVR700</td><td>Multi-metal</td><td>Biodegradable</td></tr>
+          <tr><td>GVR-SP</td><td data-i18n="prod.common.multi_metal">Multi-metal</td><td data-i18n="prod.masterbatch.m1.variant">Flagship premium</td></tr>
+          <tr><td>GVR100</td><td data-i18n="prod.common.multi_metal">Multi-metal</td><td data-i18n="prod.masterbatch.m2.variant">Uso general</td></tr>
+          <tr><td>GVR200</td><td data-i18n="prod.common.ferrous_only">Solo ferrosos</td><td data-i18n="prod.masterbatch.m3.variant">Acero e hierro</td></tr>
+          <tr><td>GVR300</td><td data-i18n="prod.masterbatch.m4.metals">No ferrosos</td><td data-i18n="prod.masterbatch.m4.variant">Aluminio y cobre</td></tr>
+          <tr><td>GVR400</td><td data-i18n="prod.masterbatch.m5.metals">No ferrosos electrónica</td><td data-i18n="prod.masterbatch.m5.variant">Plata / cobre / latón</td></tr>
+          <tr><td>GVR500</td><td data-i18n="prod.common.multi_metal">Multi-metal</td><td data-i18n="prod.masterbatch.m6.variant">Antiestático</td></tr>
+          <tr><td>GVR600</td><td data-i18n="prod.common.multi_metal">Multi-metal</td><td data-i18n="prod.masterbatch.m7.variant">Formulación stretch</td></tr>
+          <tr><td>GVR700</td><td data-i18n="prod.common.multi_metal">Multi-metal</td><td data-i18n="prod.masterbatch.m8.variant">Biodegradable</td></tr>
         </tbody>
       </table>
     </div>
@@ -149,8 +149,8 @@
 
 <section class="prod-section">
   <div class="container">
-    <div class="eyebrow reveal">Certificaciones</div>
-    <h2 class="reveal">Estándares <span class="serif-accent">cumplidos.</span></h2>
+    <div class="eyebrow reveal" data-i18n="section.certifications">Certificaciones</div>
+    <h2 class="reveal" data-i18n-html="prod.masterbatch.certs.title">Estándares <span class="serif-accent">cumplidos.</span></h2>
     <div class="certs-row reveal">
       <span class="cert-badge">VW 50164</span>
       <span class="cert-badge">DBL 6994</span>
@@ -166,12 +166,12 @@
 
 <section class="prod-cta">
   <div class="container">
-    <div class="eyebrow eyebrow--dark" style="justify-content:center">Siguiente paso</div>
-    <h2 style="margin-top:20px">¿Fabricas tu propio <em>film?</em></h2>
-    <p>Cuéntanos las especificaciones de tu proceso de extrusión y te formulamos el masterbatch correcto.</p>
+    <div class="eyebrow eyebrow--dark" style="justify-content:center" data-i18n="about.cta.eyebrow">Siguiente paso</div>
+    <h2 style="margin-top:20px" data-i18n-html="prod.masterbatch.cta.title">¿Fabricas tu propio <em>film?</em></h2>
+    <p data-i18n="prod.masterbatch.cta.desc">Cuéntanos las especificaciones de tu proceso de extrusión y te formulamos el masterbatch correcto.</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <a href="../contacto.html" class="btn btn--primary">Solicitar cotización <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-      <a href="../fichas-tecnicas.html" class="btn btn--ghost-dark">Descargar ficha técnica</a>
+      <a href="../contacto.html" class="btn btn--primary"><span data-i18n="prod.common.cta.quote">Solicitar cotización</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="../fichas-tecnicas.html" class="btn btn--ghost-dark" data-i18n="prod.common.cta.download">Descargar ficha técnica</a>
     </div>
   </div>
 </section>
@@ -180,7 +180,7 @@
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand"><a href="../index.html" class="nav__logo" style="color:#FFF"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a><p data-i18n="footer.brand.lede">Líderes globales en tecnología VCI sostenible desde 1994.</p></div>
-      <div class="footer__col"><h5 data-i18n="footer.col.products">Productos</h5><a href="vci-film.html">VCI Film</a><a href="vci-polvo.html">VCI Polvo</a><a href="vci-masterbatch.html">VCI Masterbatch</a><a href="vci-emisor.html">VCI Emisor</a><a href="vci-liquido.html">VCI Líquido</a><a href="vci-papel.html">VCI Papel</a></div>
+      <div class="footer__col"><h5 data-i18n="footer.col.products">Productos</h5><a href="vci-film.html" data-i18n="nav.dd.film">VCI Film</a><a href="vci-polvo.html" data-i18n="nav.dd.polvo">VCI Polvo</a><a href="vci-masterbatch.html" data-i18n="nav.dd.masterbatch">VCI Masterbatch</a><a href="vci-emisor.html" data-i18n="nav.dd.emisor">VCI Emisor</a><a href="vci-liquido.html" data-i18n="nav.dd.liquido">VCI Líquido</a><a href="vci-papel.html" data-i18n="nav.dd.papel">VCI Papel</a></div>
       <div class="footer__col"><h5 data-i18n="footer.col.company">Empresa</h5><a href="../nosotros.html" data-i18n="footer.about">Nosotros</a><a href="../certificaciones.html" data-i18n="footer.certs">Certificaciones</a><a href="../noticias.html" data-i18n="footer.news">Noticias</a><a href="../carreras.html" data-i18n="footer.careers">Carreras</a></div>
       <div class="footer__col"><h5 data-i18n="footer.col.support">Soporte</h5><a href="../contacto.html" data-i18n="footer.contact">Contacto</a><a href="../fichas-tecnicas.html" data-i18n="footer.datasheets">Fichas Técnicas</a><a href="../faq.html" data-i18n="footer.faq">FAQ</a><a href="../recursos.html" data-i18n="footer.resources">Recursos</a></div>
     </div>

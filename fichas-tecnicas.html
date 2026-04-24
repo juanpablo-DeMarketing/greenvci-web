@@ -46,7 +46,7 @@
       </a>
       <nav class="nav__links">
         <div class="nav__dropdown">
-          <button class="nav__dropdown-toggle" data-i18n="nav.products">Productos <svg class="nav__dropdown-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="nav__dropdown-toggle"><span data-i18n="nav.products">Productos</span> <svg class="nav__dropdown-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           <div class="nav__dropdown-menu">
             <a class="nav__dropdown-item" href="productos/vci-film.html" data-i18n="nav.dd.film">VCI Film</a>
             <a class="nav__dropdown-item" href="productos/vci-polvo.html" data-i18n="nav.dd.polvo">VCI Polvo</a>
@@ -60,7 +60,7 @@
           </div>
         </div>
         <div class="nav__dropdown">
-          <button class="nav__dropdown-toggle" data-i18n="nav.resources">Recursos <svg class="nav__dropdown-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="nav__dropdown-toggle"><span data-i18n="nav.resources">Recursos</span> <svg class="nav__dropdown-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           <div class="nav__dropdown-menu">
             <a class="nav__dropdown-item" href="fichas-tecnicas.html" data-i18n="nav.dd.fichas">Fichas Técnicas</a>
             <a class="nav__dropdown-item" href="certificaciones.html" data-i18n="nav.dd.certs">Certificaciones</a>
@@ -82,27 +82,27 @@
 
   <section class="ft-hero">
     <div class="container">
-      <p class="section-label" style="color:var(--moss-400);margin-bottom:16px">Biblioteca Técnica</p>
-      <h1>Fichas<br><em style="font-family:var(--f-editorial);font-style:italic;font-weight:400">Técnicas</em></h1>
-      <p>Descargue las especificaciones completas de cada producto GreenVCI: composición, rendimiento, aplicación, limitaciones y fichas de seguridad (SDS).</p>
+      <p class="section-label" style="color:var(--moss-400);margin-bottom:16px" data-i18n="datasheets.hero.label">Biblioteca Técnica</p>
+      <h1 data-i18n-html="datasheets.hero.title.html">Fichas<br><em style="font-family:var(--f-editorial);font-style:italic;font-weight:400">Técnicas</em></h1>
+      <p data-i18n="datasheets.hero.desc">Descargue las especificaciones completas de cada producto GreenVCI: composición, rendimiento, aplicación, limitaciones y fichas de seguridad (SDS).</p>
     </div>
   </section>
 
   <div class="ft-search">
     <div class="container">
       <div class="ft-search__inner">
-        <input class="ft-search__input" type="text" placeholder="Buscar por producto, modelo o certificación...">
+        <input class="ft-search__input" type="text" placeholder="Buscar por producto, modelo o certificación..." data-i18n-placeholder="datasheets.search.ph">
         <select class="ft-filter">
-          <option>Todos los productos</option>
-          <option>VCI Film</option>
-          <option>VCI Polvo</option>
-          <option>VCI Masterbatch</option>
-          <option>VCI Emisor</option>
-          <option>VCI Líquido</option>
-          <option>VCI Desecante</option>
-          <option>VCI Papel</option>
-          <option>VCI Limpiador</option>
-          <option>VCI Fabricación</option>
+          <option data-i18n="datasheets.filter.all">Todos los productos</option>
+          <option data-i18n="nav.dd.film">VCI Film</option>
+          <option data-i18n="nav.dd.polvo">VCI Polvo</option>
+          <option data-i18n="nav.dd.masterbatch">VCI Masterbatch</option>
+          <option data-i18n="nav.dd.emisor">VCI Emisor</option>
+          <option data-i18n="nav.dd.liquido">VCI Líquido</option>
+          <option data-i18n="nav.dd.desecante">VCI Desecante</option>
+          <option data-i18n="nav.dd.papel">VCI Papel</option>
+          <option data-i18n="nav.dd.limpiador">VCI Limpiador</option>
+          <option data-i18n="nav.dd.fabricacion">VCI Fabricación</option>
         </select>
       </div>
     </div>
@@ -112,63 +112,63 @@
     <div class="container">
 
       <div class="ft-category">
-        <h2 class="ft-category__title">VCI Film</h2>
+        <h2 class="ft-category__title" data-i18n="nav.dd.film">VCI Film</h2>
         <table class="ft-table">
-          <thead><tr><th>Modelo</th><th>Tipo</th><th>Versión</th><th>Idioma</th><th>Certif.</th><th>Descargar</th></tr></thead>
+          <thead><tr><th data-i18n="datasheets.th.model">Modelo</th><th data-i18n="datasheets.th.type">Tipo</th><th data-i18n="datasheets.th.version">Versión</th><th data-i18n="datasheets.th.lang">Idioma</th><th data-i18n="datasheets.th.cert">Certif.</th><th data-i18n="datasheets.th.download">Descargar</th></tr></thead>
           <tbody>
-            <tr><td><strong>GVF100</strong> — VCI Film Monocapa 50µm</td><td>Ficha Técnica</td><td>v2.3 / 2024</td><td>ES / EN</td><td><span class="ft-badge">RoHS · TRGS</span></td><td><a class="ft-download" href="contacto.html">Solicitar PDF</a></td></tr>
-            <tr><td><strong>GVF200</strong> — VCI Film Bicapa 80µm</td><td>Ficha Técnica</td><td>v2.1 / 2024</td><td>ES / EN</td><td><span class="ft-badge">RoHS · VW</span></td><td><a class="ft-download" href="contacto.html">Solicitar PDF</a></td></tr>
-            <tr><td><strong>GVF500</strong> — VCI Film HD 150µm</td><td>Ficha Técnica</td><td>v1.8 / 2023</td><td>EN</td><td><span class="ft-badge">MIL-SPEC</span></td><td><a class="ft-download" href="contacto.html">Solicitar PDF</a></td></tr>
-            <tr><td><strong>GVF600</strong> — VCI Film Anticorrosión + Antiestático</td><td>Ficha Técnica</td><td>v1.5 / 2023</td><td>ES / EN</td><td><span class="ft-badge">RoHS · REACH</span></td><td><a class="ft-download" href="contacto.html">Solicitar PDF</a></td></tr>
+            <tr><td data-i18n-html="datasheets.gvf100.name"><strong>GVF100</strong> — VCI Film Monocapa 50µm</td><td data-i18n="datasheets.type.ft">Ficha Técnica</td><td>v2.3 / 2024</td><td>ES / EN</td><td><span class="ft-badge">RoHS · TRGS</span></td><td><a class="ft-download" href="contacto.html" data-i18n="datasheets.request_pdf">Solicitar PDF</a></td></tr>
+            <tr><td data-i18n-html="datasheets.gvf200.name"><strong>GVF200</strong> — VCI Film Bicapa 80µm</td><td data-i18n="datasheets.type.ft">Ficha Técnica</td><td>v2.1 / 2024</td><td>ES / EN</td><td><span class="ft-badge">RoHS · VW</span></td><td><a class="ft-download" href="contacto.html" data-i18n="datasheets.request_pdf">Solicitar PDF</a></td></tr>
+            <tr><td data-i18n-html="datasheets.gvf500.name"><strong>GVF500</strong> — VCI Film HD 150µm</td><td data-i18n="datasheets.type.ft">Ficha Técnica</td><td>v1.8 / 2023</td><td>EN</td><td><span class="ft-badge">MIL-SPEC</span></td><td><a class="ft-download" href="contacto.html" data-i18n="datasheets.request_pdf">Solicitar PDF</a></td></tr>
+            <tr><td data-i18n-html="datasheets.gvf600.name"><strong>GVF600</strong> — VCI Film Anticorrosión + Antiestático</td><td data-i18n="datasheets.type.ft">Ficha Técnica</td><td>v1.5 / 2023</td><td>ES / EN</td><td><span class="ft-badge">RoHS · REACH</span></td><td><a class="ft-download" href="contacto.html" data-i18n="datasheets.request_pdf">Solicitar PDF</a></td></tr>
           </tbody>
         </table>
       </div>
 
       <div class="ft-category">
-        <h2 class="ft-category__title">VCI Polvo</h2>
+        <h2 class="ft-category__title" data-i18n="nav.dd.polvo">VCI Polvo</h2>
         <table class="ft-table">
-          <thead><tr><th>Modelo</th><th>Tipo</th><th>Versión</th><th>Idioma</th><th>Certif.</th><th>Descargar</th></tr></thead>
+          <thead><tr><th data-i18n="datasheets.th.model">Modelo</th><th data-i18n="datasheets.th.type">Tipo</th><th data-i18n="datasheets.th.version">Versión</th><th data-i18n="datasheets.th.lang">Idioma</th><th data-i18n="datasheets.th.cert">Certif.</th><th data-i18n="datasheets.th.download">Descargar</th></tr></thead>
           <tbody>
-            <tr><td><strong>GVP100</strong> — VCI Powder Ferroso</td><td>Ficha Técnica + SDS</td><td>v3.0 / 2024</td><td>ES / EN</td><td><span class="ft-badge">TRGS 615</span></td><td><a class="ft-download" href="contacto.html">Solicitar PDF</a></td></tr>
-            <tr><td><strong>GVP400</strong> — VCI Powder Multi-metal</td><td>Ficha Técnica + SDS</td><td>v2.2 / 2024</td><td>ES / EN</td><td><span class="ft-badge">REACH · RoHS</span></td><td><a class="ft-download" href="contacto.html">Solicitar PDF</a></td></tr>
-            <tr><td><strong>GVP700</strong> — VCI Powder Biodegradable</td><td>Ficha Técnica + SDS</td><td>v1.1 / 2024</td><td>EN</td><td><span class="ft-badge">ISO 7827</span></td><td><a class="ft-download" href="contacto.html">Solicitar PDF</a></td></tr>
+            <tr><td data-i18n-html="datasheets.gvp100.name"><strong>GVP100</strong> — VCI Powder Ferroso</td><td data-i18n="datasheets.type.ft_sds">Ficha Técnica + SDS</td><td>v3.0 / 2024</td><td>ES / EN</td><td><span class="ft-badge">TRGS 615</span></td><td><a class="ft-download" href="contacto.html" data-i18n="datasheets.request_pdf">Solicitar PDF</a></td></tr>
+            <tr><td data-i18n-html="datasheets.gvp400.name"><strong>GVP400</strong> — VCI Powder Multi-metal</td><td data-i18n="datasheets.type.ft_sds">Ficha Técnica + SDS</td><td>v2.2 / 2024</td><td>ES / EN</td><td><span class="ft-badge">REACH · RoHS</span></td><td><a class="ft-download" href="contacto.html" data-i18n="datasheets.request_pdf">Solicitar PDF</a></td></tr>
+            <tr><td data-i18n-html="datasheets.gvp700.name"><strong>GVP700</strong> — VCI Powder Biodegradable</td><td data-i18n="datasheets.type.ft_sds">Ficha Técnica + SDS</td><td>v1.1 / 2024</td><td>EN</td><td><span class="ft-badge">ISO 7827</span></td><td><a class="ft-download" href="contacto.html" data-i18n="datasheets.request_pdf">Solicitar PDF</a></td></tr>
           </tbody>
         </table>
       </div>
 
       <div class="ft-category">
-        <h2 class="ft-category__title">VCI Masterbatch</h2>
+        <h2 class="ft-category__title" data-i18n="nav.dd.masterbatch">VCI Masterbatch</h2>
         <table class="ft-table">
-          <thead><tr><th>Modelo</th><th>Tipo</th><th>Versión</th><th>Idioma</th><th>Certif.</th><th>Descargar</th></tr></thead>
+          <thead><tr><th data-i18n="datasheets.th.model">Modelo</th><th data-i18n="datasheets.th.type">Tipo</th><th data-i18n="datasheets.th.version">Versión</th><th data-i18n="datasheets.th.lang">Idioma</th><th data-i18n="datasheets.th.cert">Certif.</th><th data-i18n="datasheets.th.download">Descargar</th></tr></thead>
           <tbody>
-            <tr><td><strong>GVR-SP</strong> — VCI Masterbatch Standard PE</td><td>Ficha Técnica</td><td>v2.0 / 2024</td><td>ES / EN</td><td><span class="ft-badge">RoHS</span></td><td><a class="ft-download" href="contacto.html">Solicitar PDF</a></td></tr>
-            <tr><td><strong>GVR700</strong> — VCI Masterbatch Bio (PHA)</td><td>Ficha Técnica + SDS</td><td>v1.0 / 2024</td><td>EN</td><td><span class="ft-badge">ISO 7827 · REACH</span></td><td><a class="ft-download" href="contacto.html">Solicitar PDF</a></td></tr>
+            <tr><td data-i18n-html="datasheets.gvrsp.name"><strong>GVR-SP</strong> — VCI Masterbatch Standard PE</td><td data-i18n="datasheets.type.ft">Ficha Técnica</td><td>v2.0 / 2024</td><td>ES / EN</td><td><span class="ft-badge">RoHS</span></td><td><a class="ft-download" href="contacto.html" data-i18n="datasheets.request_pdf">Solicitar PDF</a></td></tr>
+            <tr><td data-i18n-html="datasheets.gvr700.name"><strong>GVR700</strong> — VCI Masterbatch Bio (PHA)</td><td data-i18n="datasheets.type.ft_sds">Ficha Técnica + SDS</td><td>v1.0 / 2024</td><td>EN</td><td><span class="ft-badge">ISO 7827 · REACH</span></td><td><a class="ft-download" href="contacto.html" data-i18n="datasheets.request_pdf">Solicitar PDF</a></td></tr>
           </tbody>
         </table>
       </div>
 
       <div class="ft-category">
-        <h2 class="ft-category__title">VCI Emisor · Líquido · Desecante · Papel</h2>
+        <h2 class="ft-category__title" data-i18n="datasheets.cat.eldp">VCI Emisor · Líquido · Desecante · Papel</h2>
         <table class="ft-table">
-          <thead><tr><th>Modelo</th><th>Tipo</th><th>Versión</th><th>Idioma</th><th>Certif.</th><th>Descargar</th></tr></thead>
+          <thead><tr><th data-i18n="datasheets.th.model">Modelo</th><th data-i18n="datasheets.th.type">Tipo</th><th data-i18n="datasheets.th.version">Versión</th><th data-i18n="datasheets.th.lang">Idioma</th><th data-i18n="datasheets.th.cert">Certif.</th><th data-i18n="datasheets.th.download">Descargar</th></tr></thead>
           <tbody>
-            <tr><td><strong>GVE100 / GVE200</strong> — VCI Emitter Tira plana</td><td>Ficha Técnica</td><td>v1.4 / 2023</td><td>ES / EN</td><td><span class="ft-badge">MIL-SPEC</span></td><td><a class="ft-download" href="contacto.html">Solicitar PDF</a></td></tr>
-            <tr><td><strong>GVDF110 / GVDF200</strong> — VCI Emitter Cápsula</td><td>Ficha Técnica</td><td>v1.2 / 2023</td><td>EN</td><td><span class="ft-badge">RoHS</span></td><td><a class="ft-download" href="contacto.html">Solicitar PDF</a></td></tr>
-            <tr><td><strong>GVL100–GVL300</strong> — VCI Liquid (agua)</td><td>Ficha Técnica + SDS</td><td>v2.5 / 2024</td><td>ES / EN</td><td><span class="ft-badge">REACH · VW</span></td><td><a class="ft-download" href="contacto.html">Solicitar PDF</a></td></tr>
-            <tr><td><strong>GVD100–GVD310</strong> — VCI Desiccant</td><td>Ficha Técnica</td><td>v1.6 / 2023</td><td>ES / EN</td><td><span class="ft-badge">IMO · RoHS</span></td><td><a class="ft-download" href="contacto.html">Solicitar PDF</a></td></tr>
-            <tr><td><strong>GVPR100–GVPR410</strong> — VCI Paper</td><td>Ficha Técnica</td><td>v2.0 / 2024</td><td>ES / EN</td><td><span class="ft-badge">TRGS 615 · VW</span></td><td><a class="ft-download" href="contacto.html">Solicitar PDF</a></td></tr>
+            <tr><td data-i18n-html="datasheets.gve.name"><strong>GVE100 / GVE200</strong> — VCI Emitter Tira plana</td><td data-i18n="datasheets.type.ft">Ficha Técnica</td><td>v1.4 / 2023</td><td>ES / EN</td><td><span class="ft-badge">MIL-SPEC</span></td><td><a class="ft-download" href="contacto.html" data-i18n="datasheets.request_pdf">Solicitar PDF</a></td></tr>
+            <tr><td data-i18n-html="datasheets.gvdf.name"><strong>GVDF110 / GVDF200</strong> — VCI Emitter Cápsula</td><td data-i18n="datasheets.type.ft">Ficha Técnica</td><td>v1.2 / 2023</td><td>EN</td><td><span class="ft-badge">RoHS</span></td><td><a class="ft-download" href="contacto.html" data-i18n="datasheets.request_pdf">Solicitar PDF</a></td></tr>
+            <tr><td data-i18n-html="datasheets.gvl.name"><strong>GVL100–GVL300</strong> — VCI Liquid (agua)</td><td data-i18n="datasheets.type.ft_sds">Ficha Técnica + SDS</td><td>v2.5 / 2024</td><td>ES / EN</td><td><span class="ft-badge">REACH · VW</span></td><td><a class="ft-download" href="contacto.html" data-i18n="datasheets.request_pdf">Solicitar PDF</a></td></tr>
+            <tr><td data-i18n-html="datasheets.gvd.name"><strong>GVD100–GVD310</strong> — VCI Desiccant</td><td data-i18n="datasheets.type.ft">Ficha Técnica</td><td>v1.6 / 2023</td><td>ES / EN</td><td><span class="ft-badge">IMO · RoHS</span></td><td><a class="ft-download" href="contacto.html" data-i18n="datasheets.request_pdf">Solicitar PDF</a></td></tr>
+            <tr><td data-i18n-html="datasheets.gvpr.name"><strong>GVPR100–GVPR410</strong> — VCI Paper</td><td data-i18n="datasheets.type.ft">Ficha Técnica</td><td>v2.0 / 2024</td><td>ES / EN</td><td><span class="ft-badge">TRGS 615 · VW</span></td><td><a class="ft-download" href="contacto.html" data-i18n="datasheets.request_pdf">Solicitar PDF</a></td></tr>
           </tbody>
         </table>
       </div>
 
       <div class="ft-category">
-        <h2 class="ft-category__title">VCI Limpiador EDC</h2>
+        <h2 class="ft-category__title" data-i18n="datasheets.cat.edc">VCI Limpiador EDC</h2>
         <table class="ft-table">
-          <thead><tr><th>Modelo</th><th>Tipo</th><th>Versión</th><th>Idioma</th><th>Certif.</th><th>Descargar</th></tr></thead>
+          <thead><tr><th data-i18n="datasheets.th.model">Modelo</th><th data-i18n="datasheets.th.type">Tipo</th><th data-i18n="datasheets.th.version">Versión</th><th data-i18n="datasheets.th.lang">Idioma</th><th data-i18n="datasheets.th.cert">Certif.</th><th data-i18n="datasheets.th.download">Descargar</th></tr></thead>
           <tbody>
-            <tr><td><strong>EDC100 / EDC200</strong> — VCI Cleaner Industrial</td><td>Ficha Técnica + SDS</td><td>v2.1 / 2024</td><td>ES / EN</td><td><span class="ft-badge">RoHS · REACH</span></td><td><a class="ft-download" href="contacto.html">Solicitar PDF</a></td></tr>
-            <tr><td><strong>EDC300</strong> — VCI Cleaner Aerospace</td><td>Ficha Técnica + SDS</td><td>v1.3 / 2024</td><td>EN</td><td><span class="ft-badge">Boeing D6 · MIL</span></td><td><a class="ft-download" href="contacto.html">Solicitar PDF</a></td></tr>
-            <tr><td><strong>EDC720</strong> — VCI Cleaner RTU Spray</td><td>Ficha Técnica + SDS</td><td>v1.1 / 2024</td><td>ES / EN</td><td><span class="ft-badge">Boeing D6</span></td><td><a class="ft-download" href="contacto.html">Solicitar PDF</a></td></tr>
+            <tr><td data-i18n-html="datasheets.edc12.name"><strong>EDC100 / EDC200</strong> — VCI Cleaner Industrial</td><td data-i18n="datasheets.type.ft_sds">Ficha Técnica + SDS</td><td>v2.1 / 2024</td><td>ES / EN</td><td><span class="ft-badge">RoHS · REACH</span></td><td><a class="ft-download" href="contacto.html" data-i18n="datasheets.request_pdf">Solicitar PDF</a></td></tr>
+            <tr><td data-i18n-html="datasheets.edc300.name"><strong>EDC300</strong> — VCI Cleaner Aerospace</td><td data-i18n="datasheets.type.ft_sds">Ficha Técnica + SDS</td><td>v1.3 / 2024</td><td>EN</td><td><span class="ft-badge">Boeing D6 · MIL</span></td><td><a class="ft-download" href="contacto.html" data-i18n="datasheets.request_pdf">Solicitar PDF</a></td></tr>
+            <tr><td data-i18n-html="datasheets.edc720.name"><strong>EDC720</strong> — VCI Cleaner RTU Spray</td><td data-i18n="datasheets.type.ft_sds">Ficha Técnica + SDS</td><td>v1.1 / 2024</td><td>ES / EN</td><td><span class="ft-badge">Boeing D6</span></td><td><a class="ft-download" href="contacto.html" data-i18n="datasheets.request_pdf">Solicitar PDF</a></td></tr>
           </tbody>
         </table>
       </div>
@@ -178,11 +178,11 @@
 
   <section class="dark-cta">
     <div class="container">
-      <h2>¿No encuentra lo que busca?</h2>
-      <p>Solicite la ficha técnica o SDS de cualquier producto GreenVCI directamente a nuestro equipo técnico. Respuesta en 24 horas hábiles.</p>
+      <h2 data-i18n="datasheets.cta.title">¿No encuentra lo que busca?</h2>
+      <p data-i18n="datasheets.cta.desc">Solicite la ficha técnica o SDS de cualquier producto GreenVCI directamente a nuestro equipo técnico. Respuesta en 24 horas hábiles.</p>
       <div class="btn-row">
-        <a class="btn btn--primary" href="contacto.html">Solicitar documentación</a>
-        <a class="btn btn--outline-light" href="certificaciones.html">Ver certificaciones</a>
+        <a class="btn btn--primary" href="contacto.html" data-i18n="datasheets.cta.btn1">Solicitar documentación</a>
+        <a class="btn btn--outline-light" href="certificaciones.html" data-i18n="datasheets.cta.btn2">Ver certificaciones</a>
       </div>
     </div>
   </section>
@@ -195,34 +195,34 @@
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="#2d6a4f"/><path d="M7 21 L14 7 L21 21" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 16h9" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
             <span class="nav__logo-text" style="color:#fff">GreenVCI</span>
           </a>
-          <p style="color:rgba(255,255,255,.55);font-size:14px;line-height:1.6;max-width:240px">Tecnología VCI de origen coreano. Certificada, sostenible y de alto rendimiento.</p>
+          <p style="color:rgba(255,255,255,.55);font-size:14px;line-height:1.6;max-width:240px" data-i18n="footer.brand">Tecnología VCI de origen coreano. Certificada, sostenible y de alto rendimiento.</p>
         </div>
         <div>
           <p class="footer__col-title" data-i18n="footer.col.products">Productos</p>
-          <a class="footer__link" href="productos/vci-film.html">VCI Film</a>
-          <a class="footer__link" href="productos/vci-polvo.html">VCI Polvo</a>
-          <a class="footer__link" href="productos/vci-masterbatch.html">VCI Masterbatch</a>
-          <a class="footer__link" href="productos/vci-emisor.html">VCI Emisor</a>
-          <a class="footer__link" href="productos/vci-liquido.html">VCI Líquido</a>
-          <a class="footer__link" href="productos/vci-desecante.html">VCI Desecante</a>
-          <a class="footer__link" href="productos/vci-papel.html">VCI Papel</a>
-          <a class="footer__link" href="productos/vci-limpiador.html">VCI Limpiador</a>
-          <a class="footer__link" href="productos/vci-fabricacion.html">VCI Fabricación</a>
+          <a class="footer__link" href="productos/vci-film.html" data-i18n="nav.dd.film">VCI Film</a>
+          <a class="footer__link" href="productos/vci-polvo.html" data-i18n="nav.dd.polvo">VCI Polvo</a>
+          <a class="footer__link" href="productos/vci-masterbatch.html" data-i18n="nav.dd.masterbatch">VCI Masterbatch</a>
+          <a class="footer__link" href="productos/vci-emisor.html" data-i18n="nav.dd.emisor">VCI Emisor</a>
+          <a class="footer__link" href="productos/vci-liquido.html" data-i18n="nav.dd.liquido">VCI Líquido</a>
+          <a class="footer__link" href="productos/vci-desecante.html" data-i18n="nav.dd.desecante">VCI Desecante</a>
+          <a class="footer__link" href="productos/vci-papel.html" data-i18n="nav.dd.papel">VCI Papel</a>
+          <a class="footer__link" href="productos/vci-limpiador.html" data-i18n="nav.dd.limpiador">VCI Limpiador</a>
+          <a class="footer__link" href="productos/vci-fabricacion.html" data-i18n="nav.dd.fabricacion">VCI Fabricación</a>
         </div>
         <div>
           <p class="footer__col-title" data-i18n="footer.col.company">Empresa</p>
-          <a class="footer__link" href="nosotros.html">Nosotros</a>
-          <a class="footer__link" href="sostenibilidad.html">Sostenibilidad</a>
-          <a class="footer__link" href="certificaciones.html">Certificaciones</a>
-          <a class="footer__link" href="carreras.html">Carreras</a>
-          <a class="footer__link" href="noticias.html">Noticias</a>
+          <a class="footer__link" href="nosotros.html" data-i18n="footer.about">Nosotros</a>
+          <a class="footer__link" href="sostenibilidad.html" data-i18n="footer.sustainability">Sostenibilidad</a>
+          <a class="footer__link" href="certificaciones.html" data-i18n="footer.certs">Certificaciones</a>
+          <a class="footer__link" href="carreras.html" data-i18n="footer.careers">Carreras</a>
+          <a class="footer__link" href="noticias.html" data-i18n="footer.news">Noticias</a>
         </div>
         <div>
           <p class="footer__col-title" data-i18n="footer.col.support">Soporte</p>
-          <a class="footer__link" href="contacto.html">Contacto</a>
-          <a class="footer__link" href="distribuidores.html">Distribuidores</a>
-          <a class="footer__link" href="fichas-tecnicas.html">Fichas Técnicas</a>
-          <a class="footer__link" href="faq.html">FAQ</a>
+          <a class="footer__link" href="contacto.html" data-i18n="footer.contact">Contacto</a>
+          <a class="footer__link" href="distribuidores.html" data-i18n="footer.distributors">Distribuidores</a>
+          <a class="footer__link" href="fichas-tecnicas.html" data-i18n="footer.datasheets">Fichas Técnicas</a>
+          <a class="footer__link" href="faq.html" data-i18n="footer.faq">FAQ</a>
         </div>
       </div>
       <div class="footer__bottom">

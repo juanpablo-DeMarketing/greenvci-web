@@ -60,7 +60,7 @@
 <body>
 
 <!-- NAV -->
-<header class="nav" id="nav">
+<header class="nav nav--over-dark" id="nav">
   <div class="container nav__inner">
     <a href="index.html" class="nav__logo"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a>
     <nav class="nav__links">
@@ -83,8 +83,8 @@
       <div class="nav__dropdown">
         <button class="nav__dropdown-toggle" data-i18n="nav.resources">Recursos <svg class="nav__dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="nav__dropdown-menu">
-          <a href="recursos.html#consejos" class="nav__dropdown-item">Consejos Rápidos</a>
-          <a href="recursos.html#archivo" class="nav__dropdown-item">Archivo</a>
+          <a href="recursos.html#consejos" class="nav__dropdown-item" data-i18n="nav.dd.tips">Consejos Rápidos</a>
+          <a href="recursos.html#archivo" class="nav__dropdown-item" data-i18n="nav.dd.archive">Archivo</a>
           <a href="recursos.html#casos" class="nav__dropdown-item" data-i18n="nav.dd.cases">Casos de Estudio</a>
           <a href="fichas-tecnicas.html" class="nav__dropdown-item" data-i18n="nav.dd.fichas">Fichas Técnicas</a>
         </div>
@@ -92,7 +92,7 @@
     </nav>
     <div style="display:flex; align-items:center; gap:20px">
       <div class="nav__lang"><button class="active">ES</button><button>EN</button><button>KO</button></div>
-      <a href="contacto.html" class="nav__cta" data-i18n="nav.cta">Cotizar <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="contacto.html" class="nav__cta"><span data-i18n="nav.cta">Cotizar</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </header>
@@ -100,27 +100,27 @@
 <!-- PRODUCT HERO -->
 <section class="page-hero">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">GreenVCI</a><span>/</span><a href="index.html#productos">Productos</a><span>/</span>VCI Film</div>
+    <div class="breadcrumb"><a href="index.html">GreenVCI</a><span>/</span><a href="index.html#productos" data-i18n="nav.products">Productos</a><span>/</span><span data-i18n="prodpage.breadcrumb.current">VCI Film</span></div>
     <div class="prod-hero-grid">
       <div class="reveal">
-        <div class="eyebrow">01 / 09 · Destacado</div>
-        <h1 class="prod-hero-title">VCI Film.<br>El estándar <em>invisible</em><br>del transporte.</h1>
-        <p class="prod-hero-lede">Film de polietileno de baja densidad, impregnado con nuestra formulación VCI de tercera generación. Una sola capa de este material reemplaza aceites, grasas y recubrimientos en la protección de metales durante almacenaje y transporte transoceánico.</p>
+        <div class="eyebrow" data-i18n="home.prod.p01.num">01 / 09 · Destacado</div>
+        <h1 class="prod-hero-title" data-i18n-html="prodpage.hero.title">VCI Film.<br>El estándar <em>invisible</em><br>del transporte.</h1>
+        <p class="prod-hero-lede" data-i18n="prodpage.hero.lede">Film de polietileno de baja densidad, impregnado con nuestra formulación VCI de tercera generación. Una sola capa de este material reemplaza aceites, grasas y recubrimientos en la protección de metales durante almacenaje y transporte transoceánico.</p>
         <div class="prod-specs">
-          <div class="prod-spec"><div class="prod-spec-l">Espesor</div><div class="prod-spec-v">30 – 200 µm</div></div>
-          <div class="prod-spec"><div class="prod-spec-l">Ancho máximo</div><div class="prod-spec-v">6 metros</div></div>
-          <div class="prod-spec"><div class="prod-spec-l">Protección</div><div class="prod-spec-v">Hasta 24 meses</div></div>
-          <div class="prod-spec"><div class="prod-spec-l">Metales</div><div class="prod-spec-v">Ferrosos · no ferrosos · multimetal</div></div>
+          <div class="prod-spec"><div class="prod-spec-l" data-i18n="prodpage.spec1.label">Espesor</div><div class="prod-spec-v" data-i18n="prodpage.spec1.val">30 – 200 µm</div></div>
+          <div class="prod-spec"><div class="prod-spec-l" data-i18n="prodpage.spec2.label">Ancho máximo</div><div class="prod-spec-v" data-i18n="prodpage.spec2.val">6 metros</div></div>
+          <div class="prod-spec"><div class="prod-spec-l" data-i18n="prod.film.spec1.label">Protección</div><div class="prod-spec-v" data-i18n="prod.film.spec1.val">Hasta 24 meses</div></div>
+          <div class="prod-spec"><div class="prod-spec-l" data-i18n="prod.film.spec3.label">Metales</div><div class="prod-spec-v" data-i18n="prodpage.spec4.val">Ferrosos · no ferrosos · multimetal</div></div>
         </div>
         <div style="display:flex; gap:12px; flex-wrap:wrap">
-          <a href="#" class="btn btn--primary">Descargar ficha técnica (PDF)
+          <a href="#" class="btn btn--primary"><span data-i18n="prodpage.cta.download">Descargar ficha técnica (PDF)</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
           </a>
-          <a href="index.html#contacto" class="btn btn--ghost-light">Solicitar muestra</a>
+          <a href="index.html#contacto" class="btn btn--ghost-light" data-i18n="section.sample">Solicitar muestra</a>
         </div>
       </div>
       <div class="prod-visual reveal reveal--d2">
-        <span class="prod-visual-tag">PE-LD · 3 capas · 120 µm</span>
+        <span class="prod-visual-tag" data-i18n="prodpage.visual.tag">PE-LD · 3 capas · 120 µm</span>
         <div data-ilu="prodFilm" style="height:100%"></div>
       </div>
     </div>
@@ -131,24 +131,24 @@
 <section class="prod-section">
   <div class="container">
     <div style="max-width:640px; margin-bottom:60px" class="reveal">
-      <div class="eyebrow">Por qué este film</div>
-      <h2>Tres ventajas<br>medibles.</h2>
+      <div class="eyebrow" data-i18n="prodpage.benefits.eyebrow">Por qué este film</div>
+      <h2 data-i18n-html="prodpage.benefits.title">Tres ventajas<br>medibles.</h2>
     </div>
     <div class="prod-beneficios">
       <div class="beneficio reveal">
         <div class="beneficio-num">01</div>
-        <div class="beneficio-t">Sin limpieza posterior</div>
-        <p class="beneficio-d">El vapor VCI no deja residuo oleoso ni película visible. La pieza sale del empaque lista para ensamblar, pintar o mecanizar. Cero solvente, cero tiempo perdido en desengrase.</p>
+        <div class="beneficio-t" data-i18n="prodpage.benefit1.title">Sin limpieza posterior</div>
+        <p class="beneficio-d" data-i18n="prodpage.benefit1.desc">El vapor VCI no deja residuo oleoso ni película visible. La pieza sale del empaque lista para ensamblar, pintar o mecanizar. Cero solvente, cero tiempo perdido en desengrase.</p>
       </div>
       <div class="beneficio reveal reveal--d1">
         <div class="beneficio-num">02</div>
-        <div class="beneficio-t">Protección en cavidades</div>
-        <p class="beneficio-d">A diferencia de aceites o ceras, el vapor alcanza roscas internas, cavidades ciegas y uniones soldadas. Protege lo que no puedes alcanzar con un pincel.</p>
+        <div class="beneficio-t" data-i18n="prodpage.benefit2.title">Protección en cavidades</div>
+        <p class="beneficio-d" data-i18n="prodpage.benefit2.desc">A diferencia de aceites o ceras, el vapor alcanza roscas internas, cavidades ciegas y uniones soldadas. Protege lo que no puedes alcanzar con un pincel.</p>
       </div>
       <div class="beneficio reveal reveal--d2">
         <div class="beneficio-num">03</div>
-        <div class="beneficio-t">Reciclable como PE regular</div>
-        <p class="beneficio-d">Una vez usado, el film entra al flujo de reciclaje municipal o industrial sin requerir tratamiento especial. Sin metales pesados, sin nitritos, sin cromatos.</p>
+        <div class="beneficio-t" data-i18n="prodpage.benefit3.title">Reciclable como PE regular</div>
+        <p class="beneficio-d" data-i18n="prodpage.benefit3.desc">Una vez usado, el film entra al flujo de reciclaje municipal o industrial sin requerir tratamiento especial. Sin metales pesados, sin nitritos, sin cromatos.</p>
       </div>
     </div>
   </div>
@@ -158,19 +158,19 @@
 <section class="prod-section prod-section-alt">
   <div class="container">
     <div style="max-width:640px; margin-bottom:60px" class="reveal">
-      <div class="eyebrow">Especificaciones</div>
-      <h2>Ficha técnica.</h2>
+      <div class="eyebrow" data-i18n="prodpage.ficha.eyebrow">Especificaciones</div>
+      <h2 data-i18n="prodpage.ficha.title">Ficha técnica.</h2>
     </div>
     <div class="ficha-tabla reveal reveal--d1">
-      <div class="ficha-row"><div class="ficha-k">Composición base</div><div class="ficha-v">Polietileno de baja densidad (LDPE) coextruído en <strong>3 capas</strong>, con formulación VCI integrada en la capa intermedia para liberación controlada.</div></div>
-      <div class="ficha-row"><div class="ficha-k">Metales protegidos</div><div class="ficha-v">Acero al carbono · acero galvanizado · aluminio · cobre · latón · plata · aleaciones ferrosas y no ferrosas · <strong>sistemas multimetal simultáneos.</strong></div></div>
-      <div class="ficha-row"><div class="ficha-k">Espesores disponibles</div><div class="ficha-v">30, 50, 80, 100, 120, 150, 200 µm · tolerancia ±10%.</div></div>
-      <div class="ficha-row"><div class="ficha-k">Formatos</div><div class="ficha-v">Rollos planos hasta 6 m · tubulares hasta 2.5 m · bolsas termoselladas a medida · sacos valvulados.</div></div>
-      <div class="ficha-row"><div class="ficha-k">Duración de protección</div><div class="ficha-v">Hasta <strong>24 meses</strong> en empaque cerrado e intacto, condiciones normales de almacenaje (5 – 40 °C).</div></div>
-      <div class="ficha-row"><div class="ficha-k">Temperatura de servicio</div><div class="ficha-v">–20 °C a +60 °C.</div></div>
-      <div class="ficha-row"><div class="ficha-k">Conformidad</div><div class="ficha-v">RoHS · REACH · ISO 9001 · ISO 14001 · MIL-PRF-22019D · TL-8135-0007. Apto contacto alimentario con grados específicos.</div></div>
-      <div class="ficha-row"><div class="ficha-k">Disposición final</div><div class="ficha-v">Reciclable como PE convencional (código 4 LDPE). Sin metales pesados, nitritos, cromatos ni aminas secundarias.</div></div>
-      <div class="ficha-row"><div class="ficha-k">MOQ</div><div class="ficha-v">500 kg para formatos estándar · 2 000 kg para formatos a medida.</div></div>
+      <div class="ficha-row"><div class="ficha-k" data-i18n="prodpage.ficha.k1">Composición base</div><div class="ficha-v" data-i18n-html="prodpage.ficha.v1">Polietileno de baja densidad (LDPE) coextruído en <strong>3 capas</strong>, con formulación VCI integrada en la capa intermedia para liberación controlada.</div></div>
+      <div class="ficha-row"><div class="ficha-k" data-i18n="prodpage.ficha.k2">Metales protegidos</div><div class="ficha-v" data-i18n-html="prodpage.ficha.v2">Acero al carbono · acero galvanizado · aluminio · cobre · latón · plata · aleaciones ferrosas y no ferrosas · <strong>sistemas multimetal simultáneos.</strong></div></div>
+      <div class="ficha-row"><div class="ficha-k" data-i18n="prodpage.ficha.k3">Espesores disponibles</div><div class="ficha-v" data-i18n="prodpage.ficha.v3">30, 50, 80, 100, 120, 150, 200 µm · tolerancia ±10%.</div></div>
+      <div class="ficha-row"><div class="ficha-k" data-i18n="prodpage.ficha.k4">Formatos</div><div class="ficha-v" data-i18n="prodpage.ficha.v4">Rollos planos hasta 6 m · tubulares hasta 2.5 m · bolsas termoselladas a medida · sacos valvulados.</div></div>
+      <div class="ficha-row"><div class="ficha-k" data-i18n="prodpage.ficha.k5">Duración de protección</div><div class="ficha-v" data-i18n-html="prodpage.ficha.v5">Hasta <strong>24 meses</strong> en empaque cerrado e intacto, condiciones normales de almacenaje (5 – 40 °C).</div></div>
+      <div class="ficha-row"><div class="ficha-k" data-i18n="prodpage.ficha.k6">Temperatura de servicio</div><div class="ficha-v" data-i18n="prodpage.ficha.v6">–20 °C a +60 °C.</div></div>
+      <div class="ficha-row"><div class="ficha-k" data-i18n="prodpage.ficha.k7">Conformidad</div><div class="ficha-v" data-i18n="prodpage.ficha.v7">RoHS · REACH · ISO 9001 · ISO 14001 · MIL-PRF-22019D · TL-8135-0007. Apto contacto alimentario con grados específicos.</div></div>
+      <div class="ficha-row"><div class="ficha-k" data-i18n="prodpage.ficha.k8">Disposición final</div><div class="ficha-v" data-i18n="prodpage.ficha.v8">Reciclable como PE convencional (código 4 LDPE). Sin metales pesados, nitritos, cromatos ni aminas secundarias.</div></div>
+      <div class="ficha-row"><div class="ficha-k" data-i18n="prodpage.ficha.k9">MOQ</div><div class="ficha-v" data-i18n="prodpage.ficha.v9">500 kg para formatos estándar · 2 000 kg para formatos a medida.</div></div>
     </div>
   </div>
 </section>
@@ -179,14 +179,14 @@
 <section class="prod-section">
   <div class="container">
     <div style="max-width:640px; margin-bottom:60px" class="reveal">
-      <div class="eyebrow">Aplicaciones</div>
-      <h2>Dónde se usa.</h2>
+      <div class="eyebrow" data-i18n="prodpage.usos.eyebrow">Aplicaciones</div>
+      <h2 data-i18n="prodpage.usos.title">Dónde se usa.</h2>
     </div>
     <div class="usos">
-      <div class="uso reveal"><div data-ilu="indAuto" style="height:100%"></div><div class="uso-overlay"><div class="uso-t">Carrocerías y ensambles automotrices</div></div></div>
-      <div class="uso reveal reveal--d1"><div data-ilu="indHeavy" style="height:100%"></div><div class="uso-overlay"><div class="uso-t">Bobinas y láminas de acero</div></div></div>
-      <div class="uso reveal reveal--d2"><div data-ilu="indShipping" style="height:100%"></div><div class="uso-overlay"><div class="uso-t">Contenedores marítimos</div></div></div>
-      <div class="uso reveal reveal--d3"><div data-ilu="indDeepTech" style="height:100%"></div><div class="uso-overlay"><div class="uso-t">Componentes de precisión</div></div></div>
+      <div class="uso reveal"><div data-ilu="indAuto" style="height:100%"></div><div class="uso-overlay"><div class="uso-t" data-i18n="prodpage.uso1">Carrocerías y ensambles automotrices</div></div></div>
+      <div class="uso reveal reveal--d1"><div data-ilu="indHeavy" style="height:100%"></div><div class="uso-overlay"><div class="uso-t" data-i18n="prodpage.uso2">Bobinas y láminas de acero</div></div></div>
+      <div class="uso reveal reveal--d2"><div data-ilu="indShipping" style="height:100%"></div><div class="uso-overlay"><div class="uso-t" data-i18n="prodpage.uso3">Contenedores marítimos</div></div></div>
+      <div class="uso reveal reveal--d3"><div data-ilu="indDeepTech" style="height:100%"></div><div class="uso-overlay"><div class="uso-t" data-i18n="prodpage.uso4">Componentes de precisión</div></div></div>
     </div>
   </div>
 </section>
@@ -194,14 +194,14 @@
 <!-- CTA FINAL -->
 <section class="cta-final">
   <div class="container">
-    <div class="eyebrow eyebrow--dark" style="justify-content:center">Siguiente paso</div>
-    <h2 style="font-family:var(--f-display); font-weight:700; font-size:clamp(40px,5vw,72px); text-transform:uppercase; letter-spacing:-0.01em; margin-top:20px">¿Hablamos<br>de <em style="font-family:var(--f-editorial); font-style:italic; font-weight:400; color:var(--moss-300); text-transform:lowercase">tu proceso?</em></h2>
-    <p>Muestras gratuitas, pruebas comparativas y recomendación específica para tu metal, volumen y logística.</p>
+    <div class="eyebrow eyebrow--dark" style="justify-content:center" data-i18n="about.cta.eyebrow">Siguiente paso</div>
+    <h2 style="font-family:var(--f-display); font-weight:700; font-size:clamp(40px,5vw,72px); text-transform:uppercase; letter-spacing:-0.01em; margin-top:20px" data-i18n-html="prodpage.cta.title">¿Hablamos<br>de <em style="font-family:var(--f-editorial); font-style:italic; font-weight:400; color:var(--moss-300); text-transform:lowercase">tu proceso?</em></h2>
+    <p data-i18n="prodpage.cta.desc">Muestras gratuitas, pruebas comparativas y recomendación específica para tu metal, volumen y logística.</p>
     <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap">
-      <a href="index.html#contacto" class="btn btn--primary" data-i18n="about.cta.btn1">Hablar con un ingeniero
+      <a href="index.html#contacto" class="btn btn--primary"><span data-i18n="about.cta.btn1">Hablar con un ingeniero</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
       </a>
-      <a href="index.html#productos" class="btn btn--ghost-dark">Ver otros productos</a>
+      <a href="index.html#productos" class="btn btn--ghost-dark" data-i18n="prodpage.cta.other">Ver otros productos</a>
     </div>
   </div>
 </section>
@@ -214,7 +214,7 @@
         <a href="index.html" class="nav__logo" style="color:#FFF"><span class="nav__logo-mark">G</span><span>GreenVCI</span></a>
         <p data-i18n="footer.brand.lede">Líderes globales en tecnología VCI sostenible desde 1994.</p>
       </div>
-      <div class="footer__col"><h5 data-i18n="footer.col.products">Productos</h5><a href="productos/vci-film.html">VCI Film</a><a href="productos/vci-polvo.html">VCI Polvo</a><a href="productos/vci-masterbatch.html">VCI Masterbatch</a><a href="productos/vci-emisor.html">VCI Emisor</a><a href="productos/vci-liquido.html">VCI Líquido</a><a href="productos/vci-papel.html">VCI Papel</a></div>
+      <div class="footer__col"><h5 data-i18n="footer.col.products">Productos</h5><a href="productos/vci-film.html" data-i18n="nav.dd.film">VCI Film</a><a href="productos/vci-polvo.html" data-i18n="nav.dd.polvo">VCI Polvo</a><a href="productos/vci-masterbatch.html" data-i18n="nav.dd.masterbatch">VCI Masterbatch</a><a href="productos/vci-emisor.html" data-i18n="nav.dd.emisor">VCI Emisor</a><a href="productos/vci-liquido.html" data-i18n="nav.dd.liquido">VCI Líquido</a><a href="productos/vci-papel.html" data-i18n="nav.dd.papel">VCI Papel</a></div>
       <div class="footer__col"><h5 data-i18n="footer.col.company">Empresa</h5><a href="nosotros.html" data-i18n="footer.about">Nosotros</a><a href="certificaciones.html" data-i18n="footer.certs">Certificaciones</a><a href="noticias.html" data-i18n="footer.news">Noticias</a><a href="carreras.html" data-i18n="footer.careers">Carreras</a><a href="distribuidores.html" data-i18n="footer.distributors">Distribuidores</a></div>
       <div class="footer__col"><h5 data-i18n="footer.col.support">Soporte</h5><a href="contacto.html" data-i18n="footer.contact">Contacto</a><a href="fichas-tecnicas.html" data-i18n="footer.datasheets">Fichas Técnicas</a><a href="faq.html" data-i18n="footer.faq">FAQ</a><a href="recursos.html" data-i18n="footer.resources">Recursos</a></div>
     </div>
